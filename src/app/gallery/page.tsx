@@ -12,14 +12,14 @@ import { Maximize2, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const galleryImages = [
-  { id: 1, src: "https://images.unsplash.com/photo-1523050353066-1034d07e52b4?auto=format&fit=crop&q=80&w=800", title: "Main Campus", category: "Campus" },
-  { id: 2, src: "https://images.unsplash.com/photo-1541339907198-e08759df9a04?auto=format&fit=crop&q=80&w=800", title: "Graduation Ceremony", category: "Events" },
-  { id: 3, src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800", title: "IT Workshop", category: "Workshops" },
-  { id: 4, src: "https://images.unsplash.com/photo-1524178232363-1fb28f74b671?auto=format&fit=crop&q=80&w=800", title: "Library Hall", category: "Campus" },
-  { id: 5, src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800", title: "Research Lab", category: "Academics" },
-  { id: 6, src: "https://images.unsplash.com/photo-1523240715632-d984bb4b9156?auto=format&fit=crop&q=80&w=800", title: "Student Life", category: "Events" },
-  { id: 7, src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800", title: "Seminar Hall", category: "Campus" },
-  { id: 8, src: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&q=80&w=800", title: "Tech Expo", category: "Events" },
+  { id: 1, src: "https://images.unsplash.com/photo-1541339907198-e08759df9a04?auto=format&fit=crop&q=80&w=800", title: "Graduation Day", category: "Events" },
+  { id: 2, src: "https://images.unsplash.com/photo-1523050353066-1034d07e52b4?auto=format&fit=crop&q=80&w=800", title: "Main Library", category: "Campus" },
+  { id: 3, src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800", title: "AI Workshop", category: "Workshops" },
+  { id: 4, src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800", title: "Student Collaboration", category: "Academics" },
+  { id: 5, src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800", title: "Robotics Lab", category: "Workshops" },
+  { id: 6, src: "https://images.unsplash.com/photo-1523240715632-d984bb4b9156?auto=format&fit=crop&q=80&w=800", title: "Tech Symposium", category: "Events" },
+  { id: 7, src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800", title: "Lecture Hall", category: "Campus" },
+  { id: 8, src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800", title: "Research Facility", category: "Academics" },
 ];
 
 const categories = ["All", "Campus", "Events", "Workshops", "Academics"];
