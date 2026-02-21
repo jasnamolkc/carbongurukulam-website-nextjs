@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #002147;
+  --color-primary-light: #003366;
+  --color-primary-dark: #00152e;
+  --color-accent: #D4AF37;
+  --color-accent-light: #e5c05a;
+  --color-accent-dark: #b38f1d;
+  --color-neutral-white: #ffffff;
+  --color-neutral-light: #f8f9fa;
+  --color-neutral-gray: #e9ecef;
+  --color-neutral-dark: #343a40;
+
+  --font-heading: var(--font-geist-sans);
+  --font-body: var(--font-geist-sans);
+
+  --radius-lg: 1rem;
+  --radius-md: 0.5rem;
+  --radius-sm: 0.25rem;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #002147;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #00152e;
+    --foreground: #f8f9fa;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-primary;
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-lg;
+}
+
+.btn-primary {
+  @apply bg-primary text-white px-6 py-3 rounded-md font-semibold transition-all hover:bg-primary-light hover:shadow-lg active:scale-95;
+}
+
+.btn-accent {
+  @apply bg-accent text-primary px-6 py-3 rounded-md font-semibold transition-all hover:bg-accent-light hover:shadow-lg active:scale-95;
+}
+
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
