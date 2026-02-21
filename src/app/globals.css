@@ -12,8 +12,8 @@
   --color-neutral-gray: #e9ecef;
   --color-neutral-dark: #343a40;
 
-  --font-heading: var(--font-geist-sans);
-  --font-body: var(--font-geist-sans);
+  --font-heading: var(--font-inter);
+  --font-body: var(--font-inter);
 
   --radius-lg: 1rem;
   --radius-md: 0.5rem;
