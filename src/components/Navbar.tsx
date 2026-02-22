@@ -43,7 +43,7 @@ export default function Navbar() {
           <div className="w-10 h-10 bg-primary flex items-center justify-center rounded-lg">
             <span className="text-accent font-bold text-2xl">C</span>
           </div>
-          <span className={cn("font-bold text-xl tracking-tight", scrolled ? "text-primary" : "text-primary")}>
+          <span className={cn("font-bold text-xl tracking-tight", scrolled ? "text-primary" : "text-white")}>
             Carbon Gurukulam
           </span>
         </Link>
@@ -56,7 +56,7 @@ export default function Navbar() {
               href={link.href}
               className={cn(
                 "text-sm font-medium transition-colors hover:text-accent",
-                pathname === link.href ? "text-accent" : "text-primary"
+                pathname === link.href ? "text-accent" : (scrolled ? "text-primary" : "text-white/90")
               )}
             >
               {link.name}
@@ -69,7 +69,10 @@ export default function Navbar() {
 
         {/* Mobile Nav Toggle */}
         <button
-          className="md:hidden text-primary focus:outline-none"
+          className={cn(
+            "md:hidden focus:outline-none",
+            scrolled ? "text-primary" : "text-white"
+          )}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
