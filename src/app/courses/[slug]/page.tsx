@@ -3,22 +3,22 @@ import CourseDetailClient from "./CourseDetailClient";
 
 const allCourses = [
   {
-    title: "AI Fundamentals for Business",
-    category: "Artificial Intelligence",
-    slug: "ai-fundamentals",
-    description: "This course is designed for professionals who want to understand how AI can be leveraged to drive business value. We cover everything from the basics of machine learning to the ethical implications of AI deployment.",
+    title: "NEET/JEE Repeaters Batch",
+    category: "Repeaters",
+    slug: "neet-jee-repeaters",
+    description: "In our classrooms, students embark on a tech-enhanced learning journey under the guidance of experienced faculty. They will engage in a systematic learning approach, complemented by extra study hours to provide a more thorough educational experience.",
   },
   {
-    title: "Advanced Machine Learning",
-    category: "Data Science",
-    slug: "advanced-ml",
-    description: "Take your machine learning skills to the next level with our advanced course covering deep learning, neural networks, and more.",
+    title: "Long Term (Class 11-12)",
+    category: "Long Term",
+    slug: "long-term-11-12",
+    description: "These programs are designed for students who have either completed or are currently taking the Class X Exam in 2024 and aspire to become exceptional achievers. Our focus will be on preparing for NEET, JEE (Main & Advanced), Kerala Engineering, and various other national and state-level entrance examinations.",
   },
   {
-    title: "Full Stack Web Development",
-    category: "Development",
-    slug: "fullstack-dev",
-    description: "Learn how to build modern, scalable web applications from scratch using the latest technologies.",
+    title: "Kerala Engineering Entrance",
+    category: "State Level",
+    slug: "kerala-engineering",
+    description: "Expert coaching specifically tailored for Kerala Engineering entrance exams, focusing on local state-level syllabus and patterns.",
   }
 ];
 
@@ -35,6 +35,32 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function CoursePage() {
-  return <CourseDetailClient />;
+export default function CoursePage({ params }: { params: { slug: string } }) {
+  const course = allCourses.find(c => c.slug === params.slug) || allCourses[0];
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": course.title,
+    "description": course.description,
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "Carbon Gurukulam",
+      "sameAs": "https://carbongurukulam.in"
+    },
+    "educationalAudience": {
+      "@type": "EducationalAudience",
+      "educationalRole": "student"
+    }
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <CourseDetailClient />
+    </>
+  );
 }

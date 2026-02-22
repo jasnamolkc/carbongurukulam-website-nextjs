@@ -11,62 +11,62 @@ import { Search, Filter } from "lucide-react";
 
 const allCourses = [
   {
-    title: "AI Fundamentals for Business",
-    category: "Artificial Intelligence",
-    duration: "8 Weeks",
-    lessons: 24,
-    image: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&q=80&w=800",
-    slug: "ai-fundamentals",
-    price: "$299"
+    title: "NEET/JEE Repeaters Batch",
+    category: "Repeaters",
+    duration: "1 Year",
+    lessons: 150,
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800",
+    slug: "neet-jee-repeaters",
+    price: "Affordable"
   },
   {
-    title: "Advanced Machine Learning",
-    category: "Data Science",
-    duration: "12 Weeks",
-    lessons: 36,
-    image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800",
-    slug: "advanced-ml",
-    price: "$499"
+    title: "Long Term (Class 11-12)",
+    category: "Long Term",
+    duration: "2 Years",
+    lessons: 300,
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800",
+    slug: "long-term-11-12",
+    price: "Admission Open"
   },
   {
-    title: "Full Stack Web Development",
-    category: "Development",
-    duration: "16 Weeks",
-    lessons: 48,
+    title: "Kerala Engineering Entrance",
+    category: "State Level",
+    duration: "1 Year",
+    lessons: 120,
+    image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=800",
+    slug: "kerala-engineering",
+    price: "Expert Coaching"
+  },
+  {
+    title: "NEET Crash Course",
+    category: "Crash Course",
+    duration: "2 Months",
+    lessons: 60,
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800",
+    slug: "neet-crash-course",
+    price: "Intensive"
+  },
+  {
+    title: "JEE Main Intensive",
+    category: "Crash Course",
+    duration: "3 Months",
+    lessons: 90,
     image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800",
-    slug: "fullstack-dev",
-    price: "$399"
+    slug: "jee-main-intensive",
+    price: "Targeted"
   },
   {
-    title: "Cybersecurity Essentials",
-    category: "Security",
-    duration: "10 Weeks",
-    lessons: 30,
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",
-    slug: "cybersecurity",
-    price: "$349"
-  },
-  {
-    title: "Cloud Architecture with AWS",
-    category: "Cloud Computing",
-    duration: "14 Weeks",
-    lessons: 42,
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
-    slug: "cloud-aws",
-    price: "$449"
-  },
-  {
-    title: "Digital Marketing Masterclass",
-    category: "Marketing",
-    duration: "6 Weeks",
-    lessons: 18,
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-    slug: "digital-marketing",
-    price: "$199"
+    title: "Foundation Batch (Class 8-10)",
+    category: "Foundation",
+    duration: "3 Years",
+    lessons: 180,
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800",
+    slug: "foundation-batch",
+    price: "Early Start"
   }
 ];
 
-const categories = ["All", "Artificial Intelligence", "Data Science", "Development", "Security", "Cloud Computing", "Marketing"];
+const categories = ["All", "Repeaters", "Long Term", "State Level", "Crash Course", "Foundation"];
 
 export default function CoursesPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -84,7 +84,7 @@ export default function CoursesPage() {
 
       <HeroSection
         title="Our Academic Programs"
-        subtitle="Explore our comprehensive range of courses designed for the modern world. Master the skills that matter."
+        subtitle="Comprehensive coaching programs for NEET, JEE, and Kerala Engineering Entrance. Your success starts here."
         compact
       />
 

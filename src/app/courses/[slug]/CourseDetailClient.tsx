@@ -15,25 +15,46 @@ import { Clock, BookOpen, GraduationCap, Download, CheckCircle, Calendar, User, 
 
 const allCourses = [
   {
-    title: "AI Fundamentals for Business",
-    category: "Artificial Intelligence",
-    duration: "8 Weeks",
-    lessons: 24,
-    image: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&q=80&w=800",
-    slug: "ai-fundamentals",
-    price: "$299",
-    description: "This course is designed for professionals who want to understand how AI can be leveraged to drive business value. We cover everything from the basics of machine learning to the ethical implications of AI deployment.",
+    title: "NEET/JEE Repeaters Batch",
+    category: "Repeaters",
+    duration: "1 Year",
+    lessons: 150,
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800",
+    slug: "neet-jee-repeaters",
+    price: "Affordable",
+    description: "In our classrooms, students embark on a tech-enhanced learning journey under the guidance of experienced faculty. They will engage in a systematic learning approach, complemented by extra study hours to provide a more thorough educational experience.",
     syllabus: [
-      { title: "Module 1: Introduction to AI", content: "Understanding the history and basic concepts of Artificial Intelligence." },
-      { title: "Module 2: Machine Learning for Decision Making", content: "How ML models work and how they can be used to make data-driven decisions." },
-      { title: "Module 3: Natural Language Processing in Business", content: "Exploring the applications of NLP in customer service and content creation." },
-      { title: "Module 4: Ethical AI and Governance", content: "Developing a framework for responsible AI use in your organization." }
+      { title: "Physics: Mechanics & Electrodynamics", content: "In-depth coverage of fundamental physics concepts essential for NEET/JEE." },
+      { title: "Chemistry: Organic, Inorganic & Physical", content: "Comprehensive chemistry modules with focus on reaction mechanisms and numerical problems." },
+      { title: "Biology: Botany & Zoology", content: "Detailed study of plant and animal sciences with NCERT-centric approach." },
+      { title: "Mathematics: Calculus & Algebra", content: "Advanced mathematical concepts for JEE aspirants with shortcut techniques." }
     ],
     learningOutcomes: [
-      "Understand core AI concepts and terminology",
-      "Identify opportunities for AI in your business",
-      "Evaluate AI vendors and solutions",
-      "Develop an AI implementation strategy"
+      "Master NCERT concepts for NEET and JEE",
+      "Develop speed and accuracy for entrance exams",
+      "Regular mock tests and performance analysis",
+      "Personalized doubt clearing sessions"
+    ]
+  },
+  {
+    title: "Long Term (Class 11-12)",
+    category: "Long Term",
+    duration: "2 Years",
+    lessons: 300,
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800",
+    slug: "long-term-11-12",
+    price: "Admission Open",
+    description: "These programs are designed for students who have either completed or are currently taking the Class X Exam in 2024 and aspire to become exceptional achievers. Our focus will be on preparing for NEET, JEE (Main & Advanced), Kerala Engineering, and various other national and state-level entrance examinations.",
+    syllabus: [
+      { title: "Class 11 Foundation", content: "Building strong basics in Physics, Chemistry, Biology/Maths." },
+      { title: "Class 12 Advanced", content: "Moving towards advanced entrance exam level concepts." },
+      { title: "Entrance Revision", content: "Dedicated time for full syllabus revision and mock exams." }
+    ],
+    learningOutcomes: [
+      "Complete coverage of Board and Entrance syllabus",
+      "Strong foundation building from Class 11",
+      "Expert guidance for national level exams",
+      "Tech-enabled learning with Vyas Edification"
     ]
   }
 ];
@@ -136,7 +157,6 @@ export default function CourseDetailPage() {
                 <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 space-y-6">
                   <div className="flex items-baseline space-x-2">
                     <span className="text-4xl font-bold text-primary">{course.price}</span>
-                    <span className="text-gray-400 line-through text-lg">$599</span>
                   </div>
 
                   <div className="space-y-4">
