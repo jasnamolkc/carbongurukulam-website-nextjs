@@ -39,19 +39,19 @@ const facultyMembers = [
     name: "Dr. Robert Chen",
     role: "Head of AI Department",
     qualification: "PhD in Machine Learning, Stanford",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400"
+    image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&q=80&w=400"
   },
   {
     name: "Prof. Sarah Jenkins",
     role: "Senior Data Scientist",
     qualification: "MS in Data Science, MIT",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400"
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400"
   },
   {
     name: "Dr. Michael Ross",
     role: "Professor of Ethics & Tech",
     qualification: "PhD in Philosophy, Oxford",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400"
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400"
   }
 ];
 
@@ -103,7 +103,7 @@ export default function AboutClient() {
           <div className="relative order-2 lg:order-1">
             <div className="relative h-[500px] md:h-[600px] rounded-3xl overflow-hidden shadow-2xl z-10">
               <Image
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800"
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800"
                 alt="Founder"
                 fill
                 className="object-cover"

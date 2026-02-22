@@ -19,7 +19,7 @@ const allCourses = [
     category: "Artificial Intelligence",
     duration: "8 Weeks",
     lessons: 24,
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&q=80&w=800",
     slug: "ai-fundamentals",
     price: "$299",
     description: "This course is designed for professionals who want to understand how AI can be leveraged to drive business value. We cover everything from the basics of machine learning to the ethical implications of AI deployment.",

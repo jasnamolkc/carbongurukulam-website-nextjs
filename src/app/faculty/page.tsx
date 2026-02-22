@@ -19,7 +19,7 @@ const facultyMembers = [
     qualification: "PhD in Machine Learning, Stanford",
     experience: "15+ Years in AI Research and Education",
     bio: "Dr. Robert Chen is a leading expert in Machine Learning and Computer Vision. He has published over 50 research papers and previously led AI teams at major tech companies.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400"
+    image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&q=80&w=400"
   },
   {
     name: "Prof. Sarah Jenkins",
@@ -27,7 +27,7 @@ const facultyMembers = [
     qualification: "MS in Data Science, MIT",
     experience: "10+ Years in Big Data Analytics",
     bio: "Sarah specializes in large-scale data analysis and predictive modeling. She is passionate about using data to solve social challenges.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400"
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400"
   },
   {
     name: "Dr. Michael Ross",
@@ -35,7 +35,7 @@ const facultyMembers = [
     qualification: "PhD in Philosophy, Oxford",
     experience: "12+ Years in Technology Ethics",
     bio: "Dr. Ross explores the intersection of morality and artificial intelligence, helping students navigate the ethical complexities of the digital age.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400"
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400"
   },
   {
     name: "Emily Watson",
@@ -43,7 +43,7 @@ const facultyMembers = [
     qualification: "B.Tech in Computer Science, IIT",
     experience: "8+ Years in Software Engineering",
     bio: "Emily is a master of modern web technologies. She brings real-world industry experience into the classroom, teaching students how to build scalable applications.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=400"
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400"
   },
   {
     name: "David Miller",
@@ -59,7 +59,7 @@ const facultyMembers = [
     qualification: "PhD in Cloud Computing, Berkeley",
     experience: "11+ Years in Cloud Solutions",
     bio: "Dr. Wong is an expert in distributed systems and cloud architecture. She helps students master AWS, Azure, and Google Cloud platforms.",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400"
+    image: "https://images.unsplash.com/photo-1598550874175-4d0fe4a2c90b?auto=format&fit=crop&q=80&w=400"
   }
 ];
 

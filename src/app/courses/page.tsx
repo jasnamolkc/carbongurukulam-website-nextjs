@@ -15,7 +15,7 @@ const allCourses = [
     category: "Artificial Intelligence",
     duration: "8 Weeks",
     lessons: 24,
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&q=80&w=800",
     slug: "ai-fundamentals",
     price: "$299"
   },
@@ -33,7 +33,7 @@ const allCourses = [
     category: "Development",
     duration: "16 Weeks",
     lessons: 48,
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800",
     slug: "fullstack-dev",
     price: "$399"
   },

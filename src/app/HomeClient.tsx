@@ -20,7 +20,7 @@ const featuredCourses = [
     category: "Artificial Intelligence",
     duration: "8 Weeks",
     lessons: 24,
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&q=80&w=800",
     slug: "ai-fundamentals",
     price: "$299"
   },
@@ -38,7 +38,7 @@ const featuredCourses = [
     category: "Development",
     duration: "16 Weeks",
     lessons: 48,
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800",
     slug: "fullstack-dev",
     price: "$399"
   }
@@ -50,7 +50,7 @@ const latestNews = [
     excerpt: "Exploring how generative AI is transforming the classroom experience for students and teachers alike.",
     date: "Oct 24, 2023",
     author: "Dr. Sarah Smith",
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&q=80&w=800",
     slug: "future-of-ai-education",
     category: "Trends",
     isAI: true
@@ -60,7 +60,7 @@ const latestNews = [
     excerpt: "Join us for a week-long celebration of innovation, featuring workshops, hackathons, and guest speakers.",
     date: "Nov 12, 2023",
     author: "John Doe",
-    image: "https://images.unsplash.com/photo-1540575861501-7ad05823c9f5?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=800",
     slug: "annual-tech-fest",
     category: "Events"
   }
@@ -92,7 +92,7 @@ export default function HomeClient() {
           <div className="relative">
             <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl z-10">
               <Image
-                src="https://images.unsplash.com/photo-1523050353066-1034d07e52b4?auto=format&fit=crop&q=80&w=800"
+                src="https://images.unsplash.com/photo-1524178232363-1fb28f74b671?auto=format&fit=crop&q=80&w=800"
                 alt="About Carbon Gurukulam"
                 fill
                 className="object-cover"
@@ -186,7 +186,7 @@ export default function HomeClient() {
             </div>
             <div className="relative min-h-[400px]">
               <Image
-                src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800"
+                src="https://images.unsplash.com/photo-1531746790731-6c087fecd05a?auto=format&fit=crop&q=80&w=800"
                 alt="AI Learning"
                 fill
                 className="object-cover"
@@ -215,19 +215,25 @@ export default function HomeClient() {
           badge="Testimonials"
         />
         <div className="flex space-x-6 overflow-x-auto pb-8 scrollbar-hide">
-          {[1, 2, 3].map((i) => (
+          {[
+            { name: "Alex Johnson", role: "Software Engineer, Google", img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=100" },
+            { name: "Sarah Williams", role: "Data Analyst, Meta", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100" },
+            { name: "Michael Chen", role: "Product Manager, Amazon", img: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=100" }
+          ].map((testimonial, i) => (
             <div key={i} className="min-w-[300px] md:min-w-[400px] bg-white p-8 rounded-2xl shadow-sm border border-gray-100 shrink-0">
               <div className="flex text-accent mb-4">
                 {[1, 2, 3, 4, 5].map((s) => <Star key={s} size={16} fill="currentColor" />)}
               </div>
               <p className="text-gray-600 italic mb-6">
-                "Carbon Gurukulam provided me with the skills and confidence to land my dream job at a top tech firm. The AI-driven curriculum was a game-changer!"
+                "Carbon Gurukulam provided me with the skills and confidence to land my dream job. The AI-driven curriculum was a game-changer!"
               </p>
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gray-200 rounded-full" />
+                <div className="relative w-12 h-12 rounded-full overflow-hidden">
+                  <Image src={testimonial.img} alt={testimonial.name} fill className="object-cover" />
+                </div>
                 <div>
-                  <h5 className="font-bold text-primary text-sm">Alex Johnson</h5>
-                  <p className="text-xs text-gray-500">Software Engineer, Google</p>
+                  <h5 className="font-bold text-primary text-sm">{testimonial.name}</h5>
+                  <p className="text-xs text-gray-500">{testimonial.role}</p>
                 </div>
               </div>
             </div>
