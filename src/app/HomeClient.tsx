@@ -116,7 +116,7 @@ export default function HomeClient() {
                 </div>
                 <div>
                   <h4 className="font-bold text-primary">Kota Expertise</h4>
-                  <p className="text-sm text-gray-500">Curriculum designed by Kota's founding fathers.</p>
+                  <p className="text-sm text-gray-500">Curriculum designed by Kota&apos;s founding fathers.</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
@@ -225,7 +225,7 @@ export default function HomeClient() {
                 {[1, 2, 3, 4, 5].map((s) => <Star key={s} size={16} fill="currentColor" />)}
               </div>
               <p className="text-gray-600 italic mb-6">
-                "Carbon Gurukulam provided me with the skills and confidence to land my dream job. The AI-driven curriculum was a game-changer!"
+                &quot;Carbon Gurukulam provided me with the skills and confidence to land my dream job. The AI-driven curriculum was a game-changer!&quot;
               </p>
               <div className="flex items-center space-x-4">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden">

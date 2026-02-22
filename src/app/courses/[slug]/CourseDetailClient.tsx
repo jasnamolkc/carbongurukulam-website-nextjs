@@ -128,7 +128,7 @@ export default function CourseDetailPage() {
                 </div>
 
                 <div className="space-y-4 pt-4">
-                  <h3 className="text-2xl font-bold text-primary">What You'll Learn</h3>
+                  <h3 className="text-2xl font-bold text-primary">What You&apos;ll Learn</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {course.learningOutcomes.map((outcome, i) => (
                       <div key={i} className="flex items-start space-x-3">

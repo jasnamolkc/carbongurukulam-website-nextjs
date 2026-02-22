@@ -123,7 +123,7 @@ export default function AboutClient() {
             <h2 className="text-3xl md:text-4xl font-bold text-primary">A Message from Our Founder</h2>
             <div className="space-y-6 text-gray-600 text-lg">
               <p>
-                "At Carbon Gurukulam, we believe that education is not just about transferring knowledge, but about igniting a passion for lifelong learning."
+                &quot;At Carbon Gurukulam, we believe that education is not just about transferring knowledge, but about igniting a passion for lifelong learning.&quot;
               </p>
               <p>
                 Our journey started with a simple observation: the world was changing faster than our educational systems. We set out to create a place where students could learn not just the theories, but the practical applications of those theories in a world powered by AI.
@@ -151,7 +151,7 @@ export default function AboutClient() {
       <SectionWrapper>
         <SectionHeader
           title="Our Journey Through the Years"
-          subtitle="From a small classroom to a global educational hub, here's how we've grown."
+          subtitle="From a small classroom to a global educational hub, here&apos;s how we&apos;ve grown."
           badge="History"
         />
         <div className="max-w-4xl mx-auto py-12">
