@@ -16,53 +16,53 @@ import ChatWidget from "@/components/ChatWidget";
 
 const featuredCourses = [
   {
-    title: "AI Fundamentals for Business",
-    category: "Artificial Intelligence",
-    duration: "8 Weeks",
-    lessons: 24,
-    image: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&q=80&w=800",
-    slug: "ai-fundamentals",
-    price: "$299"
+    title: "NEET/JEE Repeaters Batch",
+    category: "Entrance Coaching",
+    duration: "1 Year",
+    lessons: 150,
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800",
+    slug: "neet-jee-repeaters",
+    price: "Affordable"
   },
   {
-    title: "Advanced Machine Learning",
-    category: "Data Science",
-    duration: "12 Weeks",
-    lessons: 36,
-    image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800",
-    slug: "advanced-ml",
-    price: "$499"
+    title: "Long Term (Class 11-12)",
+    category: "Two Year Program",
+    duration: "2 Years",
+    lessons: 300,
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800",
+    slug: "long-term-11-12",
+    price: "Admission Open"
   },
   {
-    title: "Full Stack Web Development",
-    category: "Development",
-    duration: "16 Weeks",
-    lessons: 48,
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800",
-    slug: "fullstack-dev",
-    price: "$399"
+    title: "Kerala Engineering Entrance",
+    category: "State Level",
+    duration: "1 Year",
+    lessons: 120,
+    image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=800",
+    slug: "kerala-engineering",
+    price: "Expert Coaching"
   }
 ];
 
 const latestNews = [
   {
-    title: "The Future of AI in Education",
-    excerpt: "Exploring how generative AI is transforming the classroom experience for students and teachers alike.",
-    date: "Oct 24, 2023",
-    author: "Dr. Sarah Smith",
-    image: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&q=80&w=800",
-    slug: "future-of-ai-education",
-    category: "Trends",
-    isAI: true
+    title: "Carbon Gurukulam NEET 2024 Results",
+    excerpt: "Celebrating our top achievers who have secured ranks in the national medical entrance exam.",
+    date: "June 15, 2024",
+    author: "Academic Director",
+    image: "https://images.unsplash.com/photo-1523050335392-9bc567547bb3?auto=format&fit=crop&q=80&w=800",
+    slug: "neet-2024-results",
+    category: "Results"
   },
   {
-    title: "Carbon Gurukulam Annual Tech Fest",
-    excerpt: "Join us for a week-long celebration of innovation, featuring workshops, hackathons, and guest speakers.",
-    date: "Nov 12, 2023",
-    author: "John Doe",
-    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=800",
-    slug: "annual-tech-fest",
-    category: "Events"
+    title: "New Batch Admissions for Repeaters",
+    excerpt: "Enrollment now open for the 2024-25 NEET/JEE Repeaters batch with special scholarships.",
+    date: "July 01, 2024",
+    author: "Admissions Team",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800",
+    slug: "repeaters-batch-2024",
+    category: "Admissions",
+    isAI: true
   }
 ];
 
@@ -73,8 +73,8 @@ export default function HomeClient() {
 
       {/* Hero Section */}
       <HeroSection
-        title="Empowering Minds with AI & Innovation"
-        subtitle="Carbon Gurukulam is a premier educational hub dedicated to shaping the leaders of tomorrow through cutting-edge technology and academic excellence."
+        title="Leading NEET & JEE Coaching Excellence"
+        subtitle="Carbon Gurukulam is Kerala's premier coaching institute, powered by Vyas Edification, dedicated to helping students crack India's toughest entrance exams."
       >
         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
           <Link href="/courses" className="btn-accent">
@@ -104,19 +104,19 @@ export default function HomeClient() {
 
           <div className="space-y-6">
             <SectionHeader
-              title="Shaping the Future of Learning"
-              subtitle="We combine traditional academic values with the power of Artificial Intelligence to provide an unparalleled educational experience."
+              title="Shaping the Doctors & Engineers of Tomorrow"
+              subtitle="Carbon Gurukulam, powered by Vyas Edification, combines the expertise of Kota's top educators with cutting-edge learning technology."
               badge="About Us"
               centered={false}
             />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
               <div className="flex items-start space-x-3">
                 <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center text-accent shrink-0">
-                  <Brain size={24} />
+                  <GraduationCap size={24} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-primary">AI Integration</h4>
-                  <p className="text-sm text-gray-500">Smart learning paths tailored for every student.</p>
+                  <h4 className="font-bold text-primary">Kota Expertise</h4>
+                  <p className="text-sm text-gray-500">Curriculum designed by Kota's founding fathers.</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
