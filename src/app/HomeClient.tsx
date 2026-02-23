@@ -74,7 +74,7 @@ export default function HomeClient() {
       {/* Hero Section */}
       <HeroSection
         title="Leading NEET & JEE Coaching Excellence"
-        subtitle="Carbon Gurukulam is Kerala's premier coaching institute, powered by Vyas Edification, dedicated to helping students crack India's toughest entrance exams."
+        subtitle="Carbon Gurukulam (formerly Carbon 30 Classes) is a distinguished coaching institution rooted in the traditional Gurukulam residential model, dedicated to your success."
       >
         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
           <Link href="/courses" className="btn-accent">
@@ -104,8 +104,8 @@ export default function HomeClient() {
 
           <div className="space-y-6">
             <SectionHeader
-              title="Shaping the Doctors & Engineers of Tomorrow"
-              subtitle="Carbon Gurukulam, powered by Vyas Edification, combines the expertise of Kota's top educators with cutting-edge learning technology."
+              title="The Traditional Gurukulam Reimagined"
+              subtitle="Carbon Gurukulam, previously recognized as Carbon 30 Classes, stands as a distinguished NEET/JEE coaching institution deeply rooted in the residential learning model."
               badge="About Us"
               centered={false}
             />

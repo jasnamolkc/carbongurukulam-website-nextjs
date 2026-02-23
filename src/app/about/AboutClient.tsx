@@ -13,7 +13,7 @@ import { ShieldCheck, Target, Eye, Quote } from "lucide-react";
 
 const timelineItems = [
   {
-    title: "Foundation of Carbon Gurukulam",
+    title: "Foundation of Carbon 30 Classes",
     date: "2008",
     description: "Started with a vision to revolutionize traditional education with modern tools."
   },
@@ -28,9 +28,9 @@ const timelineItems = [
     description: "Became one of the first institutions to integrate AI in the core curriculum."
   },
   {
-    title: "Global Recognition",
+    title: "Rebranding to Carbon Gurukulam",
     date: "2023",
-    description: "Awarded 'Most Innovative Educational Hub' by the International Tech Council."
+    description: "Embracing the residential Gurukulam model to provide immersive NEET/JEE coaching."
   }
 ];
 
@@ -62,7 +62,7 @@ export default function AboutClient() {
 
       <HeroSection
         title="Our Story & Vision"
-        subtitle="Discover how Carbon Gurukulam is redefining education through the synergy of human intelligence and artificial technology."
+        subtitle="From Carbon 30 Classes to Carbon Gurukulam: A legacy of excellence in NEET & JEE coaching."
         compact
       />
 
@@ -78,7 +78,7 @@ export default function AboutClient() {
             </div>
             <h3 className="text-2xl font-bold text-primary mb-4">Our Vision</h3>
             <p className="text-gray-600 leading-relaxed">
-              To be a global leader in AI-enhanced education, empowering individuals to reach their full potential and solve complex world problems through innovation and integrity.
+              To nurture future luminaries in the domains of medicine and engineering by providing a symbiotic learning environment that fosters intimate mentorship and comprehensive growth.
             </p>
           </div>
 
@@ -91,7 +91,7 @@ export default function AboutClient() {
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
             <p className="text-gray-300 leading-relaxed">
-              To provide accessible, high-quality, and personalized learning experiences that bridge the gap between traditional academia and the rapidly evolving technological landscape.
+              To fortify fundamental academic knowledge through an all-encompassing syllabus and individualized guidance within an immersive residential framework.
             </p>
           </div>
         </div>
@@ -120,16 +120,19 @@ export default function AboutClient() {
             <div className="inline-block p-2 bg-accent/10 rounded-lg text-accent">
               <Quote size={32} fill="currentColor" className="opacity-50" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-primary">A Message from Our Founder</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">The Carbon Legacy</h2>
             <div className="space-y-6 text-gray-600 text-lg">
               <p>
-                &quot;At Carbon Gurukulam, we believe that education is not just about transferring knowledge, but about igniting a passion for lifelong learning.&quot;
+                Carbon Gurukulam, previously recognized as Carbon 30 Classes, stands as a distinguished NEET/JEE coaching institution deeply rooted in the traditional Gurukulam educational model.
               </p>
               <p>
-                Our journey started with a simple observation: the world was changing faster than our educational systems. We set out to create a place where students could learn not just the theories, but the practical applications of those theories in a world powered by AI.
+                This distinctive approach entails a symbiotic learning environment where students and educators reside and learn together, fostering intimate mentorship and comprehensive growth.
               </p>
               <p>
-                Today, we are proud to have a community of thinkers, dreamers, and doers who are making a real impact in the world. We invite you to be a part of this journey.
+                Under our rebranded name, we offer specialized preparation for NEET/JEE, tailored for 10th-grade graduates and aspiring medical scholars. Our all-encompassing syllabus aims to fortify fundamental academic knowledge, complemented by individualized guidance from our adept faculty within an immersive residential framework.
+              </p>
+              <p>
+                With a proven track record of steering students towards exceptional achievements in competitive examinations, Carbon Gurukulam remains committed to nurturing the next generation of doctors and engineers.
               </p>
             </div>
             <div className="pt-4 flex items-center space-x-6">
@@ -151,7 +154,7 @@ export default function AboutClient() {
       <SectionWrapper>
         <SectionHeader
           title="Our Journey Through the Years"
-          subtitle="From a small classroom to a global educational hub, here&apos;s how we&apos;ve grown."
+          subtitle="From Carbon 30 Classes to Carbon Gurukulam, our commitment to excellence remains unchanged."
           badge="History"
         />
         <div className="max-w-4xl mx-auto py-12">
