@@ -78,8 +78,7 @@ export default function AboutClient() {
             </div>
             <h3 className="text-2xl font-bold text-primary mb-4">Our Vision</h3>
             <p className="text-gray-600 leading-relaxed">
-              To nurture future luminaries in the domains of medicine and engineering by providing a symbiotic learning environment that fosters intimate mentorship and comprehensive growth.
-            </p>
+To deliver exceptional and inclusive education, empowering every aspiring medical and engineering student to excel in competitive examinations. Carbon Gurukulam is committed to fostering educational equity and creating a nurturing environment that supports the academic and personal development of each student.            </p>
           </div>
 
           <div className="bg-primary p-10 rounded-3xl border border-primary-light shadow-lg relative overflow-hidden group">
@@ -91,8 +90,7 @@ export default function AboutClient() {
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
             <p className="text-gray-300 leading-relaxed">
-              To fortify fundamental academic knowledge through an all-encompassing syllabus and individualized guidance within an immersive residential framework.
-            </p>
+To become a trailblazer in medical and engineering entrance coaching by cultivating a culture grounded in discipline, dedication, and integrity, thereby equipping students to achieve excellence in their respective domains.            </p>
           </div>
         </div>
       </SectionWrapper>
