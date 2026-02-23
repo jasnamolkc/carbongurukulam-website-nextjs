@@ -44,11 +44,11 @@ export default function Navbar() {
         <Link href="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 flex items-center justify-center rounded-lg overflow-hidden">
             <Image
-              src="/logo.png"   // keep in public folder
+              src="/logo.png"
               alt="Carbon Gurukulam Logo"
-              width={120}
-              height={40}
-              className="h-6 w-auto object-contain"
+              width={200}
+              height={80}
+              className="h-10 md:h-12 w-auto object-contain"
             />
           </div>
           
