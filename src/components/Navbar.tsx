@@ -42,7 +42,6 @@ export default function Navbar() {
     >
       <div className="container-custom flex justify-between items-center">
         <Link href="/" className="flex items-center space-x-2">
-          <div className="w-10 h-10 bg-primary flex items-center justify-center rounded-lg">
             <div className="w-10 h-10 flex items-center justify-center rounded-lg overflow-hidden">
             <Image
               src="/logo.png"   // place logo.png inside /public folder
