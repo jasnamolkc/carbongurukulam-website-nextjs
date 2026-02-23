@@ -44,22 +44,15 @@ export default function Navbar() {
         <Link href="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 flex items-center justify-center rounded-lg overflow-hidden">
             <Image
-              src="/logo.png"   // place logo.png inside /public folder
+              src="/logo.png"   // keep in public folder
               alt="Carbon Gurukulam Logo"
-              width={40}
+              width={120}
               height={40}
-              className="object-contain"
+              className="h-6 w-auto object-contain"
             />
           </div>
           
-          <span
-            className={cn(
-              "font-bold text-xl tracking-tight",
-              scrolled ? "text-primary" : "text-white"
-            )}
-          >
-            Carbon Gurukulam
-          </span>
+          
         </Link>
 
         {/* Desktop Nav */}
