@@ -8,19 +8,32 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Carbon Gurukulam | Modern AI Educational Hub",
-  description: "Experience premium, academic, and AI-powered education at Carbon Gurukulam. Shaping the future of learning with technology and tradition.",
-  keywords: ["Education", "AI Learning", "Carbon Gurukulam", "Modern School", "Academic Excellence"],
+  title: "Carbon Gurukulam | JEE, NEET & Integrated Coaching Institute",
+  description:
+    "Carbon Gurukulam is a premier coaching institute offering JEE, NEET, and Integrated batches with a residential Gurukulam learning model. Excellence in medical and engineering entrance preparation.",
+  keywords: [
+    "JEE Coaching",
+    "NEET Coaching",
+    "Integrated Batches",
+    "Carbon Gurukulam",
+    "Entrance Coaching Institute",
+    "Medical Entrance",
+    "Engineering Entrance"
+  ],
   openGraph: {
-    title: "Carbon Gurukulam | Modern AI Educational Hub",
-    description: "Experience premium, academic, and AI-powered education at Carbon Gurukulam.",
+    title: "Carbon Gurukulam | JEE, NEET & Integrated Coaching Institute",
+    description:
+      "Premier JEE, NEET & Integrated coaching institute with a residential Gurukulam learning system.",
     type: "website",
     locale: "en_US",
     url: "https://carbongurukulam.com",
     siteName: "Carbon Gurukulam",
   },
-};
 
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
 export default function RootLayout({
   children,
 }: Readonly<{
