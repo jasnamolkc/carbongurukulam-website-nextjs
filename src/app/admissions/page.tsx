@@ -49,12 +49,12 @@ const faqs = [
     content: "Yes, we offer merit-based scholarships for top-performing students in our entrance assessment, as well as need-based financial aid."
   },
   {
-    title: "Can I apply for multiple courses?",
-    content: "Yes, you can apply for multiple courses, but you will need to specify your primary choice in the application form."
+    title: "Can I visit the campus before applying?",
+    content: "Yes, we encourage prospective students and parents to visit our residential campus to experience the Gurukulam environment firsthand."
   },
   {
-    title: "Is there an application fee?",
-    content: "There is a nominal application fee of $50, which is non-refundable."
+    title: "What is the track record of Carbon Gurukulam?",
+    content: "We have a proven track record of steering students towards exceptional achievements in competitive examinations like NEET and JEE over the past 15 years."
   }
 ];
 
@@ -88,16 +88,16 @@ export default function AdmissionsPage() {
             <span className="bg-accent text-primary text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">
               Eligibility
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold">What We Look For</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">Who Can Apply?</h2>
             <p className="text-gray-300 text-lg">
-              We seek curious, motivated individuals who are passionate about technology and its potential to shape the future.
+              We seek motivated students who are dedicated to achieving excellence in medical and engineering entrance examinations.
             </p>
             <ul className="space-y-4 pt-4">
               {[
-                "Strong analytical and problem-solving skills",
-                "Basic proficiency in English (for international students)",
-                "High school diploma or equivalent for undergraduate programs",
-                "Passion for continuous learning and innovation"
+                "10th-grade graduates aiming for medical or engineering careers",
+                "Aspiring medical scholars seeking intensive NEET preparation",
+                "Students looking for a disciplined residential learning environment",
+                "Commitment to rigorous academic and personal growth"
               ].map((item, i) => (
                 <li key={i} className="flex items-center space-x-3">
                   <CheckCircle size={20} className="text-accent shrink-0" />
@@ -168,9 +168,10 @@ export default function AdmissionsPage() {
                   <label className="text-sm font-bold text-primary">Course of Interest</label>
                   <select className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-accent/50 outline-none appearance-none bg-white">
                     <option>Select a course</option>
-                    <option>AI Fundamentals</option>
-                    <option>Advanced Machine Learning</option>
-                    <option>Full Stack Development</option>
+                    <option>NEET/JEE Repeaters Batch</option>
+                    <option>Long Term (Class 11-12)</option>
+                    <option>Kerala Engineering Entrance</option>
+                    <option>NEET Crash Course</option>
                   </select>
                 </div>
                 <div className="space-y-2 sm:col-span-2">
