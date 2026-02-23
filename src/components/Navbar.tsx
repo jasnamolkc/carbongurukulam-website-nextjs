@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -41,10 +43,23 @@ export default function Navbar() {
       <div className="container-custom flex justify-between items-center">
         <Link href="/" className="flex items-center space-x-2">
           <div className="w-10 h-10 bg-primary flex items-center justify-center rounded-lg">
-            <span className="text-accent font-bold text-2xl">C</span>
+            <div className="w-10 h-10 flex items-center justify-center rounded-lg overflow-hidden">
+            <Image
+              src="/logo.png"   // place logo.png inside /public folder
+              alt="Carbon Gurukulam Logo"
+              width={40}
+              height={40}
+              className="object-contain"
+            />
           </div>
-          <span className={cn("font-bold text-xl tracking-tight", scrolled ? "text-primary" : "text-white")}>
-            Carbon Gurukulamf
+          
+          <span
+            className={cn(
+              "font-bold text-xl tracking-tight",
+              scrolled ? "text-primary" : "text-white"
+            )}
+          >
+            Carbon Gurukulam
           </span>
         </Link>
 
