@@ -41,18 +41,15 @@ export default function Navbar() {
       )}
     >
       <div className="container-custom flex justify-between items-center">
-        <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 flex items-center justify-center rounded-lg overflow-hidden">
-            <Image
-              src="/logo.png"
-              alt="Carbon Gurukulam Logo"
-              width={200}
-              height={80}
-              className="h-10 md:h-12 w-auto object-contain"
-            />
-          </div>
-          
-          
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo.png"
+            alt="Carbon Gurukulam Logo"
+            width={300}
+            height={120}
+            className="h-14 md:h-20 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}
