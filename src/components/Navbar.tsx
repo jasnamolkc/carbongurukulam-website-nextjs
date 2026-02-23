@@ -66,9 +66,14 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-          <Link href="/admissions" className="btn-primary py-2 px-5 text-sm">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLScoK6Ll5398u9bqV4ajBSWaUWEGKqH40ggpsRNa53toKG0LQg/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary py-2 px-5 text-sm"
+          >
             Apply Now
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Nav Toggle */}
@@ -106,13 +111,15 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
-              <Link
-                href="/admissions"
-                className="btn-primary text-center"
-                onClick={() => setIsOpen(false)}
-              >
-                Apply Now
-              </Link>
+              <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScoK6Ll5398u9bqV4ajBSWaUWEGKqH40ggpsRNa53toKG0LQg/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary text-center"
+              onClick={() => setIsOpen(false)}
+            >
+              Apply Now
+            </a>
             </div>
           </motion.div>
         )}
