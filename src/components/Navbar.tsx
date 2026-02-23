@@ -44,7 +44,7 @@ export default function Navbar() {
             <span className="text-accent font-bold text-2xl">C</span>
           </div>
           <span className={cn("font-bold text-xl tracking-tight", scrolled ? "text-primary" : "text-white")}>
-            Carbon Gurukulam
+            Carbon Gurukulamf
           </span>
         </Link>
 
