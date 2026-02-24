@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -19,58 +21,75 @@ export default function HeroSection({
   compact = false,
 }: HeroSectionProps) {
   return (
-    <div className={cn(
-      "relative bg-primary overflow-hidden flex items-center",
-      compact ? "py-20 md:py-32" : "min-h-[70vh] md:min-h-[80vh] py-32",
-      className
-    )}>
-      {/* Background patterns */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_30%,#D4AF37_0%,transparent_50%)]" />
-        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_70%,#D4AF37_0%,transparent_50%)]" />
-      </div>
-
+    <section
+      className={cn(
+        "relative flex items-center overflow-hidden bg-primary text-white",
+        compact
+          ? "py-24 md:py-36"
+          : "min-h-[85vh] md:min-h-[95vh] py-32",
+        className
+      )}
+    >
+      {/* Background Image */}
       {backgroundImage && (
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-overlay"
+          className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${backgroundImage})` }}
         />
       )}
 
+      {/* Dark Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-primary/85" />
+
+      {/* Accent Glow Effects */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-24 left-24 w-96 h-96 bg-accent/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-24 right-24 w-96 h-96 bg-accent/20 rounded-full blur-3xl" />
+      </div>
+
+      {/* Content */}
       <div className="container-custom relative z-10 text-center lg:text-left">
-        <div className="max-w-3xl">
+        <div className="max-w-4xl mx-auto lg:mx-0">
+          {/* Title */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
             className={cn(
-              "font-bold text-white leading-tight mb-6",
-              compact ? "text-4xl md:text-5xl" : "text-4xl md:text-6xl lg:text-7xl"
+              "font-extrabold leading-tight tracking-tight mb-6",
+              compact
+                ? "text-4xl md:text-5xl"
+                : "text-4xl md:text-6xl lg:text-7xl"
             )}
           >
             {title}
           </motion.h1>
 
+          {/* Subtitle */}
           {subtitle && (
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed"
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-lg md:text-xl text-gray-200 leading-relaxed mb-10 max-w-2xl"
             >
               {subtitle}
             </motion.p>
           )}
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            {children}
-          </motion.div>
+          {/* Buttons / Children */}
+          {children && (
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="flex flex-wrap gap-4 justify-center lg:justify-start"
+            >
+              {children}
+            </motion.div>
+          )}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
