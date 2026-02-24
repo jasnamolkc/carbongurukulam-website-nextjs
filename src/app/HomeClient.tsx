@@ -73,9 +73,9 @@ export default function HomeClient() {
 
       {/* Hero Section */}
       <HeroSection
-        title="Leading NEET & JEE Coaching Excellence"
-        subtitle="Carbon Gurukulam (formerly Carbon 30 Classes) is a distinguished coaching institution rooted in the traditional Gurukulam residential model, dedicated to your success."
-      >
+        title="Kerala’s Premier Residential Coaching for NEET & JEE"
+        subtitle="Carbon Gurukulam (formerly Carbon 30 Classes) blends the traditional Gurukulam system with result-oriented academic discipline to shape future doctors and engineers."
+        >
         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
           <Link href="/courses" className="btn-accent">
             Explore Courses
@@ -142,7 +142,7 @@ export default function HomeClient() {
       <SectionWrapper className="bg-neutral-light">
         <SectionHeader
           title="Our Popular Courses"
-          subtitle="Discover our wide range of industry-standard courses designed to help you excel in your career."
+          subtitle="Comprehensive coaching programs tailored for NEET, JEE, and Integrated entrance preparation."
           badge="Top Programs"
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -157,45 +157,56 @@ export default function HomeClient() {
         </div>
       </SectionWrapper>
 
-      {/* AI Learning Highlight */}
       <SectionWrapper>
-        <div className="bg-primary rounded-3xl overflow-hidden shadow-2xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2">
-            <div className="p-8 md:p-16 space-y-8">
-              <span className="text-accent font-bold tracking-widest uppercase text-sm">AI Learning Hub</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-white">Experience the Power of Intelligent Learning</h2>
-              <p className="text-gray-300 text-lg leading-relaxed">
-                At Carbon Gurukulam, we leverage AI to personalize your learning journey. Our AI assistant tracks your progress and suggests resources that help you master concepts faster.
-              </p>
-              <ul className="space-y-4">
-                {[
-                  "Personalized Study Plans",
-                  "AI-Generated Assessments",
-                  "24/7 AI Tutor Support",
-                  "Skill Gap Analysis"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center text-white space-x-3">
-                    <Zap size={20} className="text-accent" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="pt-4">
-                <button className="btn-accent">Try AI Assessment</button>
-              </div>
-            </div>
-            <div className="relative min-h-[400px]">
-              <Image
-                src="https://images.unsplash.com/photo-1531746790731-6c087fecd05a?auto=format&fit=crop&q=80&w=800"
-                alt="AI Learning"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-primary/20 mix-blend-multiply" />
-            </div>
-          </div>
+  <div className="bg-primary rounded-3xl overflow-hidden shadow-2xl">
+    <div className="grid grid-cols-1 lg:grid-cols-2">
+      <div className="p-8 md:p-16 space-y-8">
+        <span className="text-accent font-bold tracking-widest uppercase text-sm">
+          Residential Gurukulam Model
+        </span>
+
+        <h2 className="text-3xl md:text-4xl font-bold text-white">
+          Focused Preparation. Disciplined Environment. Proven Results.
+        </h2>
+
+        <p className="text-gray-300 text-lg leading-relaxed">
+          Our residential system ensures structured study hours, continuous mentorship,
+          daily practice tests, and personal academic monitoring for NEET and JEE aspirants.
+        </p>
+
+        <ul className="space-y-4">
+          {[
+            "Daily Practice & Evaluation",
+            "Personal Mentorship",
+            "Integrated + Repeaters Batches",
+            "Structured Study Schedule"
+          ].map((item, i) => (
+            <li key={i} className="flex items-center text-white space-x-3">
+              <ShieldCheck size={20} className="text-accent" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div className="pt-4">
+          <Link href="/admissions" className="btn-accent">
+            Apply for Admission
+          </Link>
         </div>
-      </SectionWrapper>
+      </div>
+
+      <div className="relative min-h-[400px]">
+        <Image
+          src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&q=80&w=800"
+          alt="Residential Coaching"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-primary/20 mix-blend-multiply" />
+      </div>
+    </div>
+  </div>
+</SectionWrapper>
 
       {/* Achievements Counters */}
       <SectionWrapper className="bg-white">
@@ -216,16 +227,18 @@ export default function HomeClient() {
         />
         <div className="flex space-x-6 overflow-x-auto pb-8 scrollbar-hide">
           {[
-            { name: "Alex Johnson", role: "Software Engineer, Google", img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=100" },
-            { name: "Sarah Williams", role: "Data Analyst, Meta", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100" },
-            { name: "Michael Chen", role: "Product Manager, Amazon", img: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=100" }
-          ].map((testimonial, i) => (
+            
+            { name: "Rahul Nair", role: "NEET Rank Holder", img: "..." },
+            { name: "Anjali Menon", role: "JEE Advanced Qualified", img: "..." },
+            { name: "Aditya S.", role: "MBBS Student", img: "..." }
+
+    ].map((testimonial, i) => (
             <div key={i} className="min-w-[300px] md:min-w-[400px] bg-white p-8 rounded-2xl shadow-sm border border-gray-100 shrink-0">
               <div className="flex text-accent mb-4">
                 {[1, 2, 3, 4, 5].map((s) => <Star key={s} size={16} fill="currentColor" />)}
               </div>
               <p className="text-gray-600 italic mb-6">
-                &quot;Carbon Gurukulam provided me with the skills and confidence to land my dream job. The AI-driven curriculum was a game-changer!&quot;
+                &quot;"Carbon Gurukulam's disciplined environment and daily practice tests helped me secure my NEET rank."&quot;
               </p>
               <div className="flex items-center space-x-4">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden">
@@ -257,8 +270,8 @@ export default function HomeClient() {
 
       {/* Strong CTA Section */}
       <CTASection
-        title="Ready to Start Your Future Journey?"
-        subtitle="Join thousands of students and start learning today with Carbon Gurukulam's world-class programs."
+        title="Admissions Open for NEET & JEE 2026"
+        subtitle="Limited seats available for Integrated and Repeaters batches. Secure your admission today."
         buttonText="Apply Now"
         buttonHref="/admissions"
         secondaryButtonText="Contact Admissions"
