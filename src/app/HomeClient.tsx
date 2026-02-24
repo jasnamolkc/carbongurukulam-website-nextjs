@@ -237,8 +237,8 @@ export default function HomeClient() {
               <div className="flex text-accent mb-4">
                 {[1, 2, 3, 4, 5].map((s) => <Star key={s} size={16} fill="currentColor" />)}
               </div>
-              <p className="text-gray-600 italic mb-6">
-                &quot;"Carbon Gurukulam's disciplined environment and daily practice tests helped me secure my NEET rank."&quot;
+             <p className="text-gray-600 italic mb-6">
+                &quot;Carbon Gurukulam&apos;s disciplined environment and daily practice tests helped me secure my NEET rank.&quot;
               </p>
               <div className="flex items-center space-x-4">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden">
