@@ -8,30 +8,34 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Carbon Gurukulam | JEE, NEET & Integrated Coaching Institute",
+  metadataBase: new URL("https://carbongurukulam.com"),
+  title: "Carbon Gurukulam | Premier JEE & NEET Residential Coaching",
   description:
-    "Carbon Gurukulam is a premier coaching institute offering JEE, NEET, and Integrated batches with a residential Gurukulam learning model. Excellence in medical and engineering entrance preparation.",
+    "Carbon Gurukulam is a premier residential coaching institute for JEE (Main & Advanced), NEET, and Integrated batches. Proven results, personalized mentoring, and Gurukulam learning system in Calicut.",
   keywords: [
-    "JEE Coaching",
-    "NEET Coaching",
-    "Integrated Batches",
-    "Carbon Gurukulam",
-    "Entrance Coaching Institute",
-    "Medical Entrance",
-    "Engineering Entrance"
+    "Carbon Gurukulam Calicut",
+    "Best JEE Coaching in Calicut",
+    "Best NEET Coaching in Calicut",
+    "Residential Coaching for JEE",
+    "Residential NEET Coaching",
+    "Integrated JEE NEET Batch",
+    "Medical Entrance Coaching",
+    "Engineering Entrance Coaching",
+    "Gurukulam Coaching Institute"
   ],
   openGraph: {
-    title: "Carbon Gurukulam | JEE, NEET & Integrated Coaching Institute",
+    title: "Carbon Gurukulam | Premier JEE & NEET Residential Coaching",
     description:
-      "Premier JEE, NEET & Integrated coaching institute with a residential Gurukulam learning system.",
-    type: "website",
-    locale: "en_US",
+      "Residential Gurukulam-based coaching institute delivering excellence in JEE & NEET with proven results and personalized mentoring.",
     url: "https://carbongurukulam.com",
     siteName: "Carbon Gurukulam",
+    locale: "en_US",
+    type: "website",
   },
-
   icons: {
     icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 export default function RootLayout({
