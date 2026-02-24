@@ -38,13 +38,13 @@ export default function HeroSection({
         />
       )}
 
-      {/* Dark Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-primary/85" />
+      {/* 🔥 Stronger Dark Overlay (Improves Heading Visibility) */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/90" />
 
-      {/* Accent Glow Effects */}
+      {/* 🔥 Softer Glow (Reduced Opacity So It Doesn't Wash Text) */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-24 left-24 w-96 h-96 bg-accent/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-24 right-24 w-96 h-96 bg-accent/20 rounded-full blur-3xl" />
+        <div className="absolute top-24 left-24 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-24 right-24 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
       </div>
 
       {/* Content */}
@@ -56,7 +56,7 @@ export default function HeroSection({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className={cn(
-              "font-extrabold leading-tight tracking-tight mb-6",
+              "font-extrabold leading-tight tracking-tight mb-6 text-white drop-shadow-[0_6px_30px_rgba(0,0,0,0.7)]",
               compact
                 ? "text-4xl md:text-5xl"
                 : "text-4xl md:text-6xl lg:text-7xl"
@@ -71,7 +71,7 @@ export default function HeroSection({
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-lg md:text-xl text-gray-200 leading-relaxed mb-10 max-w-2xl"
+              className="text-lg md:text-xl text-gray-100 leading-relaxed mb-10 max-w-2xl drop-shadow-md"
             >
               {subtitle}
             </motion.p>
