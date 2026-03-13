@@ -75,7 +75,8 @@ export default function HomeClient() {
       <HeroSection
         title="Kerala’s Premier Residential Coaching for NEET & JEE"
         subtitle="Carbon Gurukulam (formerly Carbon 30 Classes) blends the traditional Gurukulam system with result-oriented academic discipline to shape future doctors and engineers."
-        >
+        backgroundVideo="/videos/bg.mp4"
+      >
         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
           <Link href="/courses" className="btn-accent">
             Explore Courses
@@ -92,7 +93,7 @@ export default function HomeClient() {
           <div className="relative">
             <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl z-10">
               <Image
-                src="https://images.unsplash.com/photo-1524178232363-1fb28f74b671?auto=format&fit=crop&q=80&w=800"
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800"
                 alt="About Carbon Gurukulam"
                 fill
                 className="object-cover"
@@ -228,10 +229,16 @@ export default function HomeClient() {
         <div className="flex space-x-6 overflow-x-auto pb-8 scrollbar-hide">
           {[
             
-            { name: "Rahul Nair", role: "NEET Rank Holder", img: "..." },
-            { name: "Anjali Menon", role: "JEE Advanced Qualified", img: "..." },
-            { name: "Aditya S.", role: "MBBS Student", img: "..." }
-
+          //  [
+          //   { name: "Rahul Nair", role: "NEET Rank Holder", img: "/students/student1.jpg" },
+          //   { name: "Anjali Menon", role: "JEE Advanced Qualified", img: "/students/student2.jpg" },
+          //   { name: "Aditya S.", role: "MBBS Student", img: "/students/student3.jpg" }
+          // ]
+          [
+            { name: "Rahul Nair", role: "NEET Rank Holder", img: "/logo.png" },
+            { name: "Anjali Menon", role: "JEE Advanced Qualified", img: "/logo.png" },
+            { name: "Aditya S.", role: "MBBS Student", img: "/logo.png" }
+          ]
     ].map((testimonial, i) => (
             <div key={i} className="min-w-[300px] md:min-w-[400px] bg-white p-8 rounded-2xl shadow-sm border border-gray-100 shrink-0">
               <div className="flex text-accent mb-4">

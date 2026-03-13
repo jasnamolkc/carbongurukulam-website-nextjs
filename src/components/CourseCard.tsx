@@ -28,13 +28,14 @@ export default function CourseCard({
       className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 flex flex-col h-full"
     >
       <div className="relative h-48 w-full">
+        
         <Image
-          src={image}
-          alt={title}
+          src={image || "/logo.png"}
+          alt={title || "image"}
           fill
           className="object-cover"
         />
-        <div className="absolute top-4 left-4">
+                <div className="absolute top-4 left-4">
           <span className="bg-accent text-primary text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">
             {category}
           </span>

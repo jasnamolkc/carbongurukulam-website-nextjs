@@ -81,11 +81,11 @@ export default function CourseDetailPage() {
             <div className="lg:col-span-2 space-y-8">
               <div className="relative h-[300px] md:h-[450px] rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src={course.image}
-                  alt={course.title}
-                  fill
-                  className="object-cover"
-                />
+                src={course?.image || "/course-default.jpeg"}
+                alt={course?.title || "course"}
+                fill
+                className="object-cover"
+              />
               </div>
 
               <div className="space-y-6">

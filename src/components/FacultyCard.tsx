@@ -24,11 +24,11 @@ export default function FacultyCard({
     >
       <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-gray-50 group-hover:border-accent transition-colors">
         <Image
-          src={image}
-          alt={name}
-          fill
-          className="object-cover"
-        />
+        src={image || "/logo.png"}
+        alt={name || "image"}
+        fill
+        className="object-cover"
+      />
       </div>
       <h3 className="text-lg font-bold text-primary mb-1">{name}</h3>
       <p className="text-accent text-sm font-semibold mb-2">{role}</p>

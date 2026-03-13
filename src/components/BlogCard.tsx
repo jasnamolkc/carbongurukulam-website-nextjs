@@ -31,11 +31,11 @@ export default function BlogCard({
     >
       <div className="relative h-56 w-full">
         <Image
-          src={image}
-          alt={title}
-          fill
-          className="object-cover"
-        />
+            src={image || "/logo.png"}
+            alt={title || "image"}
+            fill
+            className="object-cover"
+          />
         <div className="absolute top-4 left-4 flex flex-col space-y-2">
           <span className="bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded w-fit">
             {category}
