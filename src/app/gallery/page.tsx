@@ -81,8 +81,8 @@ export default function GalleryPage() {
                 onClick={() => setSelectedImage(image)}
               >
                 <Image
-                  src={image.src}
-                  alt={image.title}
+                  src={image?.src || "/course-default.png"}
+                  alt={image?.title || "course"}
                   width={800}
                   height={600}
                   className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
@@ -118,8 +118,8 @@ export default function GalleryPage() {
               className="relative w-full max-w-5xl aspect-video rounded-2xl overflow-hidden shadow-2xl"
             >
               <Image
-                src={selectedImage.src}
-                alt={selectedImage.title}
+                src={selectedImage?.src || "/logo.png"}
+                alt={selectedImage?.title || "image"}
                 fill
                 className="object-contain"
               />

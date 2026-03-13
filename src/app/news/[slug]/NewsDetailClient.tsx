@@ -82,8 +82,8 @@ export default function NewsDetailPage() {
 
             <div className="relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-xl">
               <Image
-                src={post.image}
-                alt={post.title}
+                src={post?.image || "/logo.png"}
+                alt={post?.title || "post image"}
                 fill
                 className="object-cover"
               />

@@ -7,6 +7,7 @@ interface HeroSectionProps {
   title: string;
   subtitle?: string;
   backgroundImage?: string;
+  backgroundVideo?: string;
   children?: React.ReactNode;
   className?: string;
   compact?: boolean;
@@ -16,6 +17,7 @@ export default function HeroSection({
   title,
   subtitle,
   backgroundImage,
+  backgroundVideo,
   children,
   className,
   compact = false,
@@ -30,18 +32,32 @@ export default function HeroSection({
         className
       )}
     >
-      {/* Background Image */}
-      {backgroundImage && (
+
+      {/* Background Video */}
+      {backgroundVideo && (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src={backgroundVideo} type="video/mp4" />
+        </video>
+      )}
+
+      {/* Background Image (fallback) */}
+      {!backgroundVideo && backgroundImage && (
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${backgroundImage})` }}
         />
       )}
 
-      {/* 🔥 Stronger Dark Overlay (Improves Heading Visibility) */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/90" />
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
 
-      {/* 🔥 Softer Glow (Reduced Opacity So It Doesn't Wash Text) */}
+      {/* Glow Effect */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-24 left-24 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
         <div className="absolute bottom-24 right-24 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
@@ -50,6 +66,7 @@ export default function HeroSection({
       {/* Content */}
       <div className="container-custom relative z-10 text-center lg:text-left">
         <div className="max-w-4xl mx-auto lg:mx-0">
+
           {/* Title */}
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
@@ -77,7 +94,7 @@ export default function HeroSection({
             </motion.p>
           )}
 
-          {/* Buttons / Children */}
+          {/* Buttons */}
           {children && (
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -88,6 +105,7 @@ export default function HeroSection({
               {children}
             </motion.div>
           )}
+
         </div>
       </div>
     </section>

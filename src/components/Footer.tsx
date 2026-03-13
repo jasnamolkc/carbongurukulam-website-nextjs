@@ -63,15 +63,15 @@ export default function Footer() {
           <ul className="space-y-4 text-sm text-gray-300">
             <li className="flex items-start space-x-3">
               <MapPin size={18} className="text-accent shrink-0" />
-              <span>123 Academic Way, Education City, Carbon State 45678</span>
+              <span>carbon gurukulam ,kunnamangalam, p.o payambra, kozhikode-673571</span>
             </li>
             <li className="flex items-center space-x-3">
               <Phone size={18} className="text-accent shrink-0" />
-              <span>+1 (234) 567-890</span>
+              <span>+918592006009 ,+916235888000</span>
             </li>
             <li className="flex items-center space-x-3">
               <Mail size={18} className="text-accent shrink-0" />
-              <span>info@carbongurukulam.edu</span>
+              <span>carbongurukulam@gmail.com</span>
             </li>
           </ul>
         </div>

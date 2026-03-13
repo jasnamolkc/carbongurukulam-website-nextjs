@@ -46,7 +46,7 @@ const allNews = [
     excerpt: "A comprehensive guide on the skills and mindset needed to excel in the field of data science in 2024.",
     date: "Aug 20, 2023",
     author: "Prof. Michael Ross",
-    image: "https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
     slug: "data-science-career-guide",
     category: "Career"
   },
@@ -87,11 +87,11 @@ export default function NewsPage() {
         <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 grid grid-cols-1 lg:grid-cols-2">
           <div className="relative h-[300px] lg:h-full">
             <Image
-              src={featuredPost.image}
-              alt={featuredPost.title}
-              fill
-              className="object-cover"
-            />
+            src={featuredPost?.image || "/logo.png"}
+            alt={featuredPost?.title || "post image"}
+            fill
+            className="object-cover"
+          />
           </div>
           <div className="p-8 md:p-12 space-y-6 flex flex-col justify-center">
             <span className="bg-accent text-primary text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full w-fit">
