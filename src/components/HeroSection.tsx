@@ -24,8 +24,8 @@ export default function HeroSection({
 }: HeroSectionProps) {
   return (
     <section
-      className={cn(
-        "relative flex items-center overflow-hidden bg-primary text-white",
+  className={cn(
+    "relative isolate flex items-center overflow-hidden bg-primary text-white",
         compact
           ? "py-24 md:py-36"
           : "min-h-[85vh] md:min-h-[95vh] py-32",
@@ -33,18 +33,19 @@ export default function HeroSection({
       )}
     >
 
-      {/* Background Video */}
-      {backgroundVideo && (
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src={backgroundVideo} type="video/mp4" />
-        </video>
-      )}
+     {/* Background Video */}
+    {backgroundVideo && (
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        className="absolute inset-0 w-full h-full object-cover -z-10"
+      >
+        <source src={backgroundVideo} type="video/mp4" />
+      </video>
+    )}
 
       {/* Background Image (fallback) */}
       {!backgroundVideo && backgroundImage && (
