@@ -227,37 +227,44 @@ export default function HomeClient() {
           badge="Testimonials"
         />
         <div className="flex space-x-6 overflow-x-auto pb-8 scrollbar-hide">
-          {[
+          
             
           //  [
           //   { name: "Rahul Nair", role: "NEET Rank Holder", img: "/students/student1.jpg" },
           //   { name: "Anjali Menon", role: "JEE Advanced Qualified", img: "/students/student2.jpg" },
           //   { name: "Aditya S.", role: "MBBS Student", img: "/students/student3.jpg" }
           // ]
-          [
-            { name: "Rahul Nair", role: "NEET Rank Holder", img: "/logo.png" },
-            { name: "Anjali Menon", role: "JEE Advanced Qualified", img: "/logo.png" },
-            { name: "Aditya S.", role: "MBBS Student", img: "/logo.png" }
-          ]
-    ].map((testimonial, i) => (
-            <div key={i} className="min-w-[300px] md:min-w-[400px] bg-white p-8 rounded-2xl shadow-sm border border-gray-100 shrink-0">
-              <div className="flex text-accent mb-4">
-                {[1, 2, 3, 4, 5].map((s) => <Star key={s} size={16} fill="currentColor" />)}
-              </div>
-             <p className="text-gray-600 italic mb-6">
-                &quot;Carbon Gurukulam&apos;s disciplined environment and daily practice tests helped me secure my NEET rank.&quot;
-              </p>
-              <div className="flex items-center space-x-4">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                  <Image src={testimonial.img} alt={testimonial.name} fill className="object-cover" />
-                </div>
-                <div>
-                  <h5 className="font-bold text-primary text-sm">{testimonial.name}</h5>
-                  <p className="text-xs text-gray-500">{testimonial.role}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+         {[
+  { name: "Rahul Nair", role: "NEET Rank Holder", img: "/logo.png" },
+  { name: "Anjali Menon", role: "JEE Advanced Qualified", img: "/logo.png" },
+  { name: "Aditya S.", role: "MBBS Student", img: "/logo.png" }
+].map((testimonial, i) => (
+  <div
+    key={i}
+    className="min-w-[300px] md:min-w-[400px] bg-white p-8 rounded-2xl shadow-sm border border-gray-100 shrink-0"
+  >
+    <div className="flex text-accent mb-4">
+      {[1, 2, 3, 4, 5].map((s) => (
+        <Star key={s} size={16} fill="currentColor" />
+      ))}
+    </div>
+
+    <p className="text-gray-600 italic mb-6">
+      &quot;Carbon Gurukulam&apos;s disciplined environment and daily practice tests helped me secure my NEET rank.&quot;
+    </p>
+
+    <div className="flex items-center space-x-4">
+      <div className="relative w-12 h-12 rounded-full overflow-hidden">
+        <Image src={testimonial.img} alt={testimonial.name} fill className="object-cover" />
+      </div>
+
+      <div>
+        <h5 className="font-bold text-primary text-sm">{testimonial.name}</h5>
+        <p className="text-xs text-gray-500">{testimonial.role}</p>
+      </div>
+    </div>
+  </div>
+))}
         </div>
       </SectionWrapper>
 
