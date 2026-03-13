@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Brain, Target, Zap, Star, ShieldCheck, GraduationCap } from "lucide-react";
+import { ArrowRight, Target, Star, ShieldCheck, GraduationCap } from "lucide-react";
+
 import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
 import SectionHeader from "@/components/SectionHeader";
@@ -227,13 +228,6 @@ export default function HomeClient() {
           badge="Testimonials"
         />
         <div className="flex space-x-6 overflow-x-auto pb-8 scrollbar-hide">
-          
-            
-          //  [
-          //   { name: "Rahul Nair", role: "NEET Rank Holder", img: "/students/student1.jpg" },
-          //   { name: "Anjali Menon", role: "JEE Advanced Qualified", img: "/students/student2.jpg" },
-          //   { name: "Aditya S.", role: "MBBS Student", img: "/students/student3.jpg" }
-          // ]
          {[
   { name: "Rahul Nair", role: "NEET Rank Holder", img: "/logo.png" },
   { name: "Anjali Menon", role: "JEE Advanced Qualified", img: "/logo.png" },
