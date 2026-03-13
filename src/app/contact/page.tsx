@@ -6,7 +6,7 @@ import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
 import SectionHeader from "@/components/SectionHeader";
 import ChatWidget from "@/components/ChatWidget";
-import { Mail, Phone, MapPin, Facebook,  Instagram, Send, Clock, BrandWhatsapp } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook,  Instagram, Send, Clock } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -81,23 +81,21 @@ export default function ContactPage() {
             <div className="pt-8 border-t border-gray-100">
               <h4 className="font-bold text-primary mb-4">Follow Us</h4>
               <div className="flex space-x-4">
-                {
-                  [
-                  { Icon: Facebook, url: "https://facebook.com/yourpage" },
-                  { Icon: Instagram, url: "https://www.instagram.com/carbon_gurukulam?igsh=MWZxNnVjMWppdGZtcA==" },
-                  { Icon: Phone, url: "https://wa.me/918592006009" }, // WhatsApp link
-                ].map(({ Icon, url }, i) => (
-                  <a 
-                    key={i} 
-                    href={url} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-accent hover:text-primary transition-all shadow-md"
-                  >
-                    <Icon size={20} />
-                  </a>
-                ))
-               }
+                {[
+            { Icon: Facebook, url: "https://facebook.com/yourpage" },
+            { Icon: Instagram, url: "https://www.instagram.com/carbon_gurukulam?igsh=MWZxNnVjMWppdGZtcA==" },
+            { Icon: Phone, url: "https://wa.me/918592006009" }, // WhatsApp link using Phone icon
+          ].map(({ Icon, url }, i) => (
+            <a 
+              key={i} 
+              href={url} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-accent hover:text-primary transition-all shadow-md"
+            >
+              <Icon size={20} />
+            </a>
+          ))}
               </div>
             </div>
           </div>
