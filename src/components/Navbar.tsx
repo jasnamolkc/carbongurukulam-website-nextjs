@@ -1,95 +1,119 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from "framer-motion";
 
-interface HeroSectionProps {
-  title: string;
-  subtitle?: string;
-  backgroundImage?: string;
-  children?: React.ReactNode;
-  className?: string;
-  compact?: boolean;
-}
+const navLinks = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Courses", href: "/courses" },
+  { name: "Admissions", href: "/admissions" },
+  { name: "Results", href: "/results" },
+  { name: "Faculty", href: "/faculty" },
+  { name: "News", href: "/news" },
+  { name: "Gallery", href: "/gallery" },
+  { name: "Contact", href: "/contact" },
+];
 
-export default function HeroSection({
-  title,
-  subtitle,
-  backgroundImage,
-  children,
-  className,
-  compact = false,
-}: HeroSectionProps) {
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <section
+    <nav
       className={cn(
-        "relative flex items-center overflow-hidden bg-primary text-white",
-        compact
-          ? "py-24 md:py-36"
-          : "min-h-[85vh] md:min-h-[95vh] py-32",
-        className
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        scrolled ? "bg-white/90 backdrop-blur-md shadow-md py-3" : "bg-transparent py-5"
       )}
     >
-      {/* Background Image */}
-      {backgroundImage && (
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${backgroundImage})` }}
-        />
-      )}
+      <div className="container-custom flex justify-between items-center">
+        <Link href="/" className="flex items-center space-x-2">
+          <div className="w-10 h-10 bg-primary flex items-center justify-center rounded-lg">
+            <span className="text-accent font-bold text-2xl">C</span>
+          </div>
+          <span className={cn("font-bold text-xl tracking-tight", scrolled ? "text-primary" : "text-white")}>
+            Carbon Gurukulam
+          </span>
+        </Link>
 
-      {/* Stronger Dark Overlay for Better Readability */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/90" />
-
-      {/* Softer Accent Glow (Reduced Opacity) */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-24 left-24 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-24 right-24 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
-      </div>
-
-      {/* Content */}
-      <div className="container-custom relative z-10 text-center lg:text-left">
-        <div className="max-w-4xl mx-auto lg:mx-0">
-          {/* Title */}
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className={cn(
-              "font-extrabold leading-tight tracking-tight mb-6 text-white drop-shadow-[0_6px_30px_rgba(0,0,0,0.7)]",
-              compact
-                ? "text-4xl md:text-5xl"
-                : "text-4xl md:text-6xl lg:text-7xl"
-            )}
-          >
-            {title}
-          </motion.h1>
-
-          {/* Subtitle */}
-          {subtitle && (
-            <motion.p
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-lg md:text-xl text-gray-100 leading-relaxed mb-10 max-w-2xl drop-shadow-md"
+        {/* Desktop Nav */}
+        <div className="hidden md:flex items-center space-x-8">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className={cn(
+                "text-sm font-medium transition-colors hover:text-accent",
+                pathname === link.href ? "text-accent" : (scrolled ? "text-primary" : "text-white/90")
+              )}
             >
-              {subtitle}
-            </motion.p>
-          )}
-
-          {/* Buttons / Children */}
-          {children && (
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-wrap gap-4 justify-center lg:justify-start"
-            >
-              {children}
-            </motion.div>
-          )}
+              {link.name}
+            </Link>
+          ))}
+          <Link href="/admissions" className="btn-primary py-2 px-5 text-sm">
+            Apply Now
+          </Link>
         </div>
+
+        {/* Mobile Nav Toggle */}
+        <button
+          className={cn(
+            "md:hidden focus:outline-none",
+            scrolled ? "text-primary" : "text-white"
+          )}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </div>
-    </section>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-white border-t border-gray-100 overflow-hidden"
+          >
+            <div className="container-custom py-5 flex flex-col space-y-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={cn(
+                    "text-base font-medium transition-colors",
+                    pathname === link.href ? "text-accent" : "text-primary"
+                  )}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              ))}
+              <Link
+                href="/admissions"
+                className="btn-primary text-center"
+                onClick={() => setIsOpen(false)}
+              >
+                Apply Now
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
   );
 }
