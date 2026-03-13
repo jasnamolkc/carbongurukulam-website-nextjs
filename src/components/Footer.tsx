@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
-
+import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-primary text-white pt-16 pb-8">
@@ -8,13 +8,19 @@ export default function Footer() {
         {/* Brand Section */}
         <div className="space-y-6">
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-white flex items-center justify-center rounded-lg">
-              <span className="text-primary font-bold text-2xl">C</span>
-            </div>
-            <span className="font-bold text-xl tracking-tight text-white">
-              Carbon Gurukulam
-            </span>
-          </Link>
+              <div className="w-10 h-10 rounded-lg overflow-hidden">
+                <Image 
+                  src="/logo2.jpg"         // Path to your logo
+                  alt="Carbon Gurukulam Logo"
+                  width={40}              // Match container size
+                  height={40}             // Match container size
+                  className="object-cover"
+                />
+              </div>
+              <span className="font-bold text-xl tracking-tight text-white">
+                Carbon Gurukulam
+              </span>
+            </Link>
           <p className="text-gray-300 text-sm leading-relaxed">
             Empowering the next generation with AI-driven education and traditional academic excellence. Shaping leaders for a sustainable and intelligent future.
           </p>
@@ -22,14 +28,17 @@ export default function Footer() {
             <a href="#" className="w-8 h-8 rounded-full bg-primary-light flex items-center justify-center hover:bg-accent transition-colors">
               <Facebook size={18} />
             </a>
-            <a href="#" className="w-8 h-8 rounded-full bg-primary-light flex items-center justify-center hover:bg-accent transition-colors">
-              <Twitter size={18} />
-            </a>
-            <a href="#" className="w-8 h-8 rounded-full bg-primary-light flex items-center justify-center hover:bg-accent transition-colors">
+           
+            <a href="https://www.instagram.com/carbon_gurukulam?igsh=MWZxNnVjMWppdGZtcA==" className="w-8 h-8 rounded-full bg-primary-light flex items-center justify-center hover:bg-accent transition-colors">
               <Instagram size={18} />
             </a>
-            <a href="#" className="w-8 h-8 rounded-full bg-primary-light flex items-center justify-center hover:bg-accent transition-colors">
-              <Linkedin size={18} />
+             <a
+              href="https://wa.me/918592006009"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center hover:bg-green-600 transition-colors"
+            >
+              <Phone size={18} />
             </a>
           </div>
         </div>

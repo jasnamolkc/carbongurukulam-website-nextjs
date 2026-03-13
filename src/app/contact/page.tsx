@@ -6,7 +6,7 @@ import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
 import SectionHeader from "@/components/SectionHeader";
 import ChatWidget from "@/components/ChatWidget";
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Send, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook,  Instagram, Send, Clock, BrandWhatsapp } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -38,7 +38,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h4 className="font-bold text-primary">Our Location</h4>
-                  <p className="text-gray-500 text-sm">123 Academic Way, Education City, Carbon State 45678</p>
+                  <p className="text-gray-500 text-sm">carbon gurukulam ,kunnamangalam, p.o payambra, kozhikode-673571</p>
                 </div>
               </div>
 
@@ -48,7 +48,11 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h4 className="font-bold text-primary">Phone Number</h4>
-                  <p className="text-gray-500 text-sm">+1 (234) 567-890</p>
+                  <a href="tel:+918592006009" className="text-gray-500 text-sm">
+                    +91 8592006009
+                  </a> ,
+                  <a href="tel:+916235888000" className="text-gray-500 text-sm">
+                  +916235888000</a>
                 </div>
               </div>
 
@@ -58,8 +62,9 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h4 className="font-bold text-primary">Email Address</h4>
-                  <p className="text-gray-500 text-sm">info@carbongurukulam.edu</p>
-                </div>
+                <a href="mailto:carbongurukulam@gmail.com" className="text-gray-500 text-sm">
+                  carbongurukulam@gmail.com
+                </a>                </div>
               </div>
 
               <div className="flex items-start space-x-4">
@@ -68,7 +73,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h4 className="font-bold text-primary">Office Hours</h4>
-                  <p className="text-gray-500 text-sm">Mon - Fri: 9:00 AM - 6:00 PM</p>
+                  <p className="text-gray-500 text-sm">Mon - Sun: 9:00 AM - 6:00 PM</p>
                 </div>
               </div>
             </div>
@@ -76,11 +81,23 @@ export default function ContactPage() {
             <div className="pt-8 border-t border-gray-100">
               <h4 className="font-bold text-primary mb-4">Follow Us</h4>
               <div className="flex space-x-4">
-                {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
-                  <a key={i} href="#" className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-accent hover:text-primary transition-all shadow-md">
+                {
+                  [
+                  { Icon: Facebook, url: "https://facebook.com/yourpage" },
+                  { Icon: Instagram, url: "https://www.instagram.com/carbon_gurukulam?igsh=MWZxNnVjMWppdGZtcA==" },
+                  { Icon: Phone, url: "https://wa.me/918592006009" }, // WhatsApp link
+                ].map(({ Icon, url }, i) => (
+                  <a 
+                    key={i} 
+                    href={url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-accent hover:text-primary transition-all shadow-md"
+                  >
                     <Icon size={20} />
                   </a>
-                ))}
+                ))
+               }
               </div>
             </div>
           </div>
@@ -118,13 +135,16 @@ export default function ContactPage() {
       </SectionWrapper>
 
       {/* Map Placeholder */}
-      <div className="w-full h-[400px] bg-gray-200 relative overflow-hidden grayscale">
-        <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-bold italic bg-gray-100">
-          Google Maps Embed Placeholder
-        </div>
-        <div className="absolute inset-0 bg-primary/10 mix-blend-multiply" />
-      </div>
-
+      {/* Map */}
+<div className="w-full h-[450px] rounded-2xl overflow-hidden shadow-xl my-16">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.24660310697!2d75.86337557504979!3d11.31667748886685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65d36dcb8fa0f%3A0xb1623985c02c6284!2sCarbon%20Gurukulam!5e0!3m2!1sen!2sin!4v1773400501921!5m2!1sen!2sin"
+    className="w-full h-full border-0"
+    loading="lazy"
+    allowFullScreen
+    referrerPolicy="no-referrer-when-downgrade"
+  />
+</div>
       <Footer />
       <ChatWidget />
     </main>
