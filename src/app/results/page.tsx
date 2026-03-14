@@ -13,6 +13,14 @@ import { motion } from "framer-motion";
 
 const examResults = [
   {
+    year: "2026",
+    exam: "JEE Main",
+    highlights: [
+      { name: "Nandana", rank: "98.44 %ile", score: "Session 1", image: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&q=80&w=200" },
+    ],
+    stats: { qualified: 45, top1000: 2, top5000: 8 }
+  },
+  {
     year: "2024",
     exam: "NEET",
     highlights: [
@@ -42,11 +50,11 @@ const examResults = [
   }
 ];
 
-const years = ["2024", "2023", "2022"];
+const years = ["2026", "2024", "2023", "2022"];
 const exams = ["All", "NEET", "JEE Main"];
 
 export default function ResultsPage() {
-  const [selectedYear, setSelectedYear] = useState("2024");
+  const [selectedYear, setSelectedYear] = useState("2026");
   const [selectedExam, setSelectedExam] = useState("All");
 
   const filteredResults = examResults.filter(result =>

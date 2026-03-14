@@ -246,20 +246,20 @@ export default function HomeClient() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <span className="bg-accent text-primary text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6 inline-block">
-              2024 Achievements
+              2026 Latest Results
             </span>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Our Recent Success Stories</h2>
             <p className="text-gray-300 text-lg mb-8">
-              Every year, Carbon Gurukulam students secure top ranks in NEET and JEE exams. Our 2024 results have been exceptional with multiple students in the top 500 AIR.
+              Every year, Carbon Gurukulam students secure top ranks in NEET and JEE exams. Our latest 2026 results show our commitment to academic excellence.
             </p>
             <Link href="/results" className="btn-accent inline-flex items-center">
-              View Detailed Results <ArrowRight size={18} className="ml-2" />
+              View All Results <ArrowRight size={18} className="ml-2" />
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-4">
             {[
-              { name: "Adithya S.", rank: "AIR 142", exam: "NEET", img: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=200" },
-              { name: "Siddharth V.", rank: "99.98 %ile", exam: "JEE", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200" },
+              { name: "Nandana", rank: "98.44 %ile", exam: "JEE 2026", img: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&q=80&w=200" },
+              { name: "Adithya S.", rank: "AIR 142", exam: "NEET 2024", img: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=200" },
             ].map((student, i) => (
               <div key={i} className="bg-white/10 backdrop-blur-md p-6 rounded-3xl border border-white/10 text-center">
                 <div className="relative w-20 h-20 mx-auto rounded-2xl overflow-hidden mb-4 ring-2 ring-accent">
