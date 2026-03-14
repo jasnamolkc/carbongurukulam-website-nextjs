@@ -9,6 +9,31 @@ import ChatWidget from "@/components/ChatWidget";
 import { Mail, Phone, MapPin, Facebook,  Instagram, Send, Clock } from "lucide-react";
 
 export default function ContactPage() {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      subject: form.subject.value,
+      message: form.message.value
+    };
+
+    try {
+      const res = await fetch("https://script.google.com/macros/s/AKfycbxhLvbXbgXaw7fFCHIqf0vwOgnvNh19faNJtuxOp9rhH2OwASiTTDNtOXANusQ2MWRE/exec", {
+        method: "POST",
+        body: JSON.stringify(data)
+      });
+
+      alert("Message Sent Successfully");
+      form.reset();
+
+    } catch (error) {
+      alert("Error sending message");
+    }
+  };
   return (
     <main className="min-h-screen">
       <Navbar />
@@ -104,7 +129,7 @@ export default function ContactPage() {
           <div className="lg:col-span-2">
             <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-100">
               <h3 className="text-2xl font-bold text-primary mb-8">Send Us a Message</h3>
-              <form className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {/* <form className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-primary">Full Name</label>
                   <input type="text" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-accent/50 outline-none" placeholder="Enter your name" />
@@ -126,7 +151,63 @@ export default function ContactPage() {
                     Send Message <Send size={18} className="ml-2" />
                   </button>
                 </div>
-              </form>
+              </form> */}
+              <form
+  className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+  onSubmit={handleSubmit}
+>
+  <div className="space-y-2">
+    <label className="text-sm font-bold text-primary">Full Name</label>
+    <input
+      type="text"
+      name="name"
+      required
+      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-accent/50 outline-none"
+      placeholder="Enter your name"
+    />
+  </div>
+
+  <div className="space-y-2">
+    <label className="text-sm font-bold text-primary">Email Address</label>
+    <input
+      type="email"
+      name="email"
+      required
+      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-accent/50 outline-none"
+      placeholder="Enter your email"
+    />
+  </div>
+
+  <div className="space-y-2 sm:col-span-2">
+    <label className="text-sm font-bold text-primary">Subject</label>
+    <input
+      type="text"
+      name="subject"
+      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-accent/50 outline-none"
+      placeholder="How can we help?"
+    />
+  </div>
+
+  <div className="space-y-2 sm:col-span-2">
+    <label className="text-sm font-bold text-primary">Message</label>
+    <textarea
+      rows={5}
+      name="message"
+      required
+      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-accent/50 outline-none"
+      placeholder="Your message here..."
+    ></textarea>
+  </div>
+
+  <div className="sm:col-span-2 pt-2">
+    <button
+      type="submit"
+      className="btn-primary w-full py-4 flex items-center justify-center"
+    >
+      Send Message <Send size={18} className="ml-2" />
+    </button>
+  </div>
+</form>
             </div>
           </div>
         </div>
