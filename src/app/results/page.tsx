@@ -127,19 +127,21 @@ export default function ResultsPage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                   {result.highlights.map((student, sIdx) => (
-                    <motion.div
-                whileHover={{ y: -10 }}
-                className="bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all"
-                >
-                <div className="relative w-full h-[350px]">
-                    <Image
-                    src={student.image}
-                    fill
-                    className="object-cover"
-                    />
-                </div>
-                </motion.div>
-                  ))}
+  <motion.div
+    key={sIdx}
+    whileHover={{ y: -10 }}
+    className="bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all"
+  >
+    <div className="relative w-full h-[350px]">
+      <Image
+        src={student.image}
+        alt={`Result ${sIdx + 1}`}
+        fill
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
+))}
                 </div>
               </div>
             ))}
