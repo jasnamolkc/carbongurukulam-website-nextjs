@@ -13,44 +13,40 @@ import { motion } from "framer-motion";
 
 const examResults = [
   {
-  year: "2026",
-  exam: "JEE Main",
-  highlights: [
-    { image: "/result/1-2026.jpeg" },
-    { image: "/result/2-2026.jpeg" },
-    { image: "/result/3-2026.jpeg" },
-    { image: "/result/4-2026.jpeg" }
-  ]
-},
-{
-  year: "2026",
-  exam: "NEET",
-  highlights: [
-    { image: "/result/1-2026.jpeg" },
-    { image: "/result/2-2026.jpeg" },
-    { image: "/result/3-2026.jpeg" },
-    { image: "/result/4-2026.jpeg" }
-  ]
-},
+    year: "2024",
+    exam: "NEET",
+    highlights: [
+      { name: "Adithya S.", rank: "AIR 142", score: "710/720", image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=200" },
+      { name: "Meera Nair", rank: "AIR 385", score: "705/720", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200" },
+      { name: "Rahul Krishna", rank: "AIR 512", score: "700/720", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" },
+    ],
+    stats: { qualified: 185, top1000: 12, top5000: 45 }
+  },
   {
-  year: "2025",
-  exam: "JEE Main",
-  highlights: [
-    { image: "/result/1-2026.jpeg" },
-    { image: "/result/2-2026.jpeg" },
-    { image: "/result/3-2026.jpeg" },
-    { image: "/result/4-2026.jpeg" }
-  ]
-
-}
-
+    year: "2024",
+    exam: "JEE Main",
+    highlights: [
+      { name: "Siddharth V.", rank: "99.98 %ile", score: "285/300", image: "/result/1-2026.jpeg" },
+      { name: "Anjali Menon", rank: "99.85 %ile", score: "278/300", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200" },
+    ],
+    stats: { qualified: 92, top1000: 5, top5000: 18 }
+  },
+  {
+    year: "2023",
+    exam: "NEET",
+    highlights: [
+      { name: "Karthik R.", rank: "AIR 215", score: "708/720", image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=200" },
+      { name: "Sneha P.", rank: "AIR 450", score: "702/720", image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200" },
+    ],
+    stats: { qualified: 172, top1000: 10, top5000: 40 }
+  }
 ];
 
-const years = ["2026", "2025", "2024", "2023"];
+const years = ["2024", "2023", "2022"];
 const exams = ["All", "NEET", "JEE Main"];
 
 export default function ResultsPage() {
-  const [selectedYear, setSelectedYear] = useState("2026");
+  const [selectedYear, setSelectedYear] = useState("2024");
   const [selectedExam, setSelectedExam] = useState("All");
 
   const filteredResults = examResults.filter(result =>
@@ -113,7 +109,7 @@ export default function ResultsPage() {
                     <Trophy className="text-accent mr-3" size={32} />
                     {result.exam} {result.year} Results
                   </h2>
-                  {/* <div className="hidden md:flex space-x-8">
+                  <div className="hidden md:flex space-x-8">
                     <div className="text-center">
                       <p className="text-2xl font-bold text-primary">{result.stats.qualified}</p>
                       <p className="text-xs text-gray-500 uppercase tracking-widest font-bold">Qualified</p>
@@ -122,23 +118,40 @@ export default function ResultsPage() {
                       <p className="text-2xl font-bold text-accent">{result.stats.top1000}</p>
                       <p className="text-xs text-gray-500 uppercase tracking-widest font-bold">In Top 1000</p>
                     </div>
-                  </div> */}
+                  </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                   {result.highlights.map((student, sIdx) => (
                     <motion.div
-                whileHover={{ y: -10 }}
-                className="bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all"
-                >
-                <div className="relative w-full h-[350px]">
-                    <Image
-                    src={student.image}
-                    fill
-                    className="object-cover"
-                    />
-                </div>
-                </motion.div>
+                      key={student.name}
+                      whileHover={{ y: -10 }}
+                      className="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-xl transition-all relative overflow-hidden group"
+                    >
+                      <div className="absolute top-0 right-0 w-24 h-24 bg-accent/10 rounded-bl-[100px] flex items-start justify-end p-4">
+                        <Star className="text-accent" size={24} fill="currentColor" />
+                      </div>
+
+                      <div className="flex items-center space-x-4 mb-6">
+                        <div className="relative w-20 h-20 rounded-2xl overflow-hidden ring-4 ring-neutral-light shrink-0">
+                          <Image src={student.image} alt={student.name} fill className="object-cover" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-primary text-lg">{student.name}</h4>
+                          <p className="text-accent font-bold">{student.rank}</p>
+                        </div>
+                      </div>
+
+                      <div className="bg-neutral-light rounded-xl p-4 flex justify-between items-center">
+                        <span className="text-sm text-gray-500 font-medium">Score:</span>
+                        <span className="text-primary font-bold">{student.score}</span>
+                      </div>
+
+                      <div className="mt-6 flex items-center text-xs text-gray-400 font-bold uppercase tracking-widest">
+                        <Medal size={14} className="mr-2 text-accent" />
+                        Carbon Gurukulam Alumnus
+                      </div>
+                    </motion.div>
                   ))}
                 </div>
               </div>

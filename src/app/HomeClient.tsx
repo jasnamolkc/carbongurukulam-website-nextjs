@@ -262,7 +262,7 @@ export default function HomeClient() {
         </div>
       </SectionWrapper>
 {/* Results Highlight */}
-      <SectionWrapper className="bg-primary text-white">
+      {/* <SectionWrapper className="bg-primary text-white">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <span className="bg-accent text-primary text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6 inline-block">
@@ -292,7 +292,40 @@ export default function HomeClient() {
             ))}
           </div>
         </div>
-              </SectionWrapper>
+              </SectionWrapper> */}
+              {/* Results Highlight */}
+      <SectionWrapper className="bg-primary text-white">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="bg-accent text-primary text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6 inline-block">
+              2026 Latest Results
+            </span>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Our Recent Success Stories</h2>
+            <p className="text-gray-300 text-lg mb-8">
+              Every year, Carbon Gurukulam students secure top ranks in NEET and JEE exams. Our latest 2026 results show our commitment to academic excellence.
+            </p>
+            <Link href="/results" className="btn-accent inline-flex items-center">
+              View All Results <ArrowRight size={18} className="ml-2" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            {[
+              { name: "Nandana", rank: "98.44 %ile", exam: "JEE 2026", img: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&q=80&w=200" },
+              { name: "Adithya S.", rank: "AIR 142", exam: "NEET 2024", img: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=200" },
+            ].map((student, i) => (
+              <div key={i} className="bg-white/10 backdrop-blur-md p-6 rounded-3xl border border-white/10 text-center">
+                <div className="relative w-20 h-20 mx-auto rounded-2xl overflow-hidden mb-4 ring-2 ring-accent">
+                  <Image src={student.img} alt={student.name} fill className="object-cover" />
+                </div>
+                <h4 className="font-bold text-white text-sm">{student.name}</h4>
+                <p className="text-accent font-bold text-xs">{student.rank}</p>
+                <p className="text-white/50 text-[10px] uppercase font-bold mt-1">{student.exam}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </SectionWrapper>
+
 
       {/* Latest News */}
       <SectionWrapper>
