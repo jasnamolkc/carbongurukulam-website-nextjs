@@ -9,31 +9,34 @@ import ChatWidget from "@/components/ChatWidget";
 import { Mail, Phone, MapPin, Facebook,  Instagram, Send, Clock } from "lucide-react";
 
 export default function ContactPage() {
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
 
-    const form = e.target;
+  const form = e.currentTarget;
 
-    const data = {
-      name: form.name.value,
-      email: form.email.value,
-      subject: form.subject.value,
-      message: form.message.value
-    };
+  const data = {
+    name: (form.elements.namedItem("name") as HTMLInputElement).value,
+    email: (form.elements.namedItem("email") as HTMLInputElement).value,
+    subject: (form.elements.namedItem("subject") as HTMLInputElement).value,
+    message: (form.elements.namedItem("message") as HTMLTextAreaElement).value
+  };
 
-    try {
-      const res = await fetch("https://script.google.com/macros/s/AKfycbxhLvbXbgXaw7fFCHIqf0vwOgnvNh19faNJtuxOp9rhH2OwASiTTDNtOXANusQ2MWRE/exec", {
+  try {
+    const res = await fetch(
+      "https://script.google.com/macros/s/AKfycbxhLvbXbgXaw7fFCHIqf0vwOgnvNh19faNJtuxOp9rhH2OwASiTTDNtOXANusQ2MWRE/exec",
+      {
         method: "POST",
         body: JSON.stringify(data)
-      });
+      }
+    );
 
-      alert("Message Sent Successfully");
-      form.reset();
+    alert("Message Sent Successfully");
+    form.reset();
 
-    } catch (error) {
-      alert("Error sending message");
-    }
-  };
+  } catch (error) {
+    alert("Error sending message");
+  }
+};
   return (
     <main className="min-h-screen">
       <Navbar />
