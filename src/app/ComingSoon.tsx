@@ -69,7 +69,7 @@ export default function ComingSoon() {
             <div className="w-12 h-12 bg-accent/20 rounded-2xl flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-primary transition-colors duration-300">
               <Mail size={24} />
             </div>
-            <p className="text-white font-bold">info@carbongurukulam.com</p>
+            <p className="text-white font-bold">carbongurukulam@gmail.com</p>
             <p className="text-gray-400 text-sm">Send us an email</p>
           </div>
         </div>
