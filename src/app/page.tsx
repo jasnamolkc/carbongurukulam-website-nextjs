@@ -1,5 +1,7 @@
-import HomeClient from "./HomeClient";
+// import HomeClient from "./HomeClient";
+import ComingSoon from "./ComingSoon";
 
 export default function Home() {
-  return <HomeClient />;
+  // return <HomeClient />;
+  return <ComingSoon />;
 }
