@@ -15,8 +15,11 @@ export default function Footer() {
               Carbon Gurukulam
             </span>
           </Link>
-          <p className="text-gray-300 text-sm leading-relaxed">
+          {/* <p className="text-gray-300 text-sm leading-relaxed">
             Kerala's premier residential coaching institute for JEE & NEET. Blending the academic rigor of Kota curriculum with personalized residential mentoring.
+          </p> */}
+          <p className="text-gray-300 text-sm leading-relaxed">
+            Kerala&apos;s premier residential coaching institute for JEE &amp; NEET. Blending the academic rigor of Kota curriculum with personalized residential mentoring.
           </p>
           <div className="flex space-x-4">
             <a href="#" className="w-8 h-8 rounded-full bg-primary-light flex items-center justify-center hover:bg-accent transition-colors">
