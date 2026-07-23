@@ -37,25 +37,42 @@ export default function HeroSection({
       {/* Background Video */}
       {videoSrc ? (
         <div className="absolute inset-0 w-full h-full overflow-hidden">
-          <video
+          {/* <video
             autoPlay
             muted
             loop
             playsInline
+            preload="metadata"
+            poster="/hero-poster.jpg"
             className="absolute inset-0 w-full h-full object-cover"
           >
             <source src={videoSrc} type="video/mp4" />
             {videoFallbackSrc && <source src={videoFallbackSrc} type="video/mp4" />}
-          </video>
+          </video> */}
+          <video
+  autoPlay
+  muted
+  loop
+  playsInline
+  controls
+  className="absolute inset-0 w-full h-full object-cover"
+>
+  <source src="/hero4.mp4" type="video/mp4" />
+</video>
         </div>
       ) : (
         /* Background Image */
-        backgroundImage && (
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${backgroundImage})` }}
-          />
-        )
+        // backgroundImage && (
+        //   <div
+        //     className="absolute inset-0 bg-cover bg-center"
+        //     style={{ backgroundImage: `url(${backgroundImage})` }}
+        //   />
+        // )
+          <img
+        src="/hero-poster.jpg"
+        alt="Campus"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
       )}
 
       {/* 🔥 Stronger Dark Overlay (Improves Heading Visibility) */}
