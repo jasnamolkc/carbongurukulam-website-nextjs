@@ -48,14 +48,14 @@ export default function ChatWidget() {
               </div>
             </div>
 
-            <div className="p-4 bg-white border-t border-gray-100 flex items-center space-x-2">
+            <div className="p-3 bg-white border-t border-gray-100 flex items-center space-x-2">
               <input
                 type="text"
                 placeholder="Type your message..."
-                className="flex-grow text-sm bg-gray-100 border-none rounded-full px-4 py-2 focus:ring-1 focus:ring-accent outline-none"
+                className="flex-grow text-xs md:text-sm bg-gray-100 border-none rounded-full px-4 h-10 focus:ring-2 focus:ring-accent/50 outline-none placeholder:text-gray-400"
               />
-              <button className="bg-primary text-white p-2 rounded-full hover:bg-primary-light transition-colors">
-                <Send size={18} />
+              <button className="bg-primary text-white w-10 h-10 rounded-full hover:bg-primary-light transition-colors flex items-center justify-center shrink-0">
+                <Send size={16} />
               </button>
             </div>
           </motion.div>

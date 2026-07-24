@@ -68,40 +68,44 @@ export default function AboutClient() {
 
       {/* Vision & Mission */}
       <SectionWrapper>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="bg-neutral-light p-10 rounded-3xl border border-gray-100 shadow-sm relative overflow-hidden group">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-stretch">
+          <div className="bg-neutral-light p-8 md:p-10 rounded-2xl border border-gray-100 shadow-sm relative overflow-hidden group flex flex-col justify-between h-full">
             <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:scale-110 transition-transform">
               <Eye size={120} />
             </div>
-            <div className="w-14 h-14 bg-accent rounded-2xl flex items-center justify-center text-primary mb-6">
-              <Eye size={28} />
+            <div>
+              <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center text-primary mb-6">
+                <Eye size={24} />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-primary mb-3">Our Vision</h3>
+              <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                To deliver exceptional, structured residential preparation that empowers students across Kerala to excel in JEE & NEET, bridging accessibility gap to top-tier coaching.
+              </p>
             </div>
-            <h3 className="text-2xl font-bold text-primary mb-4">Our Vision</h3>
-            <p className="text-gray-600 leading-relaxed">
-              To deliver exceptional, structured residential preparation that empowers students across Kerala to excel in JEE & NEET, bridging accessibility gap to top-tier coaching.
-            </p>
           </div>
 
-          <div className="bg-primary p-10 rounded-3xl border border-primary-light shadow-lg relative overflow-hidden group">
+          <div className="bg-primary p-8 md:p-10 rounded-2xl border border-primary-light shadow-lg relative overflow-hidden group flex flex-col justify-between h-full">
             <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:scale-110 transition-transform text-white">
               <Target size={120} />
             </div>
-            <div className="w-14 h-14 bg-accent rounded-2xl flex items-center justify-center text-primary mb-6">
-              <Target size={28} />
+            <div>
+              <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center text-primary mb-6">
+                <Target size={24} />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-3">Our Mission</h3>
+              <p className="text-gray-300 leading-relaxed text-sm md:text-base">
+                To nurture aspiring doctors and engineers through an immersive residential model that instills discipline, systematic exam solving practices, and sound academic basics.
+              </p>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
-            <p className="text-gray-300 leading-relaxed">
-              To nurture aspiring doctors and engineers through an immersive residential model that instills discipline, systematic exam solving practices, and sound academic basics.
-            </p>
           </div>
         </div>
       </SectionWrapper>
 
       {/* Founder Message */}
       <SectionWrapper className="bg-neutral-light">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 items-center">
           <div className="relative order-2 lg:order-1">
-            <div className="relative h-[500px] md:h-[600px] rounded-3xl overflow-hidden shadow-2xl z-10">
+            <div className="relative h-[380px] md:h-[480px] rounded-2xl overflow-hidden shadow-xl z-10">
               <Image
                 src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800"
                 alt="Founder"

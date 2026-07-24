@@ -25,43 +25,45 @@ export default function CourseCard({
   return (
     <motion.div
       whileHover={{ y: -5 }}
-      className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 flex flex-col h-full"
+      className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 flex flex-col h-full transition-all duration-300 group"
     >
-      <div className="relative h-48 w-full">
+      <div className="relative aspect-[16/10] w-full shrink-0 overflow-hidden bg-gray-100">
         <Image
           src={image}
           alt={title}
           fill
-          className="object-cover"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        <div className="absolute top-4 left-4">
-          <span className="bg-accent text-primary text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">
+        <div className="absolute top-3 left-3">
+          <span className="bg-accent text-primary text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">
             {category}
           </span>
         </div>
       </div>
 
-      <div className="p-6 flex flex-col flex-grow">
-        <div className="flex items-center space-x-4 mb-3 text-xs text-gray-500">
-          <div className="flex items-center">
-            <Clock size={14} className="mr-1 text-accent" />
-            {duration}
+      <div className="p-5 md:p-6 flex flex-col flex-grow justify-between space-y-4">
+        <div>
+          <div className="flex items-center space-x-4 mb-2.5 text-xs text-gray-500 font-medium">
+            <div className="flex items-center">
+              <Clock size={14} className="mr-1.5 text-accent shrink-0" />
+              {duration}
+            </div>
+            <div className="flex items-center">
+              <BookOpen size={14} className="mr-1.5 text-accent shrink-0" />
+              {lessons} Lessons
+            </div>
           </div>
-          <div className="flex items-center">
-            <BookOpen size={14} className="mr-1 text-accent" />
-            {lessons} Lessons
-          </div>
+
+          <h3 className="text-base md:text-lg font-bold text-primary line-clamp-2 min-h-[3rem] md:min-h-[3.5rem] flex items-center group-hover:text-accent transition-colors">
+            {title}
+          </h3>
         </div>
 
-        <h3 className="text-lg font-bold text-primary mb-3 line-clamp-2">
-          {title}
-        </h3>
-
-        <div className="mt-auto pt-4 flex items-center justify-between border-t border-gray-50">
-          {price && <span className="font-bold text-primary">{price}</span>}
+        <div className="mt-auto pt-4 flex items-center justify-between border-t border-gray-100">
+          {price && <span className="font-bold text-primary text-sm md:text-base">{price}</span>}
           <Link
             href={`/courses/${slug}`}
-            className="text-accent text-sm font-bold flex items-center hover:translate-x-1 transition-transform"
+            className="text-accent text-xs md:text-sm font-bold flex items-center hover:translate-x-1 transition-transform ml-auto"
           >
             Learn More <ArrowRight size={16} className="ml-1" />
           </Link>

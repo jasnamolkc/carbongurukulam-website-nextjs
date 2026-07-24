@@ -235,15 +235,13 @@ export default function HomeClient() {
       {/* Campus Tour Video Modal */}
       <Modal isOpen={isTourOpen} onClose={() => setIsTourOpen(false)} title="Carbon Gurukulam Campus Video Tour">
         <div className="aspect-video w-full rounded-xl overflow-hidden relative bg-black">
-          <video
-            autoPlay
-            controls
-            playsInline
-            className="w-full h-full object-contain"
-          >
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-keyboard-of-a-laptop-42171-large.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <iframe
+            src="https://www.youtube.com/embed/MYA_hfsoG9w?autoplay=1&rel=0"
+            title="Carbon Gurukulam Campus Video Tour"
+            className="w-full h-full border-0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
         </div>
       </Modal>
 
@@ -264,7 +262,7 @@ export default function HomeClient() {
           subtitle="Hear from our former students who transformed their dreams into reality under our guidance."
           badge="Testimonials"
         />
-        <div className="flex space-x-6 overflow-x-auto pb-8 scrollbar-hide">
+        <div className="flex space-x-6 overflow-x-auto pb-6 scrollbar-hide">
           {[
             {
               name: "Rahul Nair",
@@ -282,20 +280,22 @@ export default function HomeClient() {
               img: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=250"
             }
           ].map((testimonial, i) => (
-            <div key={i} className="min-w-[300px] md:min-w-[400px] bg-white p-8 rounded-2xl shadow-sm border border-gray-100 shrink-0">
-              <div className="flex text-accent mb-4">
-                {[1, 2, 3, 4, 5].map((s) => <Star key={s} size={16} fill="currentColor" />)}
+            <div key={i} className="w-[300px] sm:w-[360px] md:w-[380px] bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 shrink-0 flex flex-col justify-between h-[280px]">
+              <div>
+                <div className="flex text-accent mb-3">
+                  {[1, 2, 3, 4, 5].map((s) => <Star key={s} size={16} fill="currentColor" />)}
+                </div>
+                <p className="text-gray-600 text-xs md:text-sm italic line-clamp-4 leading-relaxed">
+                  &quot;The residential environment, strict schedule, and Kota-based teaching materials at Carbon Gurukulam were critical to boosting my performance and building concepts.&quot;
+                </p>
               </div>
-              <p className="text-gray-600 italic mb-6">
-                &quot;The residential environment, strict schedule, and Kota-based teaching materials at Carbon Gurukulam were critical to boosting my performance and building concepts.&quot;
-              </p>
-              <div className="flex items-center space-x-4">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden">
+              <div className="flex items-center space-x-3 pt-4 border-t border-gray-100 mt-auto">
+                <div className="relative w-10 h-10 rounded-full overflow-hidden shrink-0">
                   <Image src={testimonial.img} alt={testimonial.name} fill className="object-cover" />
                 </div>
                 <div>
-                  <h5 className="font-bold text-primary text-sm">{testimonial.name}</h5>
-                  <p className="text-xs text-gray-500">{testimonial.role}</p>
+                  <h5 className="font-bold text-primary text-xs md:text-sm">{testimonial.name}</h5>
+                  <p className="text-[11px] md:text-xs text-gray-500 line-clamp-1">{testimonial.role}</p>
                 </div>
               </div>
             </div>

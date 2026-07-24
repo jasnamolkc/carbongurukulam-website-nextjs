@@ -117,15 +117,15 @@ export default function NewsPage() {
 
       <SectionWrapper>
         {/* Category Filter */}
-        <div className="flex items-center space-x-2 overflow-x-auto mb-12 pb-4 scrollbar-hide border-b border-gray-100">
+        <div className="flex items-center space-x-2 overflow-x-auto mb-8 pb-3 scrollbar-hide border-b border-gray-100">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-6 py-2 rounded-full text-sm font-bold transition-all ${
+              className={`h-10 px-5 rounded-xl text-xs md:text-sm font-semibold transition-all flex items-center justify-center cursor-pointer ${
                 selectedCategory === cat
-                  ? "text-accent border-b-2 border-accent rounded-none"
-                  : "text-gray-500 hover:text-primary"
+                  ? "bg-accent text-primary shadow-sm"
+                  : "bg-white border border-gray-200 text-gray-600 hover:border-accent hover:text-accent"
               }`}
             >
               {cat}

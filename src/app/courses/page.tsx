@@ -90,27 +90,27 @@ export default function CoursesPage() {
 
       <SectionWrapper>
         {/* Search and Filter UI */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-6 mb-8 md:mb-10">
           <div className="relative flex-grow max-w-md">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
             <input
               type="text"
               placeholder="Search courses..."
-              className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all shadow-sm"
+              className="form-input pl-10"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
 
           <div className="flex items-center space-x-2 overflow-x-auto pb-2 md:pb-0 scrollbar-hide">
-            <Filter size={20} className="text-gray-400 mr-2 shrink-0" />
+            <Filter size={18} className="text-gray-400 mr-1 shrink-0" />
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
+                className={`h-11 px-4 rounded-xl text-xs md:text-sm font-semibold whitespace-nowrap transition-all flex items-center justify-center cursor-pointer ${
                   selectedCategory === cat
-                    ? "bg-accent text-primary shadow-md"
+                    ? "bg-accent text-primary shadow-sm"
                     : "bg-white border border-gray-200 text-gray-600 hover:border-accent hover:text-accent"
                 }`}
               >

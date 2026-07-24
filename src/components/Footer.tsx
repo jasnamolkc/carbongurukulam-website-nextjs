@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import Logo from "./Logo";
 
 export default function Footer() {
   return (
@@ -7,13 +8,8 @@ export default function Footer() {
       <div className="container-custom grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
         {/* Brand Section */}
         <div className="space-y-6">
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-white flex items-center justify-center rounded-lg">
-              <span className="text-primary font-bold text-2xl">C</span>
-            </div>
-            <span className="font-bold text-xl tracking-tight text-white">
-              Carbon Gurukulam
-            </span>
+          <Link href="/" className="flex items-center">
+            <Logo variant="dark" />
           </Link>
           {/* <p className="text-gray-300 text-sm leading-relaxed">
             Kerala's premier residential coaching institute for JEE & NEET. Blending the academic rigor of Kota curriculum with personalized residential mentoring.

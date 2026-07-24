@@ -29,15 +29,15 @@ export default function HeroSection({
       className={cn(
         "relative flex items-center overflow-hidden bg-primary text-white",
         compact
-          ? "py-24 md:py-36"
-          : "min-h-[85vh] md:min-h-[95vh] py-32",
+          ? "py-16 md:py-24"
+          : "min-h-[75vh] md:min-h-[85vh] py-20 md:py-28",
         className
       )}
     >
       {/* Background Video */}
       {videoSrc ? (
         <div className="absolute inset-0 w-full h-full overflow-hidden">
-          <video
+          {/* <video
             autoPlay
             muted
             loop
@@ -46,6 +46,16 @@ export default function HeroSection({
           >
             <source src={videoSrc} type="video/mp4" />
             {videoFallbackSrc && <source src={videoFallbackSrc} type="video/mp4" />}
+          </video> */}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            controls
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/hero4.mp4" type="video/mp4" />
           </video>
         </div>
       ) : (

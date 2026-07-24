@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+import Logo from "./Logo";
 
 
 const navLinks = [
@@ -42,14 +42,7 @@ export default function Navbar() {
     >
       <div className="container-custom flex justify-between items-center">
         <Link href="/" className="flex items-center">
-          <Image
-            src="/logo.png"
-            alt="Carbon Gurukulam Logo"
-            width={300}
-            height={120}
-            className="h-14 md:h-20 w-auto object-contain"
-            priority
-          />
+          <Logo variant={scrolled ? "light" : "dark"} />
         </Link>
 
         {/* Desktop Nav */}

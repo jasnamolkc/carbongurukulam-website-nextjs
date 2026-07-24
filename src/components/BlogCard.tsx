@@ -27,54 +27,56 @@ export default function BlogCard({
   return (
     <motion.div
       whileHover={{ y: -5 }}
-      className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col h-full"
+      className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 flex flex-col h-full transition-all duration-300 group"
     >
-      <div className="relative h-56 w-full">
+      <div className="relative aspect-[16/10] w-full shrink-0 overflow-hidden bg-gray-100">
         <Image
           src={image}
           alt={title}
           fill
-          className="object-cover"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        <div className="absolute top-4 left-4 flex flex-col space-y-2">
-          <span className="bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded w-fit">
+        <div className="absolute top-3 left-3 flex flex-col space-y-1.5">
+          <span className="bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm w-fit">
             {category}
           </span>
           {isAI && (
-            <span className="bg-accent text-primary text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded flex items-center w-fit">
-              <span className="w-1.5 h-1.5 bg-primary rounded-full mr-1 animate-pulse" />
+            <span className="bg-accent text-primary text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm flex items-center w-fit">
+              <span className="w-1.5 h-1.5 bg-primary rounded-full mr-1.5 animate-pulse" />
               AI Insight
             </span>
           )}
         </div>
       </div>
 
-      <div className="p-6 flex flex-col flex-grow">
-        <div className="flex items-center space-x-4 mb-3 text-xs text-gray-500">
-          <div className="flex items-center">
-            <Calendar size={14} className="mr-1 text-accent" />
-            {date}
+      <div className="p-5 md:p-6 flex flex-col flex-grow justify-between space-y-4">
+        <div>
+          <div className="flex items-center space-x-4 mb-2.5 text-xs text-gray-500 font-medium">
+            <div className="flex items-center">
+              <Calendar size={14} className="mr-1.5 text-accent shrink-0" />
+              {date}
+            </div>
+            <div className="flex items-center">
+              <User size={14} className="mr-1.5 text-accent shrink-0" />
+              {author}
+            </div>
           </div>
-          <div className="flex items-center">
-            <User size={14} className="mr-1 text-accent" />
-            {author}
-          </div>
+
+          <h3 className="text-base md:text-lg font-bold text-primary mb-2 line-clamp-2 min-h-[3rem] md:min-h-[3.5rem] flex items-center group-hover:text-accent transition-colors">
+            <Link href={`/news/${slug}`}>{title}</Link>
+          </h3>
+
+          <p className="text-gray-600 text-xs md:text-sm line-clamp-3 min-h-[3.25rem] leading-relaxed">
+            {excerpt}
+          </p>
         </div>
 
-        <h3 className="text-xl font-bold text-primary mb-3 line-clamp-2 hover:text-accent transition-colors">
-          <Link href={`/news/${slug}`}>{title}</Link>
-        </h3>
-
-        <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-          {excerpt}
-        </p>
-
-        <div className="mt-auto pt-4 border-t border-gray-50">
+        <div className="mt-auto pt-4 border-t border-gray-100 flex items-center justify-between">
           <Link
             href={`/news/${slug}`}
-            className="text-primary text-sm font-bold flex items-center hover:text-accent transition-colors"
+            className="text-primary text-xs md:text-sm font-bold flex items-center group-hover:text-accent transition-colors"
           >
-            Read More <ArrowRight size={16} className="ml-1" />
+            Read More <ArrowRight size={16} className="ml-1 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
       </div>

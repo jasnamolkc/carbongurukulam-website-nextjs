@@ -25,7 +25,7 @@ const galleryImages = [
 const galleryVideos = [
   {
     id: 101,
-    src: "https://assets.mixkit.co/videos/preview/mixkit-keyboard-of-a-laptop-42171-large.mp4",
+    src: "https://youtu.be/MYA_hfsoG9w?si=FRAfv5NXPyt36Vni",
     thumbnail: "https://images.unsplash.com/photo-1523050353066-1034d07e52b4?auto=format&fit=crop&q=80&w=800",
     title: "Carbon Gurukulam Campus Walkthrough",
     category: "Campus Life"
@@ -75,11 +75,11 @@ export default function GalleryPage() {
         />
 
         {/* Tab Selection */}
-        <div className="flex justify-center mb-10">
+        <div className="flex justify-center mb-8">
           <div className="bg-neutral-light p-1.5 rounded-xl flex items-center space-x-2 border border-gray-150 shadow-sm">
             <button
               onClick={() => { setActiveTab("photos"); setSelectedItem(null); }}
-              className={`px-6 py-2.5 rounded-lg text-sm font-bold flex items-center transition-all ${
+              className={`h-10 px-5 rounded-lg text-xs md:text-sm font-bold flex items-center transition-all ${
                 activeTab === "photos"
                   ? "bg-primary text-white shadow-md"
                   : "text-gray-500 hover:text-primary"
@@ -89,7 +89,7 @@ export default function GalleryPage() {
             </button>
             <button
               onClick={() => { setActiveTab("videos"); setSelectedItem(null); }}
-              className={`px-6 py-2.5 rounded-lg text-sm font-bold flex items-center transition-all ${
+              className={`h-10 px-5 rounded-lg text-xs md:text-sm font-bold flex items-center transition-all ${
                 activeTab === "videos"
                   ? "bg-primary text-white shadow-md"
                   : "text-gray-500 hover:text-primary"
@@ -104,14 +104,14 @@ export default function GalleryPage() {
         {activeTab === "photos" && (
           <>
             {/* Category Filter */}
-            <div className="flex justify-center items-center space-x-2 overflow-x-auto mb-12 pb-2 scrollbar-hide">
+            <div className="flex justify-center items-center space-x-2 overflow-x-auto mb-8 pb-2 scrollbar-hide">
               {photoCategories.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setSelectedPhotoCategory(cat)}
-                  className={`px-6 py-2 rounded-full text-sm font-bold transition-all ${
+                  className={`h-10 px-5 rounded-xl text-xs md:text-sm font-bold transition-all flex items-center justify-center cursor-pointer ${
                     selectedPhotoCategory === cat
-                      ? "bg-accent text-primary shadow-md"
+                      ? "bg-accent text-primary shadow-sm"
                       : "bg-white border border-gray-200 text-gray-500 hover:border-accent hover:text-accent"
                   }`}
                 >
@@ -207,15 +207,29 @@ export default function GalleryPage() {
               className="relative w-full max-w-5xl aspect-video rounded-2xl overflow-hidden shadow-2xl bg-black"
             >
               {selectedItem.isVideo ? (
-                <video
-                  autoPlay
-                  controls
-                  playsInline
-                  className="w-full h-full object-contain"
-                >
-                  <source src={selectedItem.src} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                selectedItem.src.includes("youtube.com") || selectedItem.src.includes("youtu.be") ? (
+                  <iframe
+                    src={
+                      selectedItem.src.includes("youtu.be/")
+                        ? `https://www.youtube.com/embed/${selectedItem.src.split("youtu.be/")[1]?.split("?")[0]}?autoplay=1&rel=0`
+                        : selectedItem.src
+                    }
+                    title={selectedItem.title}
+                    className="w-full h-full border-0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                ) : (
+                  <video
+                    autoPlay
+                    controls
+                    playsInline
+                    className="w-full h-full object-contain"
+                  >
+                    <source src={selectedItem.src} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                )
               ) : (
                 <Image
                   src={selectedItem.src}
