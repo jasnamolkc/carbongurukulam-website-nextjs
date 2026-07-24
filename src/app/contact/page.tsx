@@ -1,14 +1,50 @@
 "use client";
 
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
 import SectionHeader from "@/components/SectionHeader";
 import ChatWidget from "@/components/ChatWidget";
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Send, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Send, Clock, CheckCircle2, Loader2 } from "lucide-react";
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    subject: "",
+    message: ""
+  });
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.fullName || !formData.email) return;
+
+    setLoading(true);
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.fullName,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          source: "Contact Us Page"
+        })
+      });
+      setSubmitted(true);
+      setFormData({ fullName: "", email: "", subject: "", message: "" });
+    } catch (err) {
+      console.error("Form error:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <main className="min-h-screen">
       <Navbar />
@@ -89,29 +125,84 @@ export default function ContactPage() {
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-xl p-6 md:p-10 border border-gray-100">
               <h3 className="text-xl md:text-2xl font-bold text-primary mb-6">Send Us a Message</h3>
-              <form className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                  <label className="form-label">Full Name</label>
-                  <input type="text" className="form-input" placeholder="Enter student name" />
-                </div>
-                <div>
-                  <label className="form-label">Email Address</label>
-                  <input type="email" className="form-input" placeholder="Enter contact email" />
-                </div>
-                <div className="sm:col-span-2">
-                  <label className="form-label">Subject</label>
-                  <input type="text" className="form-input" placeholder="NEET Repeaters Batch / JEE Long Term Enquiry" />
-                </div>
-                <div className="sm:col-span-2">
-                  <label className="form-label">Message Details</label>
-                  <textarea rows={4} className="form-textarea" placeholder="Briefly describe academic status, high school marks, or queries..."></textarea>
-                </div>
-                <div className="sm:col-span-2 pt-1">
-                  <button type="button" className="btn-primary w-full flex items-center justify-center">
-                    Send Message <Send size={18} className="ml-2" />
+
+              {submitted ? (
+                <div className="bg-green-50 border border-green-200 text-green-800 p-6 rounded-2xl flex flex-col items-center text-center space-y-3">
+                  <CheckCircle2 size={40} className="text-green-600 animate-bounce" />
+                  <h4 className="font-bold text-lg">Thank You! Your Message is Received.</h4>
+                  <p className="text-sm text-green-700 max-w-md">
+                    Your enquiry details have been automatically saved to our system. Our academic team will contact you within 24 hours.
+                  </p>
+                  <button
+                    onClick={() => setSubmitted(false)}
+                    className="btn-accent mt-4 text-xs font-bold"
+                  >
+                    Send Another Message
                   </button>
                 </div>
-              </form>
+              ) : (
+                <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label className="form-label">Full Name *</label>
+                    <input
+                      type="text"
+                      required
+                      value={formData.fullName}
+                      onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                      className="form-input"
+                      placeholder="Enter student name"
+                    />
+                  </div>
+                  <div>
+                    <label className="form-label">Email Address *</label>
+                    <input
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="form-input"
+                      placeholder="Enter contact email"
+                    />
+                  </div>
+                  <div className="sm:col-span-2">
+                    <label className="form-label">Subject</label>
+                    <input
+                      type="text"
+                      value={formData.subject}
+                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                      className="form-input"
+                      placeholder="NEET Repeaters Batch / JEE Long Term Enquiry"
+                    />
+                  </div>
+                  <div className="sm:col-span-2">
+                    <label className="form-label">Message Details</label>
+                    <textarea
+                      rows={4}
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      className="form-textarea"
+                      placeholder="Briefly describe academic status, high school marks, or queries..."
+                    ></textarea>
+                  </div>
+                  <div className="sm:col-span-2 pt-1">
+                    <button
+                      type="submit"
+                      disabled={loading}
+                      className="btn-primary w-full flex items-center justify-center cursor-pointer"
+                    >
+                      {loading ? (
+                        <>
+                          <Loader2 size={18} className="animate-spin mr-2" /> Saving...
+                        </>
+                      ) : (
+                        <>
+                          Send Message <Send size={18} className="ml-2" />
+                        </>
+                      )}
+                    </button>
+                  </div>
+                </form>
+              )}
             </div>
           </div>
         </div>
