@@ -162,14 +162,12 @@ export default function AdmissionsPage() {
               <Link href="/contact" className="btn-accent w-full flex items-center justify-center text-primary font-semibold">
                 Talk to Academic Mentor <ArrowRight className="ml-2" size={18} />
               </Link>
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLScoK6Ll5398u9bqV4ajBSWaUWEGKqH40ggpsRNa53toKG0LQg/viewform"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/contact"
                 className="w-full block py-3 border border-white/20 rounded-xl hover:bg-white/5 transition-colors font-semibold text-center text-white text-sm md:text-base"
               >
                 Apply Online For Admission
-              </a>
+              </Link>
             </div>
           </div>
         </div>

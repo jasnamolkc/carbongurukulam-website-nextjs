@@ -86,14 +86,12 @@ export default function HomeClient() {
           <Link href="/courses" className="btn-accent text-primary">
             Explore Courses
           </Link>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScoK6Ll5398u9bqV4ajBSWaUWEGKqH40ggpsRNa53toKG0LQg/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/contact"
             className="btn-primary border border-white/20"
           >
             Apply Now
-          </a>
+          </Link>
         </div>
       </HeroSection>
 
@@ -199,14 +197,12 @@ export default function HomeClient() {
                 ))}
               </ul>
               <div className="pt-4 flex flex-wrap gap-4">
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLScoK6Ll5398u9bqV4ajBSWaUWEGKqH40ggpsRNa53toKG0LQg/viewform"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/contact"
                   className="btn-accent"
                 >
                   Apply for Admission
-                </a>
+                </Link>
                 <button
                   onClick={() => setIsTourOpen(true)}
                   className="px-6 py-3 border border-white/20 hover:bg-white/10 text-white rounded-lg flex items-center justify-center font-semibold transition-all"
@@ -321,8 +317,8 @@ export default function HomeClient() {
       <CTASection
         title="Admissions Open for NEET & JEE 2026 batches"
         subtitle="Seats are strictly limited to ensure personal student mentoring in Calicut campus. Apply for C-SET today."
-        buttonText="Register for Entrance Exam"
-        buttonHref="https://docs.google.com/forms/d/e/1FAIpQLScoK6Ll5398u9bqV4ajBSWaUWEGKqH40ggpsRNa53toKG0LQg/viewform"
+        buttonText="Register"
+        buttonHref="/contact"
         secondaryButtonText="Talk to Academic Director"
         secondaryButtonHref="/contact"
       />

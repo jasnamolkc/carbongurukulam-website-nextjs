@@ -226,14 +226,12 @@ export default function CourseDetailPage() {
                 <div className="space-y-6 pt-4">
                   <div className="flex items-center justify-between">
                     <h3 className="text-2xl font-bold text-primary">Course Syllabus</h3>
-                    <a
-                      href="https://docs.google.com/forms/d/e/1FAIpQLScoK6Ll5398u9bqV4ajBSWaUWEGKqH40ggpsRNa53toKG0LQg/viewform"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link
+                      href="/contact"
                       className="flex items-center text-accent font-bold text-sm hover:underline"
                     >
                       <Download size={18} className="mr-2" /> Request Detailed PDF
-                    </a>
+                    </Link>
                   </div>
                   <Accordion items={course.syllabus} />
                 </div>
@@ -249,14 +247,12 @@ export default function CourseDetailPage() {
                   </div>
 
                   <div className="space-y-4">
-                    <a
-                      href="https://docs.google.com/forms/d/e/1FAIpQLScoK6Ll5398u9bqV4ajBSWaUWEGKqH40ggpsRNa53toKG0LQg/viewform"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link
+                      href="/contact"
                       className="btn-primary w-full py-4 text-lg text-center"
                     >
                       Apply Online
-                    </a>
+                    </Link>
                     <Link
                       href="/contact"
                       className="w-full block py-4 text-center text-primary font-bold border-2 border-gray-100 rounded-md hover:bg-gray-50 transition-colors"
