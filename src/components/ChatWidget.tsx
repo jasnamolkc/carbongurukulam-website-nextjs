@@ -52,7 +52,7 @@ export default function ChatWidget() {
       suggestions = ["Admissions & C-SET", "Hostel & Facilities", "Scholarships"];
     } else if (query.includes("admission") || query.includes("apply") || query.includes("join") || query.includes("register") || query.includes("c-set") || query.includes("cset")) {
       text = "Admissions for 2026-2027 batches are currently OPEN! You can register online or take the Carbon Scholarship Entrance Test (C-SET) to qualify for merit scholarships.";
-      actionLink = { text: "Apply Online Now", href: "https://docs.google.com/forms/d/e/1FAIpQLScoK6Ll5398u9bqV4ajBSWaUWEGKqH40ggpsRNa53toKG0LQg/viewform" };
+      actionLink = { text: "Apply Online Now", href: "/contact" };
       suggestions = ["Scholarship Details", "Hostel Facilities", "Contact Academic Mentor"];
     } else if (query.includes("fee") || query.includes("scholarship") || query.includes("cost") || query.includes("discount")) {
       text = "We offer up to 100% merit-based scholarships on tuition and hostel fees for top rankers in our C-SET entrance exam! Detailed fee structure is shared after academic profiling.";
