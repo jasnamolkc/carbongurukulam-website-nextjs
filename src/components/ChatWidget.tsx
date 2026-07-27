@@ -47,7 +47,7 @@ export default function ChatWidget() {
     let suggestions: string[] = [];
 
     if (query.includes("course") || query.includes("program") || query.includes("neet") || query.includes("jee") || query.includes("keam")) {
-      text = "Carbon Gurukulam offers specialized residential programs:\n\n• NEET/JEE Repeaters Batch (1 Year Intensive)\n• Long Term Integrated (Class 11-12)\n• Kerala Engineering (KEAM)\n• Foundation Batch (Class 8-10)\n• NEET & JEE Crash Courses";
+      text = "Carbon Gurukulam offers specialized residential programs:\n\n1. NEET Repeaters (1 Year)\n2. JEE Repeaters (1 Year)\n3. Integrated Batch (Class 11 - 12) (2 Years)";
       actionLink = { text: "View All Courses", href: "/courses" };
       suggestions = ["Admissions & C-SET", "Hostel & Facilities", "Scholarships"];
     } else if (query.includes("admission") || query.includes("apply") || query.includes("join") || query.includes("register") || query.includes("c-set") || query.includes("cset")) {

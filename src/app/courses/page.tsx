@@ -11,62 +11,29 @@ import { Search, Filter } from "lucide-react";
 
 const allCourses = [
   {
-    title: "NEET/JEE Repeaters Batch",
+    title: "NEET Repeaters",
     category: "Repeaters",
     duration: "1 Year",
-    lessons: 150,
     image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800",
-    slug: "neet-jee-repeaters",
-    price: "Affordable"
+    slug: "neet-repeaters"
   },
   {
-    title: "Long Term (Class 11-12)",
-    category: "Long Term",
-    duration: "2 Years",
-    lessons: 300,
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800",
-    slug: "long-term-11-12",
-    price: "Admission Open"
-  },
-  {
-    title: "Kerala Engineering Entrance",
-    category: "State Level",
+    title: "JEE Repeaters",
+    category: "Repeaters",
     duration: "1 Year",
-    lessons: 120,
-    image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=800",
-    slug: "kerala-engineering",
-    price: "Expert Coaching"
-  },
-  {
-    title: "NEET Crash Course",
-    category: "Crash Course",
-    duration: "2 Months",
-    lessons: 60,
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800",
-    slug: "neet-crash-course",
-    price: "Intensive"
-  },
-  {
-    title: "JEE Main Intensive",
-    category: "Crash Course",
-    duration: "3 Months",
-    lessons: 90,
     image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800",
-    slug: "jee-main-intensive",
-    price: "Targeted"
+    slug: "jee-repeaters"
   },
   {
-    title: "Foundation Batch (Class 8-10)",
-    category: "Foundation",
-    duration: "3 Years",
-    lessons: 180,
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800",
-    slug: "foundation-batch",
-    price: "Early Start"
+    title: "Integrated Batch (Class 11 - 12)",
+    category: "Integrated",
+    duration: "2 Years",
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800",
+    slug: "integrated-batch-11-12"
   }
 ];
 
-const categories = ["All", "Repeaters", "Long Term", "State Level", "Crash Course", "Foundation"];
+const categories = ["All", "Repeaters", "Integrated"];
 
 export default function CoursesPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");

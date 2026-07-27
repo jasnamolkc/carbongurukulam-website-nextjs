@@ -1,26 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Clock, BookOpen, ArrowRight } from "lucide-react";
+import { Clock, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface CourseCardProps {
   title: string;
   category: string;
   duration: string;
-  lessons: number;
   image: string;
   slug: string;
-  price?: string;
 }
 
 export default function CourseCard({
   title,
   category,
   duration,
-  lessons,
   image,
   slug,
-  price,
 }: CourseCardProps) {
   return (
     <motion.div
@@ -46,11 +42,7 @@ export default function CourseCard({
           <div className="flex items-center space-x-4 mb-2.5 text-xs text-gray-500 font-medium">
             <div className="flex items-center">
               <Clock size={14} className="mr-1.5 text-accent shrink-0" />
-              {duration}
-            </div>
-            <div className="flex items-center">
-              <BookOpen size={14} className="mr-1.5 text-accent shrink-0" />
-              {lessons} Lessons
+              {duration} Program
             </div>
           </div>
 
@@ -60,7 +52,6 @@ export default function CourseCard({
         </div>
 
         <div className="mt-auto pt-4 flex items-center justify-between border-t border-gray-100">
-          {price && <span className="font-bold text-primary text-sm md:text-base">{price}</span>}
           <Link
             href={`/courses/${slug}`}
             className="text-accent text-xs md:text-sm font-bold flex items-center hover:translate-x-1 transition-transform ml-auto"

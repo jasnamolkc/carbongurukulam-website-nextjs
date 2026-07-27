@@ -18,31 +18,25 @@ import Modal from "@/components/Modal";
 
 const featuredCourses = [
   {
-    title: "NEET/JEE Repeaters Batch",
-    category: "Entrance Coaching",
+    title: "NEET Repeaters",
+    category: "Repeaters",
     duration: "1 Year",
-    lessons: 180,
     image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800",
-    slug: "neet-jee-repeaters",
-    price: "Scholarships Available"
+    slug: "neet-repeaters"
   },
   {
-    title: "Long Term Integrated (Class 11-12)",
-    category: "Two Year Program",
-    duration: "2 Years",
-    lessons: 360,
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800",
-    slug: "long-term-11-12",
-    price: "Admissions Open"
-  },
-  {
-    title: "Kerala Engineering (KEAM) Entrance",
-    category: "State Level",
+    title: "JEE Repeaters",
+    category: "Repeaters",
     duration: "1 Year",
-    lessons: 140,
-    image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=800",
-    slug: "kerala-engineering",
-    price: "Expert Mentoring"
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800",
+    slug: "jee-repeaters"
+  },
+  {
+    title: "Integrated Batch (Class 11 - 12)",
+    category: "Integrated",
+    duration: "2 Years",
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800",
+    slug: "integrated-batch-11-12"
   }
 ];
 
