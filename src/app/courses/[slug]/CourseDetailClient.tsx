@@ -15,130 +15,60 @@ import { Clock, BookOpen, GraduationCap, Download, CheckCircle, Calendar, User }
 
 const allCourses = [
   {
-    title: "NEET/JEE Repeaters Batch",
+    title: "NEET Repeaters",
     category: "Repeaters",
     duration: "1 Year",
-    lessons: 180,
     image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800",
-    slug: "neet-jee-repeaters",
-    price: "Scholarship Eligible",
-    description: "An intensive 1-year residential program designed for high school graduates. Under the direct guidance of ex-Kota mentors, students engage in deep concepts, weekly mock tests, and systematic problem solving to secure admission in premier medical and engineering colleges.",
+    slug: "neet-repeaters",
+    description: "An intensive 1-year residential program designed for NEET repeaters. Under direct guidance of ex-Kota mentors, students engage in deep NCERT concepts, daily practice assessments, weekly mock tests, and systematic problem solving.",
     syllabus: [
-      { title: "Physics: Mechanics & Electrodynamics", content: "In-depth coverage of fundamental physics concepts essential for NEET/JEE competitive problems." },
+      { title: "Physics: Mechanics & Electrodynamics", content: "In-depth coverage of fundamental physics concepts essential for NEET competitive problems." },
       { title: "Chemistry: Organic, Inorganic & Physical", content: "Comprehensive chemistry modules with focus on reaction mechanisms, structures, and numerical problems." },
-      { title: "Biology: Botany & Zoology", content: "Detailed study of plant and animal sciences with NCERT-centric approach and diagrams analysis." },
-      { title: "Mathematics: Calculus & Algebra", content: "Advanced mathematical concepts for JEE aspirants with quick shortcut techniques and numerical mock tests." }
+      { title: "Biology: Botany & Zoology", content: "Detailed study of plant and animal sciences with NCERT-centric approach and diagrammatic analysis." }
     ],
     learningOutcomes: [
-      "Master NCERT concepts for NEET and JEE",
-      "Develop speed and accuracy for entrance exams",
+      "Master NCERT concepts for NEET medical entrance",
+      "Develop speed and accuracy for entrance exam solving",
       "Regular mock tests and performance analysis",
       "Personalized doubt clearing sessions"
     ]
   },
   {
-    title: "Long Term Integrated (Class 11-12)",
-    category: "Long Term",
-    duration: "2 Years",
-    lessons: 360,
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800",
-    slug: "long-term-11-12",
-    price: "Admissions Open",
-    description: "These programs are designed for students who have completed Class 10 and aspire to become top achievers. Fully integrates school board syllabi with systematic entrance preparation for NEET, JEE Main, and Advanced.",
-    syllabus: [
-      { title: "Class 11 Foundation", content: "Building strong basics in Physics, Chemistry, Biology, and Mathematics." },
-      { title: "Class 12 Advanced", content: "Moving towards advanced entrance exam level concepts and numericals." },
-      { title: "Entrance Revision & Mock Series", content: "Dedicated time for full syllabus revision, previous year questions, and KEAM/JEE/NEET practice series." }
-    ],
-    learningOutcomes: [
-      "Complete coverage of Board and Entrance syllabus",
-      "Strong foundation building from Class 11",
-      "Expert guidance for national level exams",
-      "Weekly mock assessments under real exam conditions"
-    ]
-  },
-  {
-    title: "Kerala Engineering (KEAM) Entrance",
-    category: "State Level",
+    title: "JEE Repeaters",
+    category: "Repeaters",
     duration: "1 Year",
-    lessons: 140,
-    image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=800",
-    slug: "kerala-engineering",
-    price: "Expert Mentoring",
-    description: "Expert coaching specifically tailored for Kerala Engineering entrance exams (KEAM), focusing on local state-level syllabus and high-speed solving techniques.",
-    syllabus: [
-      { title: "KEAM Physics Modules", content: "State level physics chapters and previous KEAM paper analysis." },
-      { title: "KEAM Chemistry Modules", content: "Applied and organic chemistry equations tailored for high scores." },
-      { title: "KEAM Mathematics Modules", content: "Calculus, trigonometry, and coordinate geometry shortcuts." }
-    ],
-    learningOutcomes: [
-      "Familiarity with state entrance exam patterns",
-      "Optimized formulas for fast numerical solving",
-      "Full coverage of Kerala board core topics",
-      "Access to online rank prediction exams"
-    ]
-  },
-  {
-    title: "NEET Crash Course",
-    category: "Crash Course",
-    duration: "2 Months",
-    lessons: 80,
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800",
-    slug: "neet-crash-course",
-    price: "Limited Seats",
-    description: "Highly focused 2-month revision program to refine test-taking strategies, clear lingering doubts, and maximize NEET scores under constant assessment.",
-    syllabus: [
-      { title: "High-Weightage Chapters Revision", content: "Brief revision of crucial NEET topics in Botany, Zoology, Physics, and Chemistry." },
-      { title: "Daily Practice Papers (DPP)", content: "Topic-wise problem solving and quick solution guides." },
-      { title: "Full Syllabus Mock Tests", content: "Continuous mock series simulating the actual NEET environment." }
-    ],
-    learningOutcomes: [
-      "Quick summary of 90 high-weightage chapters",
-      "Doubt clearing from expert faculties",
-      "Time management hacks for 180 questions",
-      "Confidence building with direct exam paper practices"
-    ]
-  },
-  {
-    title: "JEE Main Intensive",
-    category: "Crash Course",
-    duration: "3 Months",
-    lessons: 120,
     image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800",
-    slug: "jee-main-intensive",
-    price: "Admissions Open",
-    description: "A fast-track, result-oriented prep course designed to boost scoring efficiency, solve previous papers, and improve time management for engineering aspirants.",
+    slug: "jee-repeaters",
+    description: "Result-oriented 1-year residential program for JEE aspirants. Features systematic problem-solving strategies for JEE Main & Advanced under experienced Kota IITian faculties.",
     syllabus: [
-      { title: "Maths Core Intensive", content: "Calculus, coordinate geometry, and matrices key topics." },
-      { title: "Physics Formulas & Application", content: "Mechanics and electrodynamics problem sets." },
-      { title: "Chemistry Shortcuts", content: "Chemical bonding, thermodynamics, and inorganic structures." }
+      { title: "Physics: Mechanics, Electricity & Magnetism", content: "Advanced physics concepts for JEE aspirants with shortcut techniques and numerical mock tests." },
+      { title: "Chemistry: Physical, Organic & Inorganic", content: "In-depth reaction mechanisms, thermodynamics, chemical bonding, and coordination compounds." },
+      { title: "Mathematics: Calculus, Algebra & Vectors", content: "Rigorous mathematical problem-solving methods tailored for JEE Main and Advanced rank holders." }
     ],
     learningOutcomes: [
       "In-depth shortcut methods for math and physics",
-      "Daily practice worksheets",
-      "Previous 10 years JEE Main paper resolutions",
-      "Regular mock assessments with relative percentile feedback"
+      "Daily practice worksheets (DPP) and previous paper solving",
+      "Regular mock assessments under real exam conditions",
+      "One-on-one mentorship by expert Kota faculties"
     ]
   },
   {
-    title: "Foundation Batch (Class 8-10)",
-    category: "Foundation",
-    duration: "3 Years",
-    lessons: 240,
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800",
-    slug: "foundation-batch",
-    price: "Enroll Now",
-    description: "Early-intervention program to develop strong mathematical analytical skills, logical thinking, and basic science foundations for junior high school students.",
+    title: "Integrated Batch (Class 11 - 12)",
+    category: "Integrated",
+    duration: "2 Years",
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800",
+    slug: "integrated-batch-11-12",
+    description: "A comprehensive 2-year integrated residential program for Class 10 graduates. Fully synchronizes Higher Secondary school board curriculum with systematic entrance preparation for NEET, JEE Main, and Advanced.",
     syllabus: [
-      { title: "Math & Logic Foundations", content: "Number systems, algebra basics, and quantitative logic." },
-      { title: "General Science Concepts", content: "Basic physics, chemical reactions, and cell biology." },
-      { title: "Olympiad & NTSE Prep", content: "Introductory competitive coaching concepts." }
+      { title: "Class 11 Foundation", content: "Building strong basics in Physics, Chemistry, Biology, and Mathematics." },
+      { title: "Class 12 Advanced", content: "Moving towards advanced entrance exam level concepts and numericals." },
+      { title: "Entrance Revision & Mock Series", content: "Dedicated time for full syllabus revision, previous year questions, and NEET/JEE mock series." }
     ],
     learningOutcomes: [
-      "Strong conceptual clarity in physics and maths",
-      "Preparation for national Olympiads and NTSE",
-      "Development of problem-solving aptitude",
-      "Interactive, curiosity-driven laboratory sessions"
+      "Complete coverage of Board and Entrance syllabus",
+      "Strong foundation building starting from Class 11",
+      "Expert guidance for national level competitive exams",
+      "Weekly mock assessments under real exam conditions"
     ]
   }
 ];
@@ -189,13 +119,6 @@ export default function CourseDetailPage() {
                     </div>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <BookOpen size={20} className="text-accent" />
-                    <div className="flex flex-col">
-                      <span className="text-gray-400 text-[10px] uppercase font-bold tracking-wider">Modules</span>
-                      <span className="font-semibold text-primary">{course.lessons} hours</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-2">
                     <GraduationCap size={20} className="text-accent" />
                     <div className="flex flex-col">
                       <span className="text-gray-400 text-[10px] uppercase font-bold tracking-wider">Mentorship</span>
@@ -242,10 +165,6 @@ export default function CourseDetailPage() {
             <div className="lg:col-span-1">
               <div className="sticky top-28 space-y-8">
                 <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 space-y-6">
-                  <div className="flex items-baseline space-x-2">
-                    <span className="text-4xl font-bold text-primary">{course.price}</span>
-                  </div>
-
                   <div className="space-y-4">
                     <Link
                       href="/contact"
