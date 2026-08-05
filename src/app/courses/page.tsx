@@ -14,21 +14,21 @@ const allCourses = [
     title: "NEET Repeaters",
     category: "Repeaters",
     duration: "1 Year",
-    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800",
+    image: "/neet-home-page.jpg",
     slug: "neet-repeaters"
   },
   {
     title: "JEE Repeaters",
     category: "Repeaters",
     duration: "1 Year",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800",
+    image: "/jee-home-page.jpg",
     slug: "jee-repeaters"
   },
   {
     title: "Integrated Batch (Class 11 - 12)",
     category: "Integrated",
     duration: "2 Years",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800",
+    image: "/integrated-home-page.jpg",
     slug: "integrated-batch-11-12"
   }
 ];
