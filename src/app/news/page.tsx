@@ -36,7 +36,7 @@ const allNews = [
     excerpt: "Why daily evaluation is the secret to building concept confidence and removing final exam fear under a structured environment.",
     date: "Sep 05, 2025",
     author: "HOD Chemistry",
-    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800",
+    image: "/guide-news page.jpg",
     slug: "importance-of-everyday-testing",
     category: "Guides"
   },
@@ -45,7 +45,7 @@ const allNews = [
     excerpt: "An inside look at our Calicut campus schedule, 24/7 mentoring chambers, doubt resolution desks, and balanced student lifestyle.",
     date: "Aug 20, 2025",
     author: "Campus Warden",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800",
+    image: "/campus-news page.jpg",
     slug: "day-in-life-gurukulam",
     category: "Campus Life"
   },
@@ -54,7 +54,7 @@ const allNews = [
     excerpt: "Expert advice on balancing board syllabus, NCERT core chapter readings, and high-volume numerical problem practice worksheets.",
     date: "Jul 15, 2025",
     author: "Dr. Anand K.",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
+    image: "/Academic- news page.jpg",
     slug: "physics-chemistry-strategy-guidelines",
     category: "Academic"
   }
