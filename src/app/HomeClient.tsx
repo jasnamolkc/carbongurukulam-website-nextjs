@@ -95,7 +95,7 @@ export default function HomeClient() {
           <div className="relative">
             <div className="relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl z-10 border-4 border-white">
               <Image
-                src="https://images.unsplash.com/photo-1524178232363-1fb28f74b671?auto=format&fit=crop&q=80&w=800"
+                src="/Admission-home-page.jpg"
                 alt="About Carbon Gurukulam"
                 fill
                 className="object-cover"
