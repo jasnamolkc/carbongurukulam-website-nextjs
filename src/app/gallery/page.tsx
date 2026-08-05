@@ -19,7 +19,7 @@ const galleryImages = [
   { id: 5, src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800", title: "Science Experiment Lab", category: "Workshops" },
   { id: 6, src: "https://images.unsplash.com/photo-1523240715632-d984bb4b9156?auto=format&fit=crop&q=80&w=800", title: "Rank Holders felicitation", category: "Events" },
   { id: 7, src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800", title: "Main Lecture Hall", category: "Campus" },
-  { id: 8, src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800", title: "Self Study Cabins", category: "Campus" },
+  { id: 8, src: "/gallery-self-study.jpg", title: "Self Study Cabins", category: "Campus" },
 ];
 
 const galleryVideos = [
