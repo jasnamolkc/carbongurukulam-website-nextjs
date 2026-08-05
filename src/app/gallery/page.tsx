@@ -37,16 +37,16 @@ const galleryVideos = [
     title: "A Day in the Life of a NEET Aspirant",
     category: "Student Life"
   },
-  {
-    id: 103,
-    src: "https://assets.mixkit.co/videos/preview/mixkit-man-holding-a-pencil-writing-on-a-paper-43204-large.mp4",
-    thumbnail: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800",
-    title: "Kota Method Doubt Chambers in Action",
-    category: "Academics"
-  }
+  // {
+  //   id: 103,
+  //   src: "https://assets.mixkit.co/videos/preview/mixkit-man-holding-a-pencil-writing-on-a-paper-43204-large.mp4",
+  //   thumbnail: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800",
+  //   title: "Kota Method Doubt Chambers in Action",
+  //   category: "Academics"
+  // }
 ];
 
-const photoCategories = ["All", "Campus", "Events", "Workshops", "Academics"];
+const photoCategories = ["All", "Campus", "Events", "Workshops"];
 
 export default function GalleryPage() {
   const [activeTab, setActiveTab] = useState<"photos" | "videos">("photos");
