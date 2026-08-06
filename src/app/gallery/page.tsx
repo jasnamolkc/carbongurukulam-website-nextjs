@@ -12,14 +12,14 @@ import { Maximize2, X, Play, Image as ImageIcon, Video as VideoIcon } from "luci
 import { motion, AnimatePresence } from "framer-motion";
 
 const galleryImages = [
-  // { id: 1, src: "https://images.unsplash.com/photo-1541339907198-e08759df9a04?auto=format&fit=crop&q=80&w=800", title: "Inauguration Day", category: "Events" },
-  // { id: 2, src: "https://images.unsplash.com/photo-1523050353066-1034d07e52b4?auto=format&fit=crop&q=80&w=800", title: "Main Study Library", category: "Campus" },
-  { id: 1, src: "/gallery-masterclass.jpg", title: "JEE Physics Masterclass", category: "Academics" },
-  { id: 2, src: "/gallery-group-study.jpg", title: "Group Doubt Chambers", category: "Academics" },
-  // { id: 5, src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800", title: "Science Experiment Lab", category: "Workshops" },
-  { id: 3, src: "/gallery-masterclass.jpg", title: "Masterclassn", category: "Events" },
-  { id: 4, src: "/gallery-group-study.jpg", title: "Group study", category: "Campus" },
-  { id: 5, src: "/gallery-self-study.jpg", title: "Self Study Cabins", category: "Campus" },
+  { id: 1, src: "/inauguration-day.jpg", title: "Inauguration Day", category: "Events" },
+  { id: 2, src: "/library.jpg", title: "Main Study Library", category: "Campus" },
+  { id: 3, src: "/gallery-masterclass.jpg", title: "JEE Physics Masterclass", category: "Academics" },
+  { id: 4, src: "/gallery-group-study.jpg", title: "Group Doubt Chambers", category: "Academics" },
+  { id: 5, src: "/lecture-halljpg.jpg", title: "Lecture Hall", category: "Workspaces" },
+  // { id: 3, src: "/gallery-masterclass.jpg", title: "Masterclassn", category: "Events" },
+  { id: 6, src: "/gallery-group-study.jpg", title: "Group study", category: "Campus" },
+  { id: 7, src: "/gallery-self-study.jpg", title: "Self Study Cabins", category: "Campus" },
 ];
 
 const galleryVideos = [
