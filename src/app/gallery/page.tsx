@@ -46,7 +46,7 @@ const galleryVideos = [
   // }
 ];
 
-const photoCategories = ["All", "Campus", "Events", "Workshops"];
+const photoCategories = ["All", "Campus", "Events", "Workspaces"];
 
 export default function GalleryPage() {
   const [activeTab, setActiveTab] = useState<"photos" | "videos">("photos");
