@@ -164,7 +164,7 @@ export default function HomeClient() {
 
       {/* Residential Gurukulam Highlight & Campus Video Tour Section */}
       <SectionWrapper>
-        <div className="bg-primary rounded-3xl overflow-hidden shadow-2xl border border-primary-light">
+        <div className="bg-gradient-to-br from-[#2D5128] via-[#21421C] to-[#182E15] rounded-3xl overflow-hidden shadow-2xl border border-primary-light/40">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="p-8 md:p-16 space-y-8 flex flex-col justify-center">
               <span className="text-accent font-bold tracking-widest uppercase text-sm">

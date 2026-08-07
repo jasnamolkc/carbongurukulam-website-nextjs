@@ -19,7 +19,7 @@ export default function CTASection({
   secondaryButtonHref,
 }: CTASectionProps) {
   return (
-    <SectionWrapper className="bg-primary text-white text-center">
+    <SectionWrapper className="bg-gradient-to-br from-[#2D5128] via-[#21421C] to-[#182E15] text-white text-center shadow-xl">
       <div className="max-w-3xl mx-auto space-y-8">
         <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
           {title}

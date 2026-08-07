@@ -4,7 +4,7 @@ import Logo from "./Logo";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-white pt-16 pb-8">
+    <footer className="bg-gradient-to-b from-[#244520] via-primary to-primary-dark text-white pt-16 pb-8 border-t border-primary-light/30">
       <div className="container-custom grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
         {/* Brand Section */}
         <div className="space-y-6">
