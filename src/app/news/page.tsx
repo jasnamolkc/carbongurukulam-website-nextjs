@@ -26,7 +26,7 @@ const allNews = [
     excerpt: "Applications are open for the Carbon Scholarship Entrance Test (C-SET) for Class 10 graduates seeking residential coaching seats.",
     date: "July 12, 2025",
     author: "Admissions Office",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800",
+    image: "/news-scholarship.png",
     slug: "residential-scholarships-2026",
     category: "Admissions",
     isAI: false

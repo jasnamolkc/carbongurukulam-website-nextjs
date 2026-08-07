@@ -18,7 +18,7 @@ const allCourses = [
     title: "NEET Repeaters",
     category: "Repeaters",
     duration: "1 Year",
-    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800",
+    image: "/neet-home-page.jpg",
     slug: "neet-repeaters",
     description: "An intensive 1-year residential program designed for NEET repeaters. Under direct guidance of ex-Kota mentors, students engage in deep NCERT concepts, daily practice assessments, weekly mock tests, and systematic problem solving.",
     syllabus: [
@@ -37,7 +37,7 @@ const allCourses = [
     title: "JEE Repeaters",
     category: "Repeaters",
     duration: "1 Year",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800",
+    image: "/jee-home-page.jpg",
     slug: "jee-repeaters",
     description: "Result-oriented 1-year residential program for JEE aspirants. Features systematic problem-solving strategies for JEE Main & Advanced under experienced Kota IITian faculties.",
     syllabus: [
@@ -56,7 +56,7 @@ const allCourses = [
     title: "Integrated Batch (Class 11 - 12)",
     category: "Integrated",
     duration: "2 Years",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800",
+    image: "/integrated-home-page.jpg",
     slug: "integrated-batch-11-12",
     description: "A comprehensive 2-year integrated residential program for Class 10 graduates. Fully synchronizes Higher Secondary school board curriculum with systematic entrance preparation for NEET, JEE Main, and Advanced.",
     syllabus: [

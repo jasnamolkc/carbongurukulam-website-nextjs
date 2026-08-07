@@ -36,8 +36,8 @@ export default function HeroSection({
     >
       {/* Background Video */}
       {videoSrc ? (
-        <div className="absolute inset-0 w-full h-full overflow-hidden">
-          {/* <video
+        <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+          <video
             autoPlay
             muted
             loop
@@ -46,15 +46,6 @@ export default function HeroSection({
           >
             <source src={videoSrc} type="video/mp4" />
             {videoFallbackSrc && <source src={videoFallbackSrc} type="video/mp4" />}
-          </video> */}
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            controls
-            className="absolute inset-0 w-full h-full object-cover"
-          >
             <source src="/hero4.mp4" type="video/mp4" />
           </video>
         </div>

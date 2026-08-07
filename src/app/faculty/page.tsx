@@ -20,7 +20,7 @@ const facultyMembers = [
     qualification: "PhD in Applied Physics, IIT Bombay",
     experience: "15+ Years in JEE & NEET Coaching",
     bio: "Dr. Robert Chen is a leading expert in classical mechanics and electromagnetism. He has coached over 5,000 students to secure top ranks in IIT-JEE and NEET, and has authored multiple study booklets.",
-    image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&q=80&w=400"
+    image: "/faculty-robert.png"
   },
   {
     name: "Prof. Sarah Jenkins",
@@ -28,7 +28,7 @@ const facultyMembers = [
     qualification: "M.Sc. in Chemistry, Kota Coaching Veteran",
     experience: "12+ Years in Top Kota Academies",
     bio: "Sarah specializes in complex organic reactions and mechanism visual maps. She spent a decade teaching in leading Kota institutes, crafting curriculum schedules that secure high percentiles.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400"
+    image: "/faculty-sarah.png"
   },
   {
     name: "Dr. Michael Ross",
@@ -36,7 +36,7 @@ const facultyMembers = [
     qualification: "MD, ex-AIIMS Resident Researcher",
     experience: "10+ Years in Medical Entrance Mentoring",
     bio: "Dr. Ross brings deep clinical knowledge and NCERT accuracy into the classroom, specializing in human physiology and genetics preparation blueprints.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400"
+    image: "/faculty-michael.png"
   },
   {
     name: "Emily Watson",
@@ -44,7 +44,7 @@ const facultyMembers = [
     qualification: "M.Tech in Math & Computing, IIT Madras",
     experience: "8+ Years in JEE Advanced Preparations",
     bio: "Emily is a master of calculus, vectors, and coordinate geometry. She focuses on teaching shortcuts and analytical time-saving methods for JEE Main & Advanced papers.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400"
+    image: "/faculty-emily.png"
   },
   {
     name: "David Miller",
@@ -52,7 +52,7 @@ const facultyMembers = [
     qualification: "B.Tech, IIT Kharagpur (ex-Allen Senior Tutor)",
     experience: "14+ Years in Competitive Chemistry",
     bio: "David is the author of multiple textbooks on physical chemistry numerical structures. He helps students master thermodynamics, equilibrium, and electrochemistry equations.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400"
+    image: "/faculty-david.png"
   },
   {
     name: "Dr. Lisa Wong",
@@ -60,7 +60,7 @@ const facultyMembers = [
     qualification: "PhD in Animal Physiology, IISc Bangalore",
     experience: "11+ Years in Biology Olympiads Coaching",
     bio: "Dr. Wong is highly passionate about biodiversity and structural organization in animals, coaching students to score full marks in the biology section of the NEET exam.",
-    image: "https://images.unsplash.com/photo-1598550874175-4d0fe4a2c90b?auto=format&fit=crop&q=80&w=400"
+    image: "/faculty-lisa.png"
   }
 ];
 

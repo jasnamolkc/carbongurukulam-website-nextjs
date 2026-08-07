@@ -12,38 +12,32 @@ import { Maximize2, X, Play, Image as ImageIcon, Video as VideoIcon } from "luci
 import { motion, AnimatePresence } from "framer-motion";
 
 const galleryImages = [
-  { id: 1, src: "/inauguration-day.jpg", title: "Inauguration Day", category: "Events" },
-  { id: 2, src: "/library.jpg", title: "Main Study Library", category: "Campus" },
-  { id: 3, src: "/gallery-masterclass.jpg", title: "JEE Physics Masterclass", category: "Academics" },
-  { id: 4, src: "/gallery-group-study.jpg", title: "Group Doubt Chambers", category: "Academics" },
-  { id: 5, src: "/lecture-halljpg.jpg", title: "Lecture Hall", category: "Workspaces" },
-  // { id: 3, src: "/gallery-masterclass.jpg", title: "Masterclassn", category: "Events" },
-  { id: 6, src: "/gallery-group-study.jpg", title: "Group study", category: "Campus" },
-  { id: 7, src: "/gallery-self-study.jpg", title: "Self Study Cabins", category: "Campus" },
+  { id: 1, src: "/inauguration-day.jpg", title: "Inauguration Day Celebration", category: "Events" },
+  { id: 2, src: "/library.jpg", title: "Main Academic Library", category: "Campus" },
+  { id: 3, src: "/gallery-masterclass.jpg", title: "JEE Physics Masterclass", category: "Workspaces" },
+  { id: 4, src: "/gallery-group-study.jpg", title: "Group Doubt Clearing Chambers", category: "Workspaces" },
+  { id: 5, src: "/lecture-halljpg.jpg", title: "Interactive Smart Lecture Hall", category: "Workspaces" },
+  { id: 6, src: "/gallery-self-study.jpg", title: "Individual Self Study Cabins", category: "Campus" },
+  { id: 7, src: "/Admission-home-page.jpg", title: "Calicut Campus Administrative Block", category: "Campus" },
+  { id: 8, src: "/news-scholarship.png", title: "Carbon Scholarship Entrance Test (C-SET)", category: "Events" },
+  { id: 9, src: "/outstanding-performance-2025.jpg", title: "NEET Top Rankers Felicitation", category: "Events" }
 ];
 
 const galleryVideos = [
   {
     id: 101,
     src: "https://youtu.be/MYA_hfsoG9w?si=FRAfv5NXPyt36Vni",
-    thumbnail: "https://images.unsplash.com/photo-1523050353066-1034d07e52b4?auto=format&fit=crop&q=80&w=800",
+    thumbnail: "/Admission-home-page.jpg",
     title: "Carbon Gurukulam Campus Walkthrough",
     category: "Campus Life"
   },
   {
     id: 102,
-    src: "https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-his-computer-43400-large.mp4",
-    thumbnail: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800",
+    src: "/hero4.mp4",
+    thumbnail: "/library.jpg",
     title: "A Day in the Life of a NEET Aspirant",
     category: "Student Life"
-  },
-  // {
-  //   id: 103,
-  //   src: "https://assets.mixkit.co/videos/preview/mixkit-man-holding-a-pencil-writing-on-a-paper-43204-large.mp4",
-  //   thumbnail: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800",
-  //   title: "Kota Method Doubt Chambers in Action",
-  //   category: "Academics"
-  // }
+  }
 ];
 
 const photoCategories = ["All", "Campus", "Events", "Workspaces"];
