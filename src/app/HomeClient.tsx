@@ -46,7 +46,7 @@ const latestNews = [
     excerpt: "Celebrating our top achievers who have secured 680+ marks in the National Eligibility cum Entrance Test under Kota curriculum guidelines.",
     date: "June 20, 2025",
     author: "Academic Coordinator",
-    image: "/outstanding-performance-2025.jpg",
+    image: "/results.png",
     slug: "neet-2025-results-celebration",
     category: "Results"
   },
