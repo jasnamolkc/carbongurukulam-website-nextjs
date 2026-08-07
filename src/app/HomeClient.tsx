@@ -46,7 +46,7 @@ const latestNews = [
     excerpt: "Celebrating our top achievers who have secured 680+ marks in the National Eligibility cum Entrance Test under Kota curriculum guidelines.",
     date: "June 20, 2025",
     author: "Academic Coordinator",
-    image: "https://images.unsplash.com/photo-1523050335392-9bc567547bb3?auto=format&fit=crop&q=80&w=800",
+    image: "/outstanding-performance-2025.jpg",
     slug: "neet-2025-results-celebration",
     category: "Results"
   },
@@ -55,7 +55,7 @@ const latestNews = [
     excerpt: "Applications are open for the Carbon Scholarship Entrance Test (C-SET) for Class 10 graduates seeking residential coaching seats.",
     date: "July 12, 2025",
     author: "Admissions Office",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800",
+    image: "/news-scholarship.png",
     slug: "residential-scholarships-2026",
     category: "Admissions",
     isAI: false
@@ -73,8 +73,7 @@ export default function HomeClient() {
       <HeroSection
         title="Kerala’s Premier Residential Coaching for NEET & JEE"
         subtitle="Carbon Gurukulam (formerly Carbon 30 Classes) blends the traditional Gurukulam system with result-oriented Kota academic discipline to shape future doctors and engineers."
-        videoSrc="/hero.mp4"
-        videoFallbackSrc="https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-his-computer-43400-large.mp4"
+        videoSrc="/hero4.mp4"
       >
         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
           <Link href="/courses" className="btn-accent text-primary">
@@ -208,7 +207,7 @@ export default function HomeClient() {
 
             <div className="relative min-h-[400px] flex items-center justify-center group cursor-pointer" onClick={() => setIsTourOpen(true)}>
               <Image
-                src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&q=80&w=800"
+                src="/Admission-home-page.jpg"
                 alt="Residential Coaching Campus"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -257,17 +256,17 @@ export default function HomeClient() {
             {
               name: "Rahul Nair",
               role: "NEET Top Rank Holder (Government Medical College)",
-              img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=250"
+              img: "/alumni-rahul.png"
             },
             {
               name: "Anjali Menon",
               role: "JEE Advanced Qualified (IIT Madras)",
-              img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=250"
+              img: "/alumni-anjali.png"
             },
             {
               name: "Aditya S. Nair",
               role: "NEET Scholar (MBBS Student, Trivandrum)",
-              img: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=250"
+              img: "/alumni-aditya.png"
             }
           ].map((testimonial, i) => (
             <div key={i} className="w-[300px] sm:w-[360px] md:w-[380px] bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 shrink-0 flex flex-col justify-between h-[280px]">

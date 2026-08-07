@@ -27,7 +27,7 @@ const allNews = [
     `,
     date: "June 20, 2025",
     author: "Academic Coordinator",
-    image: "https://images.unsplash.com/photo-1523050335392-9bc567547bb3?auto=format&fit=crop&q=80&w=800",
+    image: "/outstanding-performance-2025.jpg",
     slug: "neet-2025-results-celebration",
     category: "Results"
   },
@@ -44,7 +44,7 @@ const allNews = [
     `,
     date: "July 12, 2025",
     author: "Admissions Office",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800",
+    image: "/news-scholarship.png",
     slug: "residential-scholarships-2026",
     category: "Admissions"
   },
@@ -61,7 +61,7 @@ const allNews = [
     `,
     date: "Sep 05, 2025",
     author: "HOD Chemistry",
-    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800",
+    image: "/guide-news page.jpg",
     slug: "importance-of-everyday-testing",
     category: "Guides"
   },
@@ -78,7 +78,7 @@ const allNews = [
     `,
     date: "Aug 20, 2025",
     author: "Campus Warden",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800",
+    image: "/campus-news page.jpg",
     slug: "day-in-life-gurukulam",
     category: "Campus Life"
   },
@@ -95,7 +95,7 @@ const allNews = [
     `,
     date: "Jul 15, 2025",
     author: "Dr. Anand K.",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
+    image: "/Academic- news page.jpg",
     slug: "physics-chemistry-strategy-guidelines",
     category: "Academic"
   }

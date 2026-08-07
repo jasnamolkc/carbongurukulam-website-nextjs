@@ -39,19 +39,19 @@ const facultyMembers = [
     name: "Dr. Robert Chen",
     role: "Head of Physics Department",
     qualification: "PhD in Applied Physics, IIT Bombay",
-    image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&q=80&w=400"
+    image: "/faculty-robert.png"
   },
   {
     name: "Prof. Sarah Jenkins",
     role: "Senior Chemistry Mentor",
     qualification: "M.Sc. in Chemistry, Kota Coaching Veteran (12+ Years)",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400"
+    image: "/faculty-sarah.png"
   },
   {
     name: "Dr. Michael Ross",
     role: "Senior Biology Lecturer",
     qualification: "MD, ex-AIIMS Resident Researcher",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400"
+    image: "/faculty-michael.png"
   }
 ];
 
@@ -107,8 +107,8 @@ export default function AboutClient() {
           <div className="relative order-2 lg:order-1">
             <div className="relative h-[380px] md:h-[480px] rounded-2xl overflow-hidden shadow-xl z-10">
               <Image
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800"
-                alt="Founder"
+                src="/founder-dr-anand.png"
+                alt="Founder Dr Anand K."
                 fill
                 className="object-cover"
               />
