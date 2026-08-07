@@ -60,12 +60,12 @@ export default function HeroSection({
       )}
 
       {/* 🔥 Stronger Dark Overlay (Improves Heading Visibility) */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-primary/60 backdrop-blur-[2px]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#2D5128]/95 via-[#1E3B1B]/90 to-[#122410]/85 backdrop-blur-[2px]" />
 
       {/* 🔥 Softer Glow */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-24 left-24 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-24 right-24 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
+        <div className="absolute top-24 left-24 w-96 h-96 bg-accent/15 rounded-full blur-3xl" />
+        <div className="absolute bottom-24 right-24 w-96 h-96 bg-accent/15 rounded-full blur-3xl" />
       </div>
 
       {/* Content */}

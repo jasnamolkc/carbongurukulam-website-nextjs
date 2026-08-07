@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/carbonlogo.jpg",
     shortcut: "/carbonlogo.jpg",
-    apple: "/apple-touch-icon.png",
+    apple: "/carbonlogo.jpg",
   },
 };
 export default function RootLayout({
