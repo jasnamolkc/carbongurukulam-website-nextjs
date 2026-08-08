@@ -117,7 +117,7 @@ export default function ContactPage() {
             <div className="pt-6 border-t border-gray-100">
               <h4 className="font-bold text-primary text-sm md:text-base mb-3">Follow Our Updates</h4>
               <div className="flex space-x-3">
-                <a href="https://www.facebook.com/carbongurukulam" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center hover:bg-accent hover:text-primary transition-all shadow-sm">
+                <a href="https://www.facebook.com/profile.php?id=61586399489579" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center hover:bg-accent hover:text-primary transition-all shadow-sm">
                   <Facebook size={18} />
                 </a>
                 <a href="https://www.instagram.com/carbon_gurukulam?igsh=MWZxNnVjMWppdGZtcA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center hover:bg-accent hover:text-primary transition-all shadow-sm">

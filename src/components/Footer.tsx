@@ -16,7 +16,7 @@ export default function Footer() {
           </p>
           <div className="flex space-x-3">
             <a
-              href="https://www.facebook.com/carbongurukulam"
+              href="https://www.facebook.com/profile.php?id=61586399489579"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
