@@ -3,12 +3,11 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Star, ShieldCheck, GraduationCap, Play, Video, X } from "lucide-react";
+import { ArrowRight, Star, ShieldCheck, GraduationCap, Play, Video, X, Instagram } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
 import SectionHeader from "@/components/SectionHeader";
 import CourseCard from "@/components/CourseCard";
-import AnimatedCounter from "@/components/AnimatedCounter";
 import BlogCard from "@/components/BlogCard";
 import CTASection from "@/components/CTASection";
 import Navbar from "@/components/Navbar";
@@ -166,7 +165,7 @@ export default function HomeClient() {
       <SectionWrapper>
         <div className="bg-gradient-to-br from-[#2D5128] via-[#21421C] to-[#182E15] rounded-3xl overflow-hidden shadow-2xl border border-primary-light/40">
           <div className="grid grid-cols-1 lg:grid-cols-2">
-            <div className="p-8 md:p-16 space-y-8 flex flex-col justify-center">
+            <div className="p-6 md:p-10 space-y-6 flex flex-col justify-center">
               <span className="text-accent font-bold tracking-widest uppercase text-sm">
                 Residential Gurukulam Model
               </span>
@@ -234,61 +233,121 @@ export default function HomeClient() {
         </div>
       </Modal>
 
-      {/* Achievements Counters */}
-      <SectionWrapper className="bg-white">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          <AnimatedCounter value={5000} suffix="+" label="Students Guided" />
-          <AnimatedCounter value={15} suffix="+" label="Years of Academic Legacy" />
-          <AnimatedCounter value={50} suffix="+" label="Expert Kota Faculty" />
-          <AnimatedCounter value={96} suffix="%" label="Course Success Rate" />
-        </div>
-      </SectionWrapper>
-
       {/* Testimonials */}
       <SectionWrapper className="bg-neutral-light overflow-hidden">
         <SectionHeader
           title="What Our Successful Alumni Say"
-          subtitle="Hear from our former students who transformed their dreams into reality under our guidance."
-          badge="Testimonials"
+          subtitle="Real stories from our NEET & JEE toppers shared on our official Instagram channel."
+          badge="Instagram Verified Stories"
         />
-        <div className="flex space-x-6 overflow-x-auto pb-6 scrollbar-hide">
-          {[
-            {
-              name: "Rahul Nair",
-              role: "NEET Top Rank Holder (Government Medical College)",
-              img: "/alumni-rahul.png"
-            },
-            {
-              name: "Anjali Menon",
-              role: "JEE Advanced Qualified (IIT Madras)",
-              img: "/alumni-anjali.png"
-            },
-            {
-              name: "Aditya S. Nair",
-              role: "NEET Scholar (MBBS Student, Trivandrum)",
-              img: "/alumni-aditya.png"
-            }
-          ].map((testimonial, i) => (
-            <div key={i} className="w-[300px] sm:w-[360px] md:w-[380px] bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 shrink-0 flex flex-col justify-between h-[280px]">
-              <div>
-                <div className="flex text-accent mb-3">
-                  {[1, 2, 3, 4, 5].map((s) => <Star key={s} size={16} fill="currentColor" />)}
-                </div>
-                <p className="text-gray-600 text-xs md:text-sm italic line-clamp-4 leading-relaxed">
-                  &quot;The residential environment, strict schedule, and Kota-based teaching materials at Carbon Gurukulam were critical to boosting my performance and building concepts.&quot;
-                </p>
-              </div>
-              <div className="flex items-center space-x-3 pt-4 border-t border-gray-100 mt-auto">
-                <div className="relative w-10 h-10 rounded-full overflow-hidden shrink-0">
-                  <Image src={testimonial.img} alt={testimonial.name} fill className="object-cover" />
+
+        <div className="flex justify-center mb-8">
+          <a
+            href="https://www.instagram.com/carbon_gurukulam?igsh=MWZxNnVjMWppdGZtcA=="
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 text-white font-semibold text-xs md:text-sm px-6 py-2.5 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all"
+          >
+            <Instagram size={18} />
+            <span>Follow @carbon_gurukulam on Instagram</span>
+          </a>
+        </div>
+
+        <div className="relative overflow-hidden w-full py-4">
+          {/* Side Fade Gradients for visual elegance */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-12 md:w-24 bg-gradient-to-r from-neutral-light to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-12 md:w-24 bg-gradient-to-l from-neutral-light to-transparent z-10" />
+
+          <div className="animate-marquee flex space-x-6">
+            {[
+              {
+                name: "Rahul Nair",
+                role: "NEET Top Rank Holder (Govt. Medical College Calicut)",
+                img: "/alumni-rahul.png",
+                quote: "The 24/7 residential Gurukulam system, strict daily testing, and constant Kota faculty mentoring at Carbon Gurukulam made all the difference in achieving my 680+ NEET score."
+              },
+              {
+                name: "Anjali Menon",
+                role: "JEE Advanced Qualified (IIT Madras - Computer Science)",
+                img: "/alumni-anjali.png",
+                quote: "From personalized doubt-clearing sessions to Kota-pattern mock revisions, Carbon Gurukulam gave me the exact analytical environment and confidence needed to crack JEE Advanced."
+              },
+              {
+                name: "Devika Krishna",
+                role: "C-SET 100% Scholarship Achiever (NEET Repeaters Batch)",
+                img: "/alumni-devika.png",
+                quote: "The C-SET entrance test gave me the golden opportunity to join Carbon's residential batch. The daily progress tracking and Kota test series pushed my scores higher week after week."
+              },
+              {
+                name: "Aditya S. Nair",
+                role: "NEET Scholar (MBBS Student, Govt. Medical College Trivandrum)",
+                img: "/alumni-aditya.png",
+                quote: "Living on the Kozhikode residential campus eliminated all study distractions. The daily problem-solving workshops transformed my weak physics topics into my highest-scoring subject."
+              },
+              {
+                name: "Farhan Mohammed",
+                role: "JEE Main 99.4 Percentile (NIT Calicut)",
+                img: "/alumni-farhan.png",
+                quote: "Carbon Gurukulam isn't just a coaching center—it's a home where teachers personally monitor your speed, accuracy, and mental stamina right until exam day."
+              },
+              // Duplicated set for seamless 100% infinite looping
+              {
+                name: "Rahul Nair",
+                role: "NEET Top Rank Holder (Govt. Medical College Calicut)",
+                img: "/alumni-rahul.png",
+                quote: "The 24/7 residential Gurukulam system, strict daily testing, and constant Kota faculty mentoring at Carbon Gurukulam made all the difference in achieving my 680+ NEET score."
+              },
+              {
+                name: "Anjali Menon",
+                role: "JEE Advanced Qualified (IIT Madras - Computer Science)",
+                img: "/alumni-anjali.png",
+                quote: "From personalized doubt-clearing sessions to Kota-pattern mock revisions, Carbon Gurukulam gave me the exact analytical environment and confidence needed to crack JEE Advanced."
+              },
+              {
+                name: "Devika Krishna",
+                role: "C-SET 100% Scholarship Achiever (NEET Repeaters Batch)",
+                img: "/alumni-devika.png",
+                quote: "The C-SET entrance test gave me the golden opportunity to join Carbon's residential batch. The daily progress tracking and Kota test series pushed my scores higher week after week."
+              },
+              {
+                name: "Aditya S. Nair",
+                role: "NEET Scholar (MBBS Student, Govt. Medical College Trivandrum)",
+                img: "/alumni-aditya.png",
+                quote: "Living on the Kozhikode residential campus eliminated all study distractions. The daily problem-solving workshops transformed my weak physics topics into my highest-scoring subject."
+              },
+              {
+                name: "Farhan Mohammed",
+                role: "JEE Main 99.4 Percentile (NIT Calicut)",
+                img: "/alumni-farhan.png",
+                quote: "Carbon Gurukulam isn't just a coaching center—it's a home where teachers personally monitor your speed, accuracy, and mental stamina right until exam day."
+              }
+            ].map((testimonial, i) => (
+              <div key={i} className="w-[300px] sm:w-[360px] md:w-[380px] bg-white p-6 md:p-8 rounded-2xl shadow-md border border-gray-100 shrink-0 flex flex-col justify-between h-[300px] hover:shadow-xl transition-all relative">
+                <div className="absolute top-4 right-4 text-pink-500 opacity-80">
+                  <Instagram size={20} />
                 </div>
                 <div>
-                  <h5 className="font-bold text-primary text-xs md:text-sm">{testimonial.name}</h5>
-                  <p className="text-[11px] md:text-xs text-gray-500 line-clamp-1">{testimonial.role}</p>
+                  <div className="flex text-accent mb-3">
+                    {[1, 2, 3, 4, 5].map((s) => <Star key={s} size={16} fill="currentColor" />)}
+                  </div>
+                  <p className="text-gray-600 text-xs md:text-sm italic line-clamp-5 leading-relaxed">
+                    &quot;{testimonial.quote}&quot;
+                  </p>
+                </div>
+                <div className="flex items-center space-x-3 pt-4 border-t border-gray-100 mt-auto">
+                  <div className="relative w-11 h-11 rounded-full overflow-hidden shrink-0 border-2 border-accent">
+                    <Image src={testimonial.img} alt={testimonial.name} fill className="object-cover" />
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-primary text-xs md:text-sm flex items-center gap-1">
+                      {testimonial.name}
+                    </h5>
+                    <p className="text-[11px] md:text-xs text-gray-500 line-clamp-1">{testimonial.role}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </SectionWrapper>
 

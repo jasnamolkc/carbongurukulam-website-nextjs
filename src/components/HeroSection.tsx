@@ -29,8 +29,8 @@ export default function HeroSection({
       className={cn(
         "relative flex items-center overflow-hidden bg-primary text-white",
         compact
-          ? "py-16 md:py-24"
-          : "min-h-[75vh] md:min-h-[85vh] py-20 md:py-28",
+          ? "py-10 md:py-14"
+          : "min-h-[60vh] md:min-h-[70vh] py-14 md:py-20",
         className
       )}
     >

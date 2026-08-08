@@ -101,22 +101,22 @@ export default function AboutClient() {
         </div>
       </SectionWrapper>
 
-      {/* Founder Message */}
+      {/* Founder Message & Campus */}
       <SectionWrapper className="bg-neutral-light">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 items-center">
           <div className="relative order-2 lg:order-1">
             <div className="relative h-[380px] md:h-[480px] rounded-2xl overflow-hidden shadow-xl z-10">
               <Image
-                src="/founder-dr-anand.png"
-                alt="Founder Dr Anand K."
+                src="/carbon-building.jpg"
+                alt="Carbon Gurukulam Campus Building"
                 fill
                 className="object-cover"
               />
             </div>
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/20 rounded-full blur-3xl" />
             <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-xl z-20">
-              <h4 className="font-bold text-primary">Dr. Anand K.</h4>
-              <p className="text-sm text-accent">Founder & Academic Director</p>
+              <h4 className="font-bold text-primary">Carbon Gurukulam Campus</h4>
+              <p className="text-sm text-accent">Kunnamangalam, Kozhikode</p>
             </div>
           </div>
 
@@ -136,7 +136,7 @@ export default function AboutClient() {
                 Our students receive custom materials, attend everyday testing sessions, and reside in a state-of-the-art campus designed specifically to eliminate distraction and build confidence.
               </p>
             </div>
-            <div className="pt-4 flex items-center space-x-6">
+            {/* <div className="pt-4 flex items-center space-x-6">
               <div className="flex flex-col">
                 <span className="text-3xl font-bold text-primary">15+</span>
                 <span className="text-sm text-gray-500">Years of Experience</span>
@@ -146,7 +146,7 @@ export default function AboutClient() {
                 <span className="text-3xl font-bold text-primary">3000+</span>
                 <span className="text-sm text-gray-500">Doctors & Engineers Mentored</span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </SectionWrapper>
@@ -160,23 +160,6 @@ export default function AboutClient() {
         />
         <div className="max-w-4xl mx-auto py-12">
           <Timeline items={timelineItems} />
-        </div>
-      </SectionWrapper>
-
-      {/* Faculty Preview */}
-      <SectionWrapper className="bg-neutral-light">
-        <SectionHeader
-          title="Meet Our Department Heads"
-          subtitle="Our instructors are industry veterans, ex-IITians, and dedicated competitive coaching mentors."
-          badge="Faculty"
-        />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {facultyMembers.map((faculty, index) => (
-            <FacultyCard key={index} {...faculty} />
-          ))}
-        </div>
-        <div className="mt-12 text-center">
-          <a href="/faculty" className="btn-primary">View Full Faculty</a>
         </div>
       </SectionWrapper>
 

@@ -59,7 +59,7 @@ body {
 }
 
 .section-padding {
-  @apply py-10 md:py-16;
+  @apply py-8 md:py-12;
 }
 
 .container-custom {
@@ -103,4 +103,25 @@ body {
 .gradient-text {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-accent-light font-bold;
 }
+
+/* Infinite Horizontal Auto Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
 
