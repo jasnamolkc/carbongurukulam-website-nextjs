@@ -91,13 +91,17 @@ export default function HomeClient() {
       <SectionWrapper>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
-            <div className="relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl z-10 border-4 border-white">
-              <Image
-                src="/Admission-home-page.jpg"
-                alt="About Carbon Gurukulam"
-                fill
-                className="object-cover"
-              />
+            <div className="relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl z-10 border-4 border-white bg-black">
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source src="/video-2.mp4" type="video/mp4" />
+                <source src="/hero4.mp4" type="video/mp4" />
+              </video>
             </div>
             <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-accent rounded-3xl -z-0 hidden md:block" />
             <div className="absolute -top-6 -left-6 w-32 h-32 border-4 border-primary/10 rounded-3xl -z-0 hidden md:block" />

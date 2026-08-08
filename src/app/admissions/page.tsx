@@ -81,7 +81,11 @@ export default function AdmissionsPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: `${formData.firstName} ${formData.lastName}`.trim(),
+          fullName: `${formData.firstName} ${formData.lastName}`.trim(),
+          firstName: formData.firstName,
+          lastName: formData.lastName,
           email: formData.email,
+          subject: formData.stream,
           stream: formData.stream,
           message: formData.message,
           source: "Admissions Enquiry Form"
