@@ -11,9 +11,10 @@ import { Mail, Phone, MapPin, Facebook, Instagram, Youtube, Linkedin, Send, Cloc
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    fullName: "",
+    firstName: "",
+    lastName: "",
     email: "",
-    subject: "",
+    stream: "NEET/JEE Repeaters Batch",
     message: ""
   });
   const [loading, setLoading] = useState(false);
@@ -21,7 +22,7 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.fullName || !formData.email) return;
+    if (!formData.firstName || !formData.email) return;
 
     setLoading(true);
     try {
@@ -29,15 +30,19 @@ export default function ContactPage() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: formData.fullName,
+          name: `${formData.firstName} ${formData.lastName}`.trim(),
+          fullName: `${formData.firstName} ${formData.lastName}`.trim(),
+          firstName: formData.firstName,
+          lastName: formData.lastName,
           email: formData.email,
-          subject: formData.subject,
+          subject: formData.stream,
+          stream: formData.stream,
           message: formData.message,
           source: "Contact Us Page"
-        })
+        }),
       });
       setSubmitted(true);
-      setFormData({ fullName: "", email: "", subject: "", message: "" });
+      setFormData({ firstName: "", lastName: "", email: "", stream: "NEET/JEE Repeaters Batch", message: "" });
     } catch (err) {
       console.error("Form error:", err);
     } finally {
@@ -150,17 +155,27 @@ export default function ContactPage() {
               ) : (
                 <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="form-label">Full Name *</label>
+                    <label className="form-label">First Name *</label>
                     <input
                       type="text"
                       required
-                      value={formData.fullName}
-                      onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                      value={formData.firstName}
+                      onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                       className="form-input"
-                      placeholder="Enter student name"
+                      placeholder="Student First name"
                     />
                   </div>
                   <div>
+                    <label className="form-label">Last Name</label>
+                    <input
+                      type="text"
+                      value={formData.lastName}
+                      onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                      className="form-input"
+                      placeholder="Last name"
+                    />
+                  </div>
+                  <div className="sm:col-span-2">
                     <label className="form-label">Email Address *</label>
                     <input
                       type="email"
@@ -168,18 +183,22 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="form-input"
-                      placeholder="Enter contact email"
+                      placeholder="contact@example.com"
                     />
                   </div>
                   <div className="sm:col-span-2">
-                    <label className="form-label">Subject</label>
-                    <input
-                      type="text"
-                      value={formData.subject}
-                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      className="form-input"
-                      placeholder="NEET Repeaters Batch / JEE Long Term Enquiry"
-                    />
+                    <label className="form-label">Coaching Stream of Interest</label>
+                    <select
+                      value={formData.stream}
+                      onChange={(e) => setFormData({ ...formData, stream: e.target.value })}
+                      className="form-select"
+                    >
+                      <option value="NEET/JEE Repeaters Batch">NEET/JEE Repeaters Batch</option>
+                      <option value="Long Term Integrated (Class 11-12)">Long Term Integrated (Class 11-12)</option>
+                      <option value="Kerala Engineering (KEAM) Entrance">Kerala Engineering (KEAM) Entrance</option>
+                      <option value="NEET Crash Course">NEET Crash Course</option>
+                      <option value="C-SET Entrance Scholarship Batch">C-SET Entrance Scholarship Batch</option>
+                    </select>
                   </div>
                   <div className="sm:col-span-2">
                     <label className="form-label">Message Details</label>
@@ -188,7 +207,7 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="form-textarea"
-                      placeholder="Briefly describe academic status, high school marks, or queries..."
+                      placeholder="How can we help? ( hostel query, scholarships info, etc. )"
                     ></textarea>
                   </div>
                   <div className="sm:col-span-2 pt-1">
