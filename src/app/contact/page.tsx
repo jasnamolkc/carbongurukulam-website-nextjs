@@ -7,7 +7,7 @@ import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
 import SectionHeader from "@/components/SectionHeader";
 import ChatWidget from "@/components/ChatWidget";
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Send, Clock, CheckCircle2, Loader2 } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram, Youtube, Linkedin, Send, Clock, CheckCircle2, Loader2 } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -112,11 +112,18 @@ export default function ContactPage() {
             <div className="pt-6 border-t border-gray-100">
               <h4 className="font-bold text-primary text-sm md:text-base mb-3">Follow Our Updates</h4>
               <div className="flex space-x-3">
-                {[Facebook, Instagram, Linkedin].map((Icon, i) => (
-                  <a key={i} href="#" className="w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center hover:bg-accent hover:text-primary transition-all shadow-sm">
-                    <Icon size={18} />
-                  </a>
-                ))}
+                <a href="https://www.facebook.com/carbongurukulam" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center hover:bg-accent hover:text-primary transition-all shadow-sm">
+                  <Facebook size={18} />
+                </a>
+                <a href="https://www.instagram.com/carbon_gurukulam?igsh=MWZxNnVjMWppdGZtcA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center hover:bg-accent hover:text-primary transition-all shadow-sm">
+                  <Instagram size={18} />
+                </a>
+                <a href="https://www.youtube.com/@Carbon_gurukulam" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center hover:bg-accent hover:text-primary transition-all shadow-sm">
+                  <Youtube size={18} />
+                </a>
+                <a href="https://www.linkedin.com/company/carbongurukulam" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center hover:bg-accent hover:text-primary transition-all shadow-sm">
+                  <Linkedin size={18} />
+                </a>
               </div>
             </div>
           </div>

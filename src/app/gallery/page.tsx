@@ -33,9 +33,9 @@ const galleryVideos = [
   },
   {
     id: 102,
-    src: "/hero4.mp4",
+    src: "/video-2.mp4",
     thumbnail: "/library.jpg",
-    title: "A Day in the Life of a NEET Aspirant",
+    title: "What is carbon gurukulam",
     category: "Student Life"
   }
 ];

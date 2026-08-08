@@ -38,9 +38,9 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: "/carbonlogo.jpg",
-    shortcut: "/carbonlogo.jpg",
-    apple: "/carbonlogo.jpg",
+    icon: "/carbonlogo.png",
+    shortcut: "/carbonlogo.png",
+    apple: "/carbonlogo.png",
   },
 };
 export default function RootLayout({
