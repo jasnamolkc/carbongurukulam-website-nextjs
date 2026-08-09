@@ -257,8 +257,8 @@ export default function HomeClient() {
           </a>
         </div>
 
+        {/* 
         <div className="relative overflow-hidden w-full py-4">
-          {/* Side Fade Gradients for visual elegance */}
           <div className="pointer-events-none absolute inset-y-0 left-0 w-12 md:w-24 bg-gradient-to-r from-neutral-light to-transparent z-10" />
           <div className="pointer-events-none absolute inset-y-0 right-0 w-12 md:w-24 bg-gradient-to-l from-neutral-light to-transparent z-10" />
 
@@ -353,6 +353,7 @@ export default function HomeClient() {
             ))}
           </div>
         </div>
+        */}
       </SectionWrapper>
 
       {/* Latest News */}
