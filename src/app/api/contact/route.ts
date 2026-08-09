@@ -3,7 +3,25 @@ import { NextResponse } from "next/server";
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, fullName, firstName, lastName, email, mobile, phone, subject, message, stream, source } = body;
+    const {
+      name,
+      fullName,
+      firstName,
+      lastName,
+      email,
+      mobile,
+      phone,
+      mobileNumber,
+      phoneNumber,
+      contact,
+      contactNumber,
+      mobile_number,
+      phone_number,
+      subject,
+      message,
+      stream,
+      source
+    } = body;
 
     const studentName =
       name ||
@@ -11,13 +29,33 @@ export async function POST(request: Request) {
       `${firstName || ""} ${lastName || ""}`.trim() ||
       "N/A";
 
+    const userMobile =
+      mobile ||
+      phone ||
+      mobileNumber ||
+      phoneNumber ||
+      contact ||
+      contactNumber ||
+      mobile_number ||
+      phone_number ||
+      "N/A";
+
     const payload = {
       timestamp: new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
       name: studentName,
+      firstName: firstName || "",
+      lastName: lastName || "",
       email: email || "N/A",
-      mobile: mobile || phone || "N/A",
-      phone: mobile || phone || "N/A",
+      mobile: userMobile,
+      phone: userMobile,
+      mobileNumber: userMobile,
+      phoneNumber: userMobile,
+      contact: userMobile,
+      contactNumber: userMobile,
+      mobile_number: userMobile,
+      phone_number: userMobile,
       subject: subject || stream || "General Inquiry",
+      stream: stream || subject || "General Inquiry",
       message: message || "N/A",
       source: source || "Website Form",
       spreadsheetId: "1P_9wk0i-rn-nRX9v_DPn1rJrS1rWlkNf0yPz_5GlNO4"
