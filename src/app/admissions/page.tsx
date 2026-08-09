@@ -64,7 +64,8 @@ export default function AdmissionsPage() {
     firstName: "",
     lastName: "",
     email: "",
-    stream: "NEET/JEE Repeaters Batch",
+    mobile: "",
+    stream: "JEE repeaters batch",
     message: ""
   });
   const [loading, setLoading] = useState(false);
@@ -72,7 +73,7 @@ export default function AdmissionsPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.firstName || !formData.email) return;
+    if (!formData.firstName || !formData.email || !formData.mobile) return;
 
     setLoading(true);
     try {
@@ -85,6 +86,8 @@ export default function AdmissionsPage() {
           firstName: formData.firstName,
           lastName: formData.lastName,
           email: formData.email,
+          mobile: formData.mobile,
+          phone: formData.mobile,
           subject: formData.stream,
           stream: formData.stream,
           message: formData.message,
@@ -96,7 +99,8 @@ export default function AdmissionsPage() {
         firstName: "",
         lastName: "",
         email: "",
-        stream: "NEET/JEE Repeaters Batch",
+        mobile: "",
+        stream: "JEE repeaters batch",
         message: ""
       });
     } catch (err) {
@@ -242,7 +246,7 @@ export default function AdmissionsPage() {
                       placeholder="Last name"
                     />
                   </div>
-                  <div className="sm:col-span-2">
+                  <div>
                     <label className="form-label">Email Address *</label>
                     <input
                       type="email"
@@ -253,6 +257,17 @@ export default function AdmissionsPage() {
                       placeholder="contact@example.com"
                     />
                   </div>
+                  <div>
+                    <label className="form-label">Mobile Number *</label>
+                    <input
+                      type="tel"
+                      required
+                      value={formData.mobile}
+                      onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
+                      className="form-input"
+                      placeholder="+91 98765 43210"
+                    />
+                  </div>
                   <div className="sm:col-span-2">
                     <label className="form-label">Coaching Stream of Interest</label>
                     <select
@@ -260,10 +275,9 @@ export default function AdmissionsPage() {
                       onChange={(e) => setFormData({ ...formData, stream: e.target.value })}
                       className="form-select"
                     >
-                      <option value="NEET/JEE Repeaters Batch">NEET/JEE Repeaters Batch</option>
-                      <option value="Long Term Integrated (Class 11-12)">Long Term Integrated (Class 11-12)</option>
-                      <option value="Kerala Engineering (KEAM) Entrance">Kerala Engineering (KEAM) Entrance</option>
-                      <option value="NEET Crash Course">NEET Crash Course</option>
+                      <option value="JEE repeaters batch">JEE repeaters batch</option>
+                      <option value="NEET repeaters batch">NEET repeaters batch</option>
+                      <option value="PLUS 1 PLUS 2 INTEGRATED BATCH">PLUS 1 PLUS 2 INTEGRATED BATCH</option>
                     </select>
                   </div>
                   <div className="sm:col-span-2">
