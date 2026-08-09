@@ -64,7 +64,7 @@ export async function POST(request: Request) {
     // Forward to Google Apps Script Webhook
     const webhookUrl =
       process.env.GOOGLE_SHEET_WEBHOOK_URL ||
-      "https://script.google.com/macros/s/AKfycbwzdFLTjDyiA6Zg-Ly7RSc51Th3ry7c0mnvIEc6eqODUHeiWQuCxCOxVdEqqtkBE90/exec";
+      "https://script.google.com/macros/s/AKfycbznaMBpr8tqM1u7o8MELkzTvJ-SnCvGKBaNzGXjE2Mc59mPs0UtuGBIK24i5CGZ3B5O/exec";
 
     if (webhookUrl) {
       try {
@@ -77,6 +77,8 @@ export async function POST(request: Request) {
         console.error("Google Sheet webhook error:", err);
       }
     }
+          // "https://script.google.com/macros/s/AKfycbwzdFLTjDyiA6Zg-Ly7RSc51Th3ry7c0mnvIEc6eqODUHeiWQuCxCOxVdEqqtkBE90/exec";
+
 
     return NextResponse.json({
       success: true,
