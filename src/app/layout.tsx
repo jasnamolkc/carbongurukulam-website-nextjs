@@ -48,11 +48,39 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Carbon Gurukulam",
+    "url": "https://carbongurukulam.com",
+    "logo": "https://carbongurukulam.com/carbonlogo.png",
+    "description": "Premier residential coaching institute for JEE Main & Advanced, NEET repeaters, and Plus 1 & Plus 2 Integrated batches in Calicut, Kerala.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kozhikode",
+      "addressRegion": "Kerala",
+      "postalCode": "673001",
+      "addressCountry": "IN"
+    },
+    "telephone": "+91 97782 17821",
+    "email": "info@carbongurukulam.com",
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61586399489579",
+      "https://www.instagram.com/carbon_gurukulam",
+      "https://www.youtube.com/@Carbon_gurukulam",
+      "https://www.linkedin.com/company/carbongurukulam"
+    ]
+  };
+
   return (
     <html lang="en">
       <body
         className={`${leagueSpartan.variable} ${plusJakartaSans.variable} font-sans antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>
