@@ -67,7 +67,7 @@ export default function ChatWidget() {
       actionLink = { text: "Meet Our Faculty", href: "/faculty" };
       suggestions = ["Courses Available", "Admissions & C-SET"];
     } else if (query.includes("contact") || query.includes("phone") || query.includes("location") || query.includes("address") || query.includes("call") || query.includes("email")) {
-      text = "You can reach out to our admissions team directly:\n\n📍 Location: Carbon Gurukulam Campus, Kozhikode, Kerala\n📞 Phone: +91 97782 17821\n✉️ Email: info@carbongurukulam.com";
+      text = "You can reach out to our admissions team directly:\n\n📍 Location: Carbon Gurukulam Campus, Kozhikode, Kerala\n📞 Phone: +91 85920 06009\n✉️ Email: info@carbongurukulam.com";
       actionLink = { text: "Contact Us Page", href: "/contact" };
       suggestions = ["Courses Available", "Admissions & C-SET"];
     } else {

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Facebook, Instagram, Youtube, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react";
 import Logo from "./Logo";
 
 export default function Footer() {
@@ -42,15 +42,6 @@ export default function Footer() {
             >
               <Youtube size={18} />
             </a>
-            <a
-              href="https://www.linkedin.com/company/carbongurukulam"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="w-9 h-9 rounded-full bg-primary-light flex items-center justify-center hover:bg-accent hover:text-primary-dark transition-all shadow-sm"
-            >
-              <Linkedin size={18} />
-            </a>
           </div>
         </div>
 
@@ -61,7 +52,6 @@ export default function Footer() {
             <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
             <li><Link href="/courses" className="hover:text-white transition-colors">Courses</Link></li>
             <li><Link href="/admissions" className="hover:text-white transition-colors">Admissions</Link></li>
-            <li><Link href="/news" className="hover:text-white transition-colors">Latest News</Link></li>
           </ul>
         </div>
 
@@ -70,7 +60,6 @@ export default function Footer() {
           <h3 className="text-lg font-bold mb-6 text-accent">Support</h3>
           <ul className="space-y-4 text-sm text-gray-300">
             <li><Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
-            <li><Link href="/gallery" className="hover:text-white transition-colors">Campus Gallery</Link></li>
           </ul>
         </div>
 
@@ -84,7 +73,7 @@ export default function Footer() {
             </li>
             <li className="flex items-center space-x-3">
               <Phone size={18} className="text-accent shrink-0" />
-              <span>+91 97782 17821</span>
+              <a href="tel:+918592006009" className="hover:text-white transition-colors">+91 85920 06009</a>
             </li>
             <li className="flex items-center space-x-3">
               <Mail size={18} className="text-accent shrink-0" />

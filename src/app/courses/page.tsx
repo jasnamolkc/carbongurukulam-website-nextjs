@@ -7,7 +7,7 @@ import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
 import CourseCard from "@/components/CourseCard";
 import ChatWidget from "@/components/ChatWidget";
-import { Search, Filter } from "lucide-react";
+import { Filter } from "lucide-react";
 
 const allCourses = [
   {
@@ -37,12 +37,9 @@ const categories = ["All", "Repeaters", "Integrated"];
 
 export default function CoursesPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [searchQuery, setSearchQuery] = useState("");
 
   const filteredCourses = allCourses.filter(course => {
-    const matchesCategory = selectedCategory === "All" || course.category === selectedCategory;
-    const matchesSearch = course.title.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
+    return selectedCategory === "All" || course.category === selectedCategory;
   });
 
   return (
@@ -56,35 +53,22 @@ export default function CoursesPage() {
       />
 
       <SectionWrapper>
-        {/* Search and Filter UI */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-6 mb-8 md:mb-10">
-          <div className="relative flex-grow max-w-md">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
-            <input
-              type="text"
-              placeholder="Search courses..."
-              className="form-input pl-10"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-          </div>
-
-          <div className="flex items-center space-x-2 overflow-x-auto pb-2 md:pb-0 scrollbar-hide">
-            <Filter size={18} className="text-gray-400 mr-1 shrink-0" />
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setSelectedCategory(cat)}
-                className={`h-11 px-4 rounded-xl text-xs md:text-sm font-semibold whitespace-nowrap transition-all flex items-center justify-center cursor-pointer ${
-                  selectedCategory === cat
-                    ? "bg-accent text-primary shadow-sm"
-                    : "bg-white border border-gray-200 text-gray-600 hover:border-accent hover:text-accent"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
+        {/* Course Filter UI */}
+        <div className="flex items-center justify-center space-x-3 mb-10 overflow-x-auto pb-2 scrollbar-hide">
+          <Filter size={18} className="text-gray-400 mr-1 shrink-0" />
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setSelectedCategory(cat)}
+              className={`h-11 px-5 rounded-xl text-xs md:text-sm font-semibold whitespace-nowrap transition-all flex items-center justify-center cursor-pointer ${
+                selectedCategory === cat
+                  ? "bg-accent text-primary shadow-sm"
+                  : "bg-white border border-gray-200 text-gray-600 hover:border-accent hover:text-accent"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
         </div>
 
         {/* Course Grid */}
@@ -98,7 +82,7 @@ export default function CoursesPage() {
           <div className="text-center py-20">
             <p className="text-gray-500 text-lg">No courses found matching your criteria.</p>
             <button
-              onClick={() => {setSelectedCategory("All"); setSearchQuery("");}}
+              onClick={() => setSelectedCategory("All")}
               className="mt-4 text-accent font-bold hover:underline"
             >
               Clear all filters

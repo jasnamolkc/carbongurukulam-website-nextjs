@@ -62,13 +62,12 @@ export default function RootLayout({
       "postalCode": "673001",
       "addressCountry": "IN"
     },
-    "telephone": "+91 97782 17821",
+    "telephone": "+91 85920 06009",
     "email": "info@carbongurukulam.com",
     "sameAs": [
       "https://www.facebook.com/profile.php?id=61586399489579",
       "https://www.instagram.com/carbon_gurukulam",
-      "https://www.youtube.com/@Carbon_gurukulam",
-      "https://www.linkedin.com/company/carbongurukulam"
+      "https://www.youtube.com/@Carbon_gurukulam"
     ]
   };
 
