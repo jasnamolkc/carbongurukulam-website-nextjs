@@ -95,7 +95,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h4 className="font-bold text-primary text-sm md:text-base">Admissions Hotline</h4>
-                  <p className="text-gray-500 text-xs md:text-sm">+91 97782 17821</p>
+                  <a href="tel:+918592006009" className="text-gray-600 hover:text-primary text-xs md:text-sm font-semibold transition-colors">+91 85920 06009</a>
                 </div>
               </div>
 

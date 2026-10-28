@@ -2,16 +2,11 @@
 
 import { useParams } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import SectionWrapper from "@/components/SectionWrapper";
-import SectionHeader from "@/components/SectionHeader";
-import CourseCard from "@/components/CourseCard";
-import Accordion from "@/components/Accordion";
 import Breadcrumb from "@/components/Breadcrumb";
 import ChatWidget from "@/components/ChatWidget";
-import { Clock, BookOpen, GraduationCap, Download, CheckCircle, Calendar, User } from "lucide-react";
+import { Clock, GraduationCap, CheckCircle, Calendar, Phone } from "lucide-react";
 
 const allCourses = [
   {
@@ -146,38 +141,28 @@ export default function CourseDetailPage() {
                   </div>
                 </div>
 
-                <div className="space-y-6 pt-4">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-2xl font-bold text-primary">Course Syllabus</h3>
-                    <Link
-                      href="/contact"
-                      className="flex items-center text-accent font-bold text-sm hover:underline"
-                    >
-                      <Download size={18} className="mr-2" /> Request Detailed PDF
-                    </Link>
-                  </div>
-                  <Accordion items={course.syllabus} />
-                </div>
               </div>
             </div>
 
             {/* Sidebar */}
             <div className="lg:col-span-1">
-              <div className="sticky top-28 space-y-8">
+              <div className="sticky top-28 space-y-6">
                 <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 space-y-6">
                   <div className="space-y-4">
-                    <Link
-                      href="/contact"
-                      className="btn-primary w-full py-4 text-lg text-center"
+                    <a
+                      href="tel:+918592006009"
+                      className="btn-primary w-full py-4 text-base font-bold text-center flex items-center justify-center space-x-2"
                     >
-                      Apply Online
-                    </Link>
-                    <Link
-                      href="/contact"
-                      className="w-full block py-4 text-center text-primary font-bold border-2 border-gray-100 rounded-md hover:bg-gray-50 transition-colors"
+                      <Phone size={18} />
+                      <span>Call to Apply Online</span>
+                    </a>
+                    <a
+                      href="tel:+918592006009"
+                      className="w-full py-4 text-center text-primary font-bold border-2 border-primary/20 rounded-xl hover:bg-primary/5 transition-colors flex items-center justify-center space-x-2"
                     >
-                      Enquire Course
-                    </Link>
+                      <Phone size={18} className="text-accent" />
+                      <span>Direct Call to Enquire</span>
+                    </a>
                   </div>
 
                   <div className="space-y-4 pt-4 border-t border-gray-100">
@@ -185,17 +170,7 @@ export default function CourseDetailPage() {
                       <span className="text-gray-500 flex items-center"><Calendar size={16} className="mr-2" /> Academic Year</span>
                       <span className="text-primary font-bold">2026 - 2027</span>
                     </div>
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-gray-500 flex items-center"><User size={16} className="mr-2" /> HOD Head</span>
-                      <span className="text-primary font-bold underline">Dr. Robert Chen</span>
-                    </div>
                   </div>
-                </div>
-
-                <div className="bg-primary p-8 rounded-2xl shadow-xl text-white space-y-4">
-                  <h4 className="text-xl font-bold">Need Help?</h4>
-                  <p className="text-gray-300 text-sm">Our admissions guidance team is available to counsel you on the best matching coaching programs.</p>
-                  <Link href="/contact" className="btn-accent w-full block text-center text-primary">Contact Counseling</Link>
                 </div>
               </div>
             </div>
@@ -203,20 +178,6 @@ export default function CourseDetailPage() {
           </div>
         </div>
       </div>
-
-      {/* Related Courses */}
-      <SectionWrapper>
-        <SectionHeader
-          title="Other Programs"
-          subtitle="Explore our range of structured coaching options."
-          centered={false}
-        />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {allCourses.slice(0, 3).map((c) => (
-            <CourseCard key={c.slug} {...c} />
-          ))}
-        </div>
-      </SectionWrapper>
 
       <Footer />
       <ChatWidget />
